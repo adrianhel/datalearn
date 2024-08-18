@@ -9,6 +9,6 @@
 
 ![architecture_of_the_analytical_solution](https://github.com/user-attachments/assets/0b436e04-9ee5-4a42-a4dc-639ec708a544)
 
-[Скачать файл](https://github.com/adrianhel/datalearn/edit/main/DE-101/Module1/data/architecture_of_the_analytical_solution.drawio?raw=true)
+[Скачать файл](https://github.com/adrianhel/datalearn/edit/main/DE-101/Module1/data/architecture_of_the_analytical_solution.drawio)
 
 ### 1.2 Построение отчёта в Excel
