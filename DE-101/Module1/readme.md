@@ -87,8 +87,9 @@
 
 ![chart_09](https://github.com/user-attachments/assets/4d77abd9-645c-4677-ab88-aeb0c60d033a)
 
-
 ### 1.2.4 Создание дашборда
-На основе созданных диаграмм собираем [дашборд](https://github.com/adrianhel/datalearn/tree/main/DE-101/Module1/data/superstore/dashboard.xlsx). Добавляем срезы и подключаем их к отчётам. Всё красиво расставляем.
+На основе созданных диаграмм собираем дашборд. Добавляем срезы и подключаем их к отчётам. Всё красиво расставляем.
 
 ![dashboard](https://github.com/user-attachments/assets/747ad279-8618-4c1d-8512-62e2fdb1cc6c)
+
+##### [Скачать Дашборд](https://github.com/user-attachments/files/16664517/superstore.dashboard.xlsx)
