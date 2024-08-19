@@ -75,6 +75,7 @@
 
 - Основные показатели
 
+![table](https://github.com/user-attachments/assets/73d57297-5bab-4b06-95d8-c421f7c47b7f)
 
 
 - По регионам  (сравнение)
@@ -88,6 +89,6 @@
 
 
 ### 1.2.4 Создание дашборда
-На основе созданных диаграмм собираем [дашборд](DE-101/Module1/data/superstore dashboard.xlsx). Добавляем срезы и подключаем их к отчётам. Всё красиво расставляем.
+На основе созданных диаграмм собираем [дашборд](https://github.com/adrianhel/datalearn/tree/main/DE-101/Module1/data/superstore/dashboard.xlsx). Добавляем срезы и подключаем их к отчётам. Всё красиво расставляем.
 
 ![dashboard](https://github.com/user-attachments/assets/747ad279-8618-4c1d-8512-62e2fdb1cc6c)
