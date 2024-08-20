@@ -40,56 +40,47 @@
 Создаём диаграммы на основе сводных таблиц, следуя составленному плану:
 - Динамика дохода и прибыли
 
-![chart_01](https://github.com/user-attachments/assets/5688af7e-ae06-4458-ac2b-ba3305eb660b)
-
+![chart_01](https://github.com/user-attachments/assets/dee73b21-ff9d-4b24-bca6-0c1914bafc53)
 
 - Категории товаров (сравнение)
 
-![chart_02](https://github.com/user-attachments/assets/249dd7bb-cbc2-4fb9-a8b9-b0bd334c62a7)
-
+![chart_02](https://github.com/user-attachments/assets/e41994f4-4bf3-4a23-aaa8-181f0f7f71e8)
 
 - Суб-категории товаров (сравнение)
 
-![chart_03](https://github.com/user-attachments/assets/d83cbd47-52ff-44e8-b880-b61a8b58b836)
-
+![chart_03](https://github.com/user-attachments/assets/a6bd9f13-195d-4da1-92c4-957b621e06d0)
 
 - Региональные менеджеры (сравнение)
 
-![chart_04](https://github.com/user-attachments/assets/80022dfe-3216-4184-94e8-d2dd79cf656e)
-
+![chart_04](https://github.com/user-attachments/assets/046f1017-04d5-43ae-b4bf-ff1b25d01a5c)
 
 - Сегменты (сравнение)
 
-![chart_05](https://github.com/user-attachments/assets/98531d04-f016-4b41-bd3c-f356904a0fd1)
-
+![chart_05](https://github.com/user-attachments/assets/d5aff407-2b04-49d7-9e7a-6bd04568f784)
 
 - Динамика по сегментам
 
-![chart_06](https://github.com/user-attachments/assets/2c2445d7-3b9e-4c57-976b-17e342f39832)
-
+![chart_06](https://github.com/user-attachments/assets/51df2e75-d3cd-40c8-a4ff-036a92a4b161)
 
 - По штатам
 
-![chart_07](https://github.com/user-attachments/assets/15178539-6528-4ee2-a888-da359aa96f7b)
-
+![chart_07](https://github.com/user-attachments/assets/cabd7118-064c-4aa0-8ea7-c9ff79268417)
 
 - Основные показатели
 
 ![table](https://github.com/user-attachments/assets/73d57297-5bab-4b06-95d8-c421f7c47b7f)
 
-
 - По регионам  (сравнение)
 
-![chart_08](https://github.com/user-attachments/assets/e1c2fc2d-4a9c-450c-ae1c-20ba94b60dba)
-
+![chart_08](https://github.com/user-attachments/assets/a2bbdf03-78d1-4ff4-82d6-14111af713f3)
 
 - По возвратам в %
 
-![chart_09](https://github.com/user-attachments/assets/4d77abd9-645c-4677-ab88-aeb0c60d033a)
+![chart_09](https://github.com/user-attachments/assets/de390dd3-08c1-4d08-876a-8cbfe907cef6)
 
 ### 1.2.4 Создание дашборда
 На основе созданных диаграмм собираем дашборд. Добавляем срезы и подключаем их к отчётам. Всё красиво расставляем.
 
-![dashboard](https://github.com/user-attachments/assets/747ad279-8618-4c1d-8512-62e2fdb1cc6c)
+![dashboard](https://github.com/user-attachments/assets/06606650-d566-477f-9e39-baa66c8bd6d9)
 
-##### [Скачать Дашборд](https://github.com/user-attachments/files/16664517/superstore.dashboard.xlsx)
+##### [Скачать Дашборд](https://github.com/user-attachments/files/16679641/superstore.dashboard.xlsx)
