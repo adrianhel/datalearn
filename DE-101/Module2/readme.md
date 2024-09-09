@@ -3,5 +3,5 @@
 После установки PostgreSQL и подключения к БД через DBeaver, приступаем к загрузке данных.
 ##### Скрипты создания таблиц:
 - Таблица [Orders](https://github.com/adrianhel/datalearn/raw/main/DE-101/Module2/data/orders.sql)
-- Таблица [People]()
-- Таблица [Returns]()
+- Таблица [People](https://github.com/adrianhel/datalearn/raw/main/DE-101/Module2/data/people.sql)
+- Таблица [Returns](https://github.com/adrianhel/datalearn/raw/main/DE-101/Module2/data/returns.sql)
