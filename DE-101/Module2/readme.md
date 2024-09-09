@@ -2,4 +2,6 @@
 ## 2.1 Загрузка данных в БД
 После установки PostgreSQL и подключения к БД через DBeaver, приступаем к загрузке данных.
 ##### Скрипты создания таблиц:
-[Таблица Orders](DE-101/Module2/data/orders.sql)
+- Таблица [Orders](DE-101/Module2/data/orders.sql)
+- Таблица [People]()
+- Таблица [Returns]()
