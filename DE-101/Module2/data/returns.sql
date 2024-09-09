@@ -1,0 +1,105 @@
+INSERT INTO public."returns" (returned,order_id) VALUES
+	 ('Yes','CA-2016-100762'),
+	 ('Yes','CA-2016-100762'),
+	 ('Yes','CA-2016-100762'),
+	 ('Yes','CA-2016-100762'),
+	 ('Yes','CA-2016-100867'),
+	 ('Yes','CA-2016-102652'),
+	 ('Yes','CA-2016-102652'),
+	 ('Yes','CA-2016-102652'),
+	 ('Yes','CA-2016-102652'),
+	 ('Yes','CA-2016-103373');
+INSERT INTO public."returns" (returned,order_id) VALUES
+	 ('Yes','CA-2016-103744'),
+	 ('Yes','CA-2016-103744'),
+	 ('Yes','CA-2016-103940'),
+	 ('Yes','CA-2016-103940'),
+	 ('Yes','CA-2016-103940'),
+	 ('Yes','CA-2016-103940'),
+	 ('Yes','CA-2016-104829'),
+	 ('Yes','CA-2016-105270'),
+	 ('Yes','CA-2016-105270'),
+	 ('Yes','CA-2016-108609');
+INSERT INTO public."returns" (returned,order_id) VALUES
+	 ('Yes','CA-2016-108861'),
+	 ('Yes','CA-2016-109918'),
+	 ('Yes','CA-2016-109918'),
+	 ('Yes','CA-2016-109918'),
+	 ('Yes','CA-2016-110786'),
+	 ('Yes','CA-2016-110786'),
+	 ('Yes','CA-2016-110786'),
+	 ('Yes','CA-2016-110786'),
+	 ('Yes','CA-2016-110786'),
+	 ('Yes','CA-2016-110786');
+INSERT INTO public."returns" (returned,order_id) VALUES
+	 ('Yes','CA-2016-110786'),
+	 ('Yes','CA-2016-111871'),
+	 ('Yes','CA-2016-116785'),
+	 ('Yes','CA-2016-116785'),
+	 ('Yes','CA-2016-123225'),
+	 ('Yes','CA-2016-123225'),
+	 ('Yes','CA-2016-123253'),
+	 ('Yes','CA-2016-123498'),
+	 ('Yes','CA-2016-123498'),
+	 ('Yes','CA-2016-124688');
+INSERT INTO public."returns" (returned,order_id) VALUES
+	 ('Yes','CA-2016-124688'),
+	 ('Yes','CA-2016-124688'),
+	 ('Yes','CA-2016-126361'),
+	 ('Yes','CA-2016-126361'),
+	 ('Yes','CA-2016-126361'),
+	 ('Yes','CA-2016-126361'),
+	 ('Yes','CA-2016-126361'),
+	 ('Yes','CA-2016-126361'),
+	 ('Yes','CA-2016-126403'),
+	 ('Yes','CA-2016-126403');
+INSERT INTO public."returns" (returned,order_id) VALUES
+	 ('Yes','CA-2016-126403'),
+	 ('Yes','CA-2016-126403'),
+	 ('Yes','CA-2016-126522'),
+	 ('Yes','CA-2016-127012'),
+	 ('Yes','CA-2016-127012'),
+	 ('Yes','CA-2016-127012'),
+	 ('Yes','CA-2016-127131'),
+	 ('Yes','CA-2016-127131'),
+	 ('Yes','CA-2016-127131'),
+	 ('Yes','CA-2016-127131');
+INSERT INTO public."returns" (returned,order_id) VALUES
+	 ('Yes','CA-2016-133690'),
+	 ('Yes','CA-2016-133690'),
+	 ('Yes','CA-2016-134726'),
+	 ('Yes','CA-2016-134726'),
+	 ('Yes','CA-2016-135657'),
+	 ('Yes','CA-2016-135699'),
+	 ('Yes','CA-2016-135699'),
+	 ('Yes','CA-2016-140816'),
+	 ('Yes','CA-2016-141726'),
+	 ('Yes','CA-2016-141726');
+INSERT INTO public."returns" (returned,order_id) VALUES
+	 ('Yes','CA-2016-141726'),
+	 ('Yes','CA-2016-141726'),
+	 ('Yes','CA-2016-142769'),
+	 ('Yes','CA-2016-142769'),
+	 ('Yes','CA-2016-142769'),
+	 ('Yes','CA-2016-142769'),
+	 ('Yes','CA-2016-142769'),
+	 ('Yes','CA-2016-142769'),
+	 ('Yes','CA-2016-142769'),
+	 ('Yes','CA-2016-142769');
+INSERT INTO public."returns" (returned,order_id) VALUES
+	 ('Yes','CA-2016-143336'),
+	 ('Yes','CA-2016-143336'),
+	 ('Yes','CA-2016-143336'),
+	 ('Yes','CA-2016-143840'),
+	 ('Yes','CA-2016-143840'),
+	 ('Yes','CA-2016-148614'),
+	 ('Yes','CA-2016-148614'),
+	 ('Yes','CA-2016-148950'),
+	 ('Yes','CA-2016-148950'),
+	 ('Yes','CA-2016-148950');
+INSERT INTO public."returns" (returned,order_id) VALUES
+	 ('Yes','CA-2016-151162'),
+	 ('Yes','CA-2016-151162'),
+	 ('Yes','CA-2016-151162'),
+	 ('Yes','CA-2016-151162'),
+	 ('Yes','CA-2016-151162');
