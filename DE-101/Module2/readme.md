@@ -50,17 +50,17 @@ CREATE TABLE people(Returned VARCHAR(10) NOT NULL PRIMARY KEY,
 ## 2.2 SQL запросы
 Условно разделим запросы на три категории:
 1. **Ключевые метрики**
-  - Total Sales
-  - Total Profit
-  - Profit Ratio
-  - Profit per Order
-  - Sales per Customer
-  - Avg. Discount
-  - Monthly Sales by Segment
-  - Monthly Sales by Product Category
+  - _Общий объем продаж (Total Sales)_
+  - _Общая прибыль (Total Profit)_
+  - _Коэффициент прибыли (Profit Ratio)_
+  - _Прибыль по заказам (Profit per Order)_
+  - _Продажи по клиентам (Sales per Customer)_
+  - _Средняя скидка (Avg. Discount)_
+  - _Ежемесячные продажи по сегментам (Monthly Sales by Segment)_
+  - _Ежемесячные продажи по категориям товаров (Monthly Sales by Product Category)_
 2. **Продуктовые метрики**
-  - Sales by Product Category over time
+  - _Продажи по категориям товаров с течением времени (Sales by Product Category over time)_
 3. **Анализ клиентов**
-  - Sales and Profit by Customer
-  - Customer Ranking
-  - Sales per region
+  - _Продажи и прибыль по клиентам (Sales and Profit by Customer)_
+  - _Рейтинг клиентов (Customer Ranking)_
+  - _Продажи по регионам (Sales per region)_
