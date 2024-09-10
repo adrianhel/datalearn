@@ -1,7 +1,48 @@
 # 2. Базы данных и SQL
 ## 2.1 Загрузка данных в БД
-После установки ***PostgreSQL*** и подключения к БД через ***DBeaver***, приступаем к загрузке данных.
-##### Скрипты создания таблиц:
+После установки ***PostgreSQL*** и подключения к БД через ***DBeaver***, приступаем к созданию таблиц и загрузке данных.
+##### Создание таблиц:
+- _таблица Orders_
+```sql
+DROP TABLE IF EXISTS orders;
+CREATE TABLE orders(Row_ID        INTEGER  NOT NULL PRIMARY KEY,
+                    Order_ID      VARCHAR(14) NOT NULL,
+                    Order_Date    DATE  NOT NULL,
+                    Ship_Date     DATE  NOT NULL,
+                    Ship_Mode     VARCHAR(14) NOT NULL,
+                    Customer_ID   VARCHAR(8) NOT NULL,
+                    Customer_Name VARCHAR(22) NOT NULL,
+                    Segment       VARCHAR(11) NOT NULL,
+                    Country       VARCHAR(13) NOT NULL,
+                    City          VARCHAR(17) NOT NULL,
+                    State         VARCHAR(20) NOT NULL,
+                    Postal_Code   INTEGER,
+                    Region        VARCHAR(7) NOT NULL,
+                    Product_ID    VARCHAR(15) NOT NULL,
+                    Category      VARCHAR(15) NOT NULL,
+                    SubCategory   VARCHAR(11) NOT NULL,
+                    Product_Name  VARCHAR(127) NOT NULL,
+                    Sales         NUMERIC(9,4) NOT NULL,
+                    Quantity      INTEGER  NOT NULL,
+                    Discount      NUMERIC(4,2) NOT NULL,
+                    Profit        NUMERIC(21,16) NOT NULL
+);
+```
+- _таблица People_
+```sql
+DROP TABLE IF EXISTS people;
+CREATE TABLE people(Person VARCHAR(17) NOT NULL PRIMARY KEY,
+                    Region VARCHAR(7)  NOT NULL
+);
+```
+- _таблица Returns_
+```sql
+DROP TABLE IF EXISTS returns;
+CREATE TABLE people(Returned VARCHAR(10) NOT NULL PRIMARY KEY,
+                    Order_id VARCHAR(25) NOT NULL
+);
+```
+##### Загрузка данных:
 - _таблица [Orders](https://github.com/adrianhel/datalearn/raw/main/DE-101/Module2/data/orders.sql)_
 - _таблица [People](https://github.com/adrianhel/datalearn/raw/main/DE-101/Module2/data/people.sql)_
 - _таблица [Returns](https://github.com/adrianhel/datalearn/raw/main/DE-101/Module2/data/returns.sql)_
