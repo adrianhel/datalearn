@@ -2,7 +2,7 @@
 ## 2.1 Загрузка данных в БД
 После установки ***PostgreSQL*** и подключения к БД через ***DBeaver***, приступаем к созданию таблиц и загрузке данных.
 ##### Создание таблиц:
-- _таблица Orders_
+- _таблица_ `Orders`
 ```sql
 DROP TABLE IF EXISTS orders;
 CREATE TABLE orders(Row_ID        INTEGER  NOT NULL PRIMARY KEY,
@@ -28,17 +28,17 @@ CREATE TABLE orders(Row_ID        INTEGER  NOT NULL PRIMARY KEY,
                     Profit        NUMERIC(21,16) NOT NULL
 );
 ```
-- _таблица People_
+- _таблица_ `People`
 ```sql
 DROP TABLE IF EXISTS people;
 CREATE TABLE people(Person VARCHAR(17) NOT NULL PRIMARY KEY,
                     Region VARCHAR(7)  NOT NULL
 );
 ```
-- _таблица Returns_
+- _таблица_ `Returns`
 ```sql
 DROP TABLE IF EXISTS returns;
-CREATE TABLE people(Returned VARCHAR(10) NOT NULL PRIMARY KEY,
+CREATE TABLE returns(Returned VARCHAR(10) NOT NULL PRIMARY KEY,
                     Order_id VARCHAR(25) NOT NULL
 );
 ```
