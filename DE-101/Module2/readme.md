@@ -39,7 +39,7 @@ CREATE TABLE people(Person VARCHAR(17) NOT NULL PRIMARY KEY,
 ```sql
 DROP TABLE IF EXISTS returns;
 CREATE TABLE returns(Returned VARCHAR(10) NOT NULL PRIMARY KEY,
-                    Order_id VARCHAR(25) NOT NULL
+                     Order_id VARCHAR(25) NOT NULL
 );
 ```
 ##### Загрузка данных:
