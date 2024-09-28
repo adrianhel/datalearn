@@ -39,5 +39,78 @@ SELECT
 FROM orders;
 ```
 
+##### Продажи и прибыль по категориям (Sales and Profit by Category)
+
+```sql
+SELECT
+	category,
+	CONCAT('$', ROUND(SUM(sales))) AS sales,
+	CONCAT('$', ROUND(SUM(profit))) AS profit
+FROM orders
+GROUP BY category
+ORDER BY category ASC;
+```
+
+##### Количество продаж по подкатегориям (Count of Sales by Sub-Category)
+
+```sql
+SELECT
+	subcategory,
+	COUNT(sales) AS count
+FROM orders
+GROUP BY subcategory
+ORDER BY 2 DESC;
+```
+
+##### Региональные менеджеры (Regional Managers)
+
+```sql
+SELECT 
+	p.person AS manager,
+	CONCAT('$', ROUND(SUM(sales))) AS sales,
+	CONCAT('$', ROUND(SUM(profit))) AS profit
+FROM orders AS o
+INNER JOIN people AS p ON o.region = p.region
+GROUP BY p.person
+ORDER BY p.person ASC;
+```
+
+##### Продажи и прибыль по сегментам (Sales and Profit by Segment)
+
+```sql
+SELECT 
+	segment,
+	CONCAT('$', ROUND(SUM(sales))) AS sales,
+	CONCAT('$', ROUND(SUM(profit))) AS profit
+FROM orders
+GROUP BY segment
+ORDER BY segment ASC;
+```
+
+##### Продажи и прибыль по штатам (Sales and Profit by State)
+
+```sql
+SELECT 
+	state,
+	CONCAT('$', ROUND(SUM(sales))) AS sales,
+	CONCAT('$', ROUND(SUM(profit))) AS profit
+FROM orders
+GROUP BY state
+ORDER BY state ASC;
+```
+
+##### Продажи и прибыль по регионам (Sales and Profit by Region)
+
+```sql
+SELECT 
+	region,
+	CONCAT('$', ROUND(SUM(sales))) AS sales,
+	CONCAT('$', ROUND(SUM(profit))) AS profit
+FROM orders
+GROUP BY region
+ORDER BY region ASC;
+```
+
+
 
 
