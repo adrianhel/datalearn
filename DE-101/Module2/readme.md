@@ -7,19 +7,37 @@
 - _Таблица [Returns](https://github.com/adrianhel/datalearn/raw/main/DE-101/Module2/data/returns.sql)_
 
 ## 2.2 SQL запросы
-Условно разделим запросы на три категории:
-1. **Ключевые метрики**
-  - _Общий объем продаж (Total Sales)_
-  - _Общая прибыль (Total Profit)_
-  - _Коэффициент прибыли (Profit Ratio)_
-  - _Прибыль по заказам (Profit per Order)_
-  - _Продажи по клиентам (Sales per Customer)_
-  - _Средняя скидка (Avg. Discount)_
-  - _Ежемесячные продажи по сегментам (Monthly Sales by Segment)_
-  - _Ежемесячные продажи по категориям товаров (Monthly Sales by Product Category)_
-2. **Продуктовые метрики**
-  - _Продажи по категориям товаров с течением времени (Sales by Product Category over time)_
-3. **Анализ клиентов**
-  - _Продажи и прибыль по клиентам (Sales and Profit by Customer)_
-  - _Рейтинг клиентов (Customer Ranking)_
-  - _Продажи по регионам (Sales per region)_
+##### Общий объем продаж (Total Sales)
+
+```sql
+SELECT 
+	CONCAT('$', ROUND(SUM(sales)))
+FROM orders;
+  ```
+  
+##### Общая прибыль (Total Profit)
+
+```sql
+SELECT 
+	CONCAT('$', ROUND(SUM(profit)))
+FROM orders;
+```
+
+##### Коэффициент прибыли (Profit Ratio)
+
+```sql
+SELECT 
+	CONCAT(ROUND(SUM(profit) / (SUM(sales)) * 100), '%')
+FROM orders;
+```
+
+##### Средняя скидка (Avg. Discount)
+
+```sql
+SELECT 
+	CONCAT(ROUND(AVG(discount) * 100), '%')
+FROM orders;
+```
+
+
+
