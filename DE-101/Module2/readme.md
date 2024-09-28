@@ -5,10 +5,10 @@
 - _таблица_ `Orders`
 ```sql
 DROP TABLE IF EXISTS orders;
-CREATE TABLE orders(Row_ID        INTEGER  NOT NULL PRIMARY KEY,
+CREATE TABLE orders(Row_ID        INTEGER NOT NULL PRIMARY KEY,
                     Order_ID      VARCHAR(14) NOT NULL,
-                    Order_Date    DATE  NOT NULL,
-                    Ship_Date     DATE  NOT NULL,
+                    Order_Date    DATE NOT NULL,
+                    Ship_Date     DATE NOT NULL,
                     Ship_Mode     VARCHAR(14) NOT NULL,
                     Customer_ID   VARCHAR(8) NOT NULL,
                     Customer_Name VARCHAR(22) NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE orders(Row_ID        INTEGER  NOT NULL PRIMARY KEY,
                     SubCategory   VARCHAR(11) NOT NULL,
                     Product_Name  VARCHAR(127) NOT NULL,
                     Sales         NUMERIC(9,4) NOT NULL,
-                    Quantity      INTEGER  NOT NULL,
+                    Quantity      INTEGER NOT NULL,
                     Discount      NUMERIC(4,2) NOT NULL,
                     Profit        NUMERIC(21,16) NOT NULL
 );
@@ -43,9 +43,9 @@ CREATE TABLE returns(Returned VARCHAR(10) NOT NULL PRIMARY KEY,
 );
 ```
 ##### Загрузка данных:
-- _таблица [Orders](https://github.com/adrianhel/datalearn/raw/main/DE-101/Module2/data/orders.sql)_
-- _таблица [People](https://github.com/adrianhel/datalearn/raw/main/DE-101/Module2/data/people.sql)_
-- _таблица [Returns](https://github.com/adrianhel/datalearn/raw/main/DE-101/Module2/data/returns.sql)_
+- _для [Orders](https://github.com/adrianhel/datalearn/raw/main/DE-101/Module2/data/orders.sql)_
+- _для [People](https://github.com/adrianhel/datalearn/raw/main/DE-101/Module2/data/people.sql)_
+- _для [Returns](https://github.com/adrianhel/datalearn/raw/main/DE-101/Module2/data/returns.sql)_
 
 ## 2.2 SQL запросы
 Условно разделим запросы на три категории:
