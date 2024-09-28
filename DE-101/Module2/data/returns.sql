@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS returns;
 CREATE TABLE returns(
-   Returned   VARCHAR(10) NOT NULL PRIMARY KEY
+   Returned   VARCHAR(10) NOT NULL
   ,Order_id   VARCHAR(25) NOT NULL
 );
 INSERT INTO returns(Returned,Order_id) VALUES ('Yes','CA-2016-100762');
