@@ -39,6 +39,31 @@ SELECT
 FROM orders;
 ```
 
+##### Продажи и прибыль по годам (Sales and Profit by Year)
+
+```sql
+SELECT 
+	EXTRACT(YEAR FROM order_date) AS year,
+	CONCAT('$', ROUND(SUM(sales))) AS sales,
+	CONCAT('$', ROUND(SUM(profit))) AS profit
+FROM orders
+GROUP BY 1
+ORDER BY 1 ASC;
+```
+
+##### Топ-10 городов по продажам и прибыли (Number Orders and Sales by City)
+
+```sql
+SELECT 
+	city,
+	COUNT(DISTINCT order_id) as number_orders,
+	ROUND(SUM(sales)) AS sales
+FROM orders
+GROUP BY city
+ORDER BY 3 DESC
+LIMIT 10;
+```
+
 ##### Продажи и прибыль по категориям (Sales and Profit by Category)
 
 ```sql
