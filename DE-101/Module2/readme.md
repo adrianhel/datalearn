@@ -7,7 +7,7 @@
 - _Таблица [Returns](https://github.com/adrianhel/datalearn/raw/main/DE-101/Module2/data/returns.sql)_
 
 ## 2.2 SQL запросы
-##### Общий объем продаж (Total Sales)
+##### 2.2.1 Общий объем продаж (Total Sales)
 
 ```sql
 SELECT 
@@ -15,7 +15,7 @@ SELECT
 FROM orders;
   ```
   
-##### Общая прибыль (Total Profit)
+##### 2.2.2 Общая прибыль (Total Profit)
 
 ```sql
 SELECT 
@@ -23,7 +23,7 @@ SELECT
 FROM orders;
 ```
 
-##### Коэффициент прибыли (Profit Ratio)
+##### 2.2.3 Коэффициент прибыли (Profit Ratio)
 
 ```sql
 SELECT 
@@ -31,7 +31,7 @@ SELECT
 FROM orders;
 ```
 
-##### Средняя скидка (Avg. Discount)
+##### 2.2.4 Средняя скидка (Avg. Discount)
 
 ```sql
 SELECT 
@@ -39,7 +39,7 @@ SELECT
 FROM orders;
 ```
 
-##### Продажи и прибыль по годам (Sales and Profit by Year)
+##### 2.2.5 Продажи и прибыль по годам (Sales and Profit by Year)
 
 ```sql
 SELECT 
@@ -51,12 +51,12 @@ GROUP BY 1
 ORDER BY 1 ASC;
 ```
 
-##### Топ-10 городов по продажам и прибыли (Number Orders and Sales by City)
+##### 2.2.6 Топ-10 городов по продажам и прибыли (Number Orders and Sales by City)
 
 ```sql
 SELECT 
 	city,
-	COUNT(DISTINCT order_id) as number_orders,
+	COUNT(DISTINCT order_id) AS number_orders,
 	ROUND(SUM(sales)) AS sales
 FROM orders
 GROUP BY city
@@ -64,7 +64,19 @@ ORDER BY 3 DESC
 LIMIT 10;
 ```
 
-##### Продажи и прибыль по категориям (Sales and Profit by Category)
+##### 2.2.7 Топ-10 клиентов (Customer Ranking)
+
+```sql
+SELECT 
+	customer_name,
+	ROUND(SUM(sales)) AS sales
+FROM orders
+GROUP BY customer_name
+ORDER BY 2 desc
+LIMIT 10;
+```
+
+##### 2.2.8 Продажи и прибыль по категориям (Sales and Profit by Category)
 
 ```sql
 SELECT
@@ -76,7 +88,7 @@ GROUP BY category
 ORDER BY category ASC;
 ```
 
-##### Количество продаж по подкатегориям (Count of Sales by Sub-Category)
+##### 2.2.9 Количество продаж по подкатегориям (Count of Sales by Sub-Category)
 
 ```sql
 SELECT
@@ -87,7 +99,7 @@ GROUP BY subcategory
 ORDER BY 2 DESC;
 ```
 
-##### Региональные менеджеры (Regional Managers)
+##### 2.2.10 Региональные менеджеры (Regional Managers)
 
 ```sql
 SELECT 
@@ -100,7 +112,7 @@ GROUP BY p.person
 ORDER BY p.person ASC;
 ```
 
-##### Продажи и прибыль по сегментам (Sales and Profit by Segment)
+##### 2.2.11 Продажи и прибыль по сегментам (Sales and Profit by Segment)
 
 ```sql
 SELECT 
@@ -112,7 +124,7 @@ GROUP BY segment
 ORDER BY segment ASC;
 ```
 
-##### Продажи и прибыль по штатам (Sales and Profit by State)
+##### 2.2.12 Продажи и прибыль по штатам (Sales and Profit by State)
 
 ```sql
 SELECT 
@@ -124,7 +136,7 @@ GROUP BY state
 ORDER BY state ASC;
 ```
 
-##### Продажи и прибыль по регионам (Sales and Profit by Region)
+##### 2.2.13 Продажи и прибыль по регионам (Sales and Profit by Region)
 
 ```sql
 SELECT 
@@ -135,7 +147,13 @@ FROM orders
 GROUP BY region
 ORDER BY region ASC;
 ```
+##### 2.2.14 Возвраты (Returned) 
 
-
-
-
+```sql
+SELECT
+	EXTRACT(YEAR FROM o.order_date) AS year,
+	COUNT(*)
+FROM orders AS o
+LEFT JOIN returns AS r ON o.order_id = r.order_id
+GROUP BY 1;
+```
