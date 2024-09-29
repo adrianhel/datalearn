@@ -147,13 +147,17 @@ FROM orders
 GROUP BY region
 ORDER BY region ASC;
 ```
-##### 2.2.14 Возвраты (Returned) 
+
+##### 2.2.14 Количество возвратов по месяцам (Returned by Month)
 
 ```sql
-SELECT
+SELECT	
 	EXTRACT(YEAR FROM o.order_date) AS year,
-	COUNT(*)
+	EXTRACT(MONTH FROM o.order_date) AS month,
+	COUNT(*) AS cnt
 FROM orders AS o
-LEFT JOIN returns AS r ON o.order_id = r.order_id
-GROUP BY 1;
+INNER JOIN returns AS r ON o.order_id = r.order_id
+GROUP BY 1, 2
+ORDER BY 1, 2 ASC;
 ```
+
