@@ -51,7 +51,7 @@ GROUP BY 1
 ORDER BY 1 ASC;
 ```
 
-##### 2.2.6 Топ-10 городов по продажам и прибыли (Number Orders and Sales by City)
+##### 2.2.6 Топ-10 Городов по заказам и продажам (Number Orders and Sales by City)
 
 ```sql
 SELECT 
@@ -64,7 +64,7 @@ ORDER BY 3 DESC
 LIMIT 10;
 ```
 
-##### 2.2.7 Топ-10 клиентов (Customer Ranking)
+##### 2.2.7 Топ-10 Рейтинга клиентов (Customer Ranking)
 
 ```sql
 SELECT 
