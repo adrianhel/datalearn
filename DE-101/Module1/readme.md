@@ -8,7 +8,7 @@
 - ***Business Layer*** — слой для доступа к данным.
 > Данные как товар для целевой аудитории — бизнес клиентов, аналитиков.
 
-![architecture_of_the_analytical_solution.png](img/architecture_of_the_analytical_solution.png)
+<img src="img/architecture_of_the_analytical_solution.png" width="90%">
 
 ##### [Скачать схему](data/architecture_of_the_analytical_solution.zip)
 
@@ -43,31 +43,31 @@
 Создаём диаграммы на основе сводных таблиц, следуя составленному плану:
 - Динамика дохода и прибыли
 
-![chart_01.png](img/chart_01.png)
+<img src="img/chart_01.png" width="70%">
 
 - Категории товаров (сравнение)
 
-![chart_02.png](img/chart_02.png)
+<img src="img/chart_02.png" width="70%">
 
 - Суб-категории товаров (сравнение)
 
-![chart_03.png](img/chart_03.png)
+<img src="img/chart_03.png" width="70%">
 
 - Региональные менеджеры (сравнение)
 
-![chart_04.png](img/chart_04.png)
+<img src="img/chart_04.png" width="70%">
 
 - Сегменты (сравнение)
 
-![chart_05.png](img/chart_05.png)
+<img src="img/chart_05.png" width="70%">
 
 - Динамика по сегментам
 
-![chart_06.png](img/chart_06.png)
+<img src="img/chart_06.png" width="70%">
 
 - По штатам
 
-![chart_07.png](img/chart_07.png)
+<img src="img/chart_07.png" width="70%">
 
 - Основные показатели
 
@@ -75,11 +75,11 @@
 
 - По регионам (сравнение)
 
-![chart_08.png](img/chart_08.png)
+<img src="img/chart_08.png" width="70%">
 
 - По возвратам в %
 
-![chart_09.png](img/chart_09.png)
+<img src="img/chart_09.png" width="70%">
 
 ### 1.2.4 Создание дашборда
 На основе созданных диаграмм собираем дашборд. Добавляем срезы и подключаем их к отчётам. Всё красиво расставляем.
