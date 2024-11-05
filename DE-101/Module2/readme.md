@@ -2,16 +2,16 @@
 ## 2.1 Загрузка данных в БД
 После установки ***PostgreSQL*** и подключения к БД через ***DBeaver***, приступаем к созданию таблиц и загрузке данных.
 ##### Создание таблиц и загрузка данных:
-- _Таблица [Orders](https://github.com/adrianhel/datalearn/raw/main/DE-101/Module2/data/orders.sql)_
-- _Таблица [People](https://github.com/adrianhel/datalearn/raw/main/DE-101/Module2/data/people.sql)_
-- _Таблица [Returns](https://github.com/adrianhel/datalearn/raw/main/DE-101/Module2/data/returns.sql)_
+- _Таблица [Orders](data/orders.sql)_
+- _Таблица [People](data/people.sql)_
+- _Таблица [Returns](data/returns.sql)_
 
 ## 2.2 SQL запросы
 ##### 2.2.1 Общий объем продаж (Total Sales)
 
 ```sql
 SELECT 
-	CONCAT('$', ROUND(SUM(sales)))
+    CONCAT('$', ROUND(SUM(sales)))
 FROM orders;
   ```
   
@@ -19,7 +19,7 @@ FROM orders;
 
 ```sql
 SELECT 
-	CONCAT('$', ROUND(SUM(profit)))
+    CONCAT('$', ROUND(SUM(profit)))
 FROM orders;
 ```
 
@@ -27,7 +27,7 @@ FROM orders;
 
 ```sql
 SELECT 
-	CONCAT(ROUND(SUM(profit) / (SUM(sales)) * 100), '%')
+    CONCAT(ROUND(SUM(profit) / (SUM(sales)) * 100), '%')
 FROM orders;
 ```
 
@@ -35,7 +35,7 @@ FROM orders;
 
 ```sql
 SELECT 
-	CONCAT(ROUND(AVG(discount) * 100), '%')
+    CONCAT(ROUND(AVG(discount) * 100), '%')
 FROM orders;
 ```
 
@@ -43,9 +43,9 @@ FROM orders;
 
 ```sql
 SELECT 
-	EXTRACT(YEAR FROM order_date) AS year,
-	CONCAT('$', ROUND(SUM(sales))) AS sales,
-	CONCAT('$', ROUND(SUM(profit))) AS profit
+    EXTRACT(YEAR FROM order_date) AS year,
+    CONCAT('$', ROUND(SUM(sales))) AS sales,
+    CONCAT('$', ROUND(SUM(profit))) AS profit
 FROM orders
 GROUP BY 1
 ORDER BY 1 ASC;
@@ -55,9 +55,9 @@ ORDER BY 1 ASC;
 
 ```sql
 SELECT 
-	city,
-	COUNT(DISTINCT order_id) AS number_orders,
-	ROUND(SUM(sales)) AS sales
+    city,
+    COUNT(DISTINCT order_id) AS number_orders,
+    ROUND(SUM(sales)) AS sales
 FROM orders
 GROUP BY city
 ORDER BY 3 DESC
@@ -68,8 +68,8 @@ LIMIT 10;
 
 ```sql
 SELECT 
-	customer_name,
-	ROUND(SUM(sales)) AS sales
+    customer_name,
+    ROUND(SUM(sales)) AS sales
 FROM orders
 GROUP BY customer_name
 ORDER BY 2 desc
@@ -80,9 +80,9 @@ LIMIT 10;
 
 ```sql
 SELECT
-	category,
-	CONCAT('$', ROUND(SUM(sales))) AS sales,
-	CONCAT('$', ROUND(SUM(profit))) AS profit
+    category,
+    CONCAT('$', ROUND(SUM(sales))) AS sales,
+    CONCAT('$', ROUND(SUM(profit))) AS profit
 FROM orders
 GROUP BY category
 ORDER BY category ASC;
@@ -92,8 +92,8 @@ ORDER BY category ASC;
 
 ```sql
 SELECT
-	subcategory,
-	COUNT(sales) AS count
+    subcategory,
+    COUNT(sales) AS count
 FROM orders
 GROUP BY subcategory
 ORDER BY 2 DESC;
@@ -103,9 +103,9 @@ ORDER BY 2 DESC;
 
 ```sql
 SELECT 
-	p.person AS manager,
-	CONCAT('$', ROUND(SUM(sales))) AS sales,
-	CONCAT('$', ROUND(SUM(profit))) AS profit
+    p.person AS manager,
+    CONCAT('$', ROUND(SUM(sales))) AS sales,
+    CONCAT('$', ROUND(SUM(profit))) AS profit
 FROM orders AS o
 INNER JOIN people AS p ON o.region = p.region
 GROUP BY p.person
@@ -116,9 +116,9 @@ ORDER BY p.person ASC;
 
 ```sql
 SELECT 
-	segment,
-	CONCAT('$', ROUND(SUM(sales))) AS sales,
-	CONCAT('$', ROUND(SUM(profit))) AS profit
+    segment,
+    CONCAT('$', ROUND(SUM(sales))) AS sales,
+    CONCAT('$', ROUND(SUM(profit))) AS profit
 FROM orders
 GROUP BY segment
 ORDER BY segment ASC;
@@ -128,9 +128,9 @@ ORDER BY segment ASC;
 
 ```sql
 SELECT 
-	state,
-	CONCAT('$', ROUND(SUM(sales))) AS sales,
-	CONCAT('$', ROUND(SUM(profit))) AS profit
+    state,
+    CONCAT('$', ROUND(SUM(sales))) AS sales,
+    CONCAT('$', ROUND(SUM(profit))) AS profit
 FROM orders
 GROUP BY state
 ORDER BY state ASC;
@@ -140,9 +140,9 @@ ORDER BY state ASC;
 
 ```sql
 SELECT 
-	region,
-	CONCAT('$', ROUND(SUM(sales))) AS sales,
-	CONCAT('$', ROUND(SUM(profit))) AS profit
+    region,
+    CONCAT('$', ROUND(SUM(sales))) AS sales,
+    CONCAT('$', ROUND(SUM(profit))) AS profit
 FROM orders
 GROUP BY region
 ORDER BY region ASC;
@@ -152,9 +152,9 @@ ORDER BY region ASC;
 
 ```sql
 SELECT	
-	EXTRACT(YEAR FROM o.order_date) AS year,
-	EXTRACT(MONTH FROM o.order_date) AS month,
-	COUNT(*) AS cnt
+    EXTRACT(YEAR FROM o.order_date) AS year,
+    EXTRACT(MONTH FROM o.order_date) AS month,
+    COUNT(*) AS cnt
 FROM orders AS o
 INNER JOIN returns AS r ON o.order_id = r.order_id
 GROUP BY 1, 2

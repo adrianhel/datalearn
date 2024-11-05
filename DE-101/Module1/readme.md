@@ -8,13 +8,16 @@
 - ***Business Layer*** — слой для доступа к данным.
 > Данные как товар для целевой аудитории — бизнес клиентов, аналитиков.
 
-![architecture_of_the_analytical_solution](https://github.com/user-attachments/assets/c2425495-5def-4f4a-a0b2-9939bbd8094e)
+![architecture_of_the_analytical_solution.png](img/architecture_of_the_analytical_solution.png)
+
+##### [Скачать схему](data/architecture_of_the_analytical_solution.zip)
 
 ## 1.2. Работа в Excel
-Задача построить отчёты и дашборд в Excel на основе [полученных данных](https://github.com/user-attachments/files/16646274/Sample.-.Superstore.xls).
+Задача построить отчёты и дашборд в Excel на основе [полученных данных](data/Sample%20-%20Superstore.xls).
 
 ### 1.2.1 Знакомство с данными
-После ознакомления с первичными данными, последовало их объединение в одну рабочую таблицу `Orders`, на основе которой будет построена отчётность и дашборд.
+После ознакомления с первичными данными, последовало их объединение в одну рабочую таблицу `Orders`, 
+на основе которой будет построена отчётность и дашборд.
 
 ### 1.2.2 Составление плана отчётности
 Важно определить что будет выведено и в каком виде, т.к. от этого зависит результат последующего анализа.
@@ -40,47 +43,47 @@
 Создаём диаграммы на основе сводных таблиц, следуя составленному плану:
 - Динамика дохода и прибыли
 
-![chart_01](https://github.com/user-attachments/assets/dee73b21-ff9d-4b24-bca6-0c1914bafc53)
+![chart_01.png](img/chart_01.png)
 
 - Категории товаров (сравнение)
 
-![chart_02](https://github.com/user-attachments/assets/e41994f4-4bf3-4a23-aaa8-181f0f7f71e8)
+![chart_02.png](img/chart_02.png)
 
 - Суб-категории товаров (сравнение)
 
-![chart_03](https://github.com/user-attachments/assets/a6bd9f13-195d-4da1-92c4-957b621e06d0)
+![chart_03.png](img/chart_03.png)
 
 - Региональные менеджеры (сравнение)
 
-![chart_04](https://github.com/user-attachments/assets/046f1017-04d5-43ae-b4bf-ff1b25d01a5c)
+![chart_04.png](img/chart_04.png)
 
 - Сегменты (сравнение)
 
-![chart_05](https://github.com/user-attachments/assets/d5aff407-2b04-49d7-9e7a-6bd04568f784)
+![chart_05.png](img/chart_05.png)
 
 - Динамика по сегментам
 
-![chart_06](https://github.com/user-attachments/assets/51df2e75-d3cd-40c8-a4ff-036a92a4b161)
+![chart_06.png](img/chart_06.png)
 
 - По штатам
 
-![chart_07](https://github.com/user-attachments/assets/cabd7118-064c-4aa0-8ea7-c9ff79268417)
+![chart_07.png](img/chart_07.png)
 
 - Основные показатели
 
-![table](https://github.com/user-attachments/assets/73d57297-5bab-4b06-95d8-c421f7c47b7f)
+![table.png](img/table.png)
 
-- По регионам  (сравнение)
+- По регионам (сравнение)
 
-![chart_08](https://github.com/user-attachments/assets/a2bbdf03-78d1-4ff4-82d6-14111af713f3)
+![chart_08.png](img/chart_08.png)
 
 - По возвратам в %
 
-![chart_09](https://github.com/user-attachments/assets/de390dd3-08c1-4d08-876a-8cbfe907cef6)
+![chart_09.png](img/chart_09.png)
 
 ### 1.2.4 Создание дашборда
 На основе созданных диаграмм собираем дашборд. Добавляем срезы и подключаем их к отчётам. Всё красиво расставляем.
 
-![dashboard](https://github.com/user-attachments/assets/06606650-d566-477f-9e39-baa66c8bd6d9)
+![dashboard.png](img/dashboard.png)
 
-##### [Скачать Дашборд](https://github.com/user-attachments/files/16679641/superstore.dashboard.xlsx)
+##### [Скачать Дашборд](data/superstore%20dashboard.xlsx)
