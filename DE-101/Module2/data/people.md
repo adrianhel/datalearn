@@ -8,8 +8,8 @@ CREATE TABLE people(
 );
 
 INSERT INTO people(Person,Region) 
-	 VALUES ('Anna Andreadi','West'),
-            ('Chuck Magee','East'),
-            ('Kelly Williams','Central'),
-            ('Cassandra Brandow','South');
+VALUES ('Anna Andreadi','West'),
+       ('Chuck Magee','East'),
+       ('Kelly Williams','Central'),
+       ('Cassandra Brandow','South');
 ```
