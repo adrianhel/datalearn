@@ -6,9 +6,9 @@
 ## 2.1 Загрузка данных в БД
 После установки **PostgreSQL** и подключения к БД через **DBeaver**, приступаем к созданию таблиц и загрузке данных.
 #### Создание таблиц и загрузка данных
-- _Таблица [Orders](data/orders.sql)_
-- _Таблица [People](data/people.sql)_
-- _Таблица [Returns](data/returns.sql)_
+- _Таблица [Orders](data/orders.md)_
+- _Таблица [People](data/people.md)_
+- _Таблица [Returns](data/returns.md)_
 
 ## 2.2 SQL запросы
 В соответсвии с планом отчетности пишем [SQL запросы](data/sql_querys.md) к нашей БД.
