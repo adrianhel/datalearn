@@ -1,6 +1,9 @@
 ```sql
-DROP TABLE IF EXISTS calendar_dim;
-CREATE TABLE calendar_dim
+CREATE SCHEMA dwh;
+
+--CALENDAR
+DROP TABLE IF EXISTS dwh.calendar_dim;
+CREATE TABLE dwh.calendar_dim
 (
  order_date date NOT NULL,
  ship_date  date NOT NULL,
@@ -12,8 +15,9 @@ CREATE TABLE calendar_dim
  CONSTRAINT PK_1 PRIMARY KEY ( order_date, ship_date )
 );
 
-DROP TABLE IF EXISTS customer_dim;
-CREATE TABLE customer_dim
+--CUSTOMER
+DROP TABLE IF EXISTS dwh.customer_dim;
+CREATE TABLE dwh.customer_dim
 (
  customer_id   serial NOT NULL,
  customer_name varchar(27) NOT NULL,
@@ -21,8 +25,9 @@ CREATE TABLE customer_dim
  CONSTRAINT PK_6 PRIMARY KEY ( customer_id )
 );
 
-DROP TABLE IF EXISTS geography_dim;
-CREATE TABLE geography_dim
+--GEOGRAPHY
+DROP TABLE IF EXISTS dwh.geography_dim;
+CREATE TABLE dwh.geography_dim
 (
  geo_id      serial NOT NULL,
  country     varchar(13) NOT NULL,
@@ -33,8 +38,9 @@ CREATE TABLE geography_dim
  CONSTRAINT PK_3 PRIMARY KEY ( geo_id )
 );
 
-DROP TABLE IF EXISTS product_dim;
-CREATE TABLE product_dim
+--PRODUCT
+DROP TABLE IF EXISTS dwh.product_dim;
+CREATE TABLE dwh.product_dim
 (
  product_id   serial NOT NULL,
  category     varchar(15) NOT NULL,
@@ -44,16 +50,18 @@ CREATE TABLE product_dim
  CONSTRAINT PK_5 PRIMARY KEY ( product_id )
 );
 
-DROP TABLE IF EXISTS shipping_dim;
-CREATE TABLE shipping_dim
+--SHIPPING
+DROP TABLE IF EXISTS dwh.shipping_dim;
+CREATE TABLE dwh.shipping_dim
 (
  ship_id   serial NOT NULL,
  ship_mode varchar(14) NOT NULL,
  CONSTRAINT PK_4 PRIMARY KEY ( ship_id )
 );
 
-DROP TABLE IF EXISTS sales_fact;
-CREATE TABLE sales_fact
+--METRICS
+DROP TABLE IF EXISTS dwh.sales_fact;
+CREATE TABLE dwh.sales_fact
 (
  row_id      int4range NOT NULL,
  order_id    varchar(14) NOT NULL,
