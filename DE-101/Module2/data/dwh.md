@@ -1,106 +1,197 @@
 ```sql
-CREATE SCHEMA dwh;
-
 --CALENDAR
+--creating a table
 DROP TABLE IF EXISTS dwh.calendar_dim;
 CREATE TABLE dwh.calendar_dim
 (
- order_date date NOT NULL,
- ship_date  date NOT NULL,
- year       int4range NOT NULL,
- quarter    varchar(5) NOT NULL,
- month      int4range NOT NULL,
- week       int4range NOT NULL,
- week_day   int4range NOT NULL,
- CONSTRAINT PK_1 PRIMARY KEY ( order_date, ship_date )
+date_id     serial NOT NULL,
+year        int NOT NULL,
+quarter     int NOT NULL,
+month       int NOT NULL,
+week        int NOT NULL,
+date        date NOT NULL,
+week_day    varchar(20) NOT NULL,
+leap        varchar(20) NOT NULL,
+CONSTRAINT PK_calendar_dim PRIMARY KEY ( date_id )
 );
 
+--deleting rows
+TRUNCATE TABLE dwh.calendar_dim;
+
+--inserting
+INSERT INTO dwh.calendar_dim 
+SELECT
+to_char(date,'yyyymmdd')::int as date_id,  
+       EXTRACT('year' FROM date)::int as year,
+       EXTRACT('quarter' FROM date)::int as quarter,
+       EXTRACT('month' FROM date)::int as month,
+       EXTRACT('week' FROM date)::int as week,
+       date::date,
+       to_char(date, 'dy') as week_day,
+       EXTRACT('day' FROM
+               (date + interval '2 month - 1 day')
+              ) = 29
+       as leap
+  FROM generate_series(date '2000-01-01',
+                       date '2030-01-01',
+                       interval '1 day')
+       as t(date);
+       
+--checking
+SELECT * FROM dwh.calendar_dim; 
+
+
 --CUSTOMER
+--creating a table
 DROP TABLE IF EXISTS dwh.customer_dim;
 CREATE TABLE dwh.customer_dim
 (
- customer_id   serial NOT NULL,
- customer_name varchar(27) NOT NULL,
- segment       varchar(11) NOT NULL,
- CONSTRAINT PK_6 PRIMARY KEY ( customer_id )
+cust_id       serial NOT NULL,
+customer_id   varchar(8) NOT NULL, --id can't be NULL
+customer_name varchar(22) NOT NULL,
+CONSTRAINT PK_customer_dim PRIMARY KEY ( cust_id )
 );
 
+--deleting rows
+TRUNCATE TABLE dwh.customer_dim;
+
+--inserting
+INSERT INTO dwh.customer_dim 
+SELECT 100+ROW_NUMBER() OVER(), customer_id, customer_name 
+FROM (SELECT DISTINCT customer_id, customer_name FROM superstore.orders ) a;
+
+--checking
+SELECT * FROM dwh.customer_dim cd; 
+
 --GEOGRAPHY
-DROP TABLE IF EXISTS dwh.geography_dim;
-CREATE TABLE dwh.geography_dim
+DROP TABLE IF EXISTS dwh.geo_dim;
+CREATE TABLE dwh.geo_dim
 (
  geo_id      serial NOT NULL,
  country     varchar(13) NOT NULL,
  city        varchar(17) NOT NULL,
- "state"     varchar(11) NOT NULL,
- region      varchar(7) NOT NULL,
- postal_code int4range NOT NULL,
- CONSTRAINT PK_3 PRIMARY KEY ( geo_id )
+ state       varchar(20) NOT NULL,
+ postal_code varchar(20) NULL,       --can't be integer, we lost first 0
+ CONSTRAINT PK_geo_dim PRIMARY KEY ( geo_id )
 );
+
+--deleting rows
+TRUNCATE TABLE dwh.geo_dim;
+
+--generating geo_id and inserting rows from orders
+INSERT INTO dwh.geo_dim 
+SELECT 100+ROW_NUMBER() OVER(), country, city, state, postal_code 
+FROM (SELECT DISTINCT country, city, state, postal_code FROM superstore.orders ) a;
+
+--data quality check
+SELECT DISTINCT country, city, state, postal_code FROM dwh.geo_dim
+WHERE country IS NULL OR city IS NULL OR postal_code IS NULL;
+
+--city Burlington, Vermont doesn't have postal code
+UPDATE dwh.geo_dim
+SET postal_code = '05401'
+WHERE city = 'Burlington' AND postal_code IS NULL;
+
+--also update source file
+UPDATE superstore.orders
+SET postal_code = '05401'
+WHERE city = 'Burlington' AND postal_code IS NULL;
+
+--chek city Burlington
+SELECT * FROM dwh.geo_dim
+WHERE city = 'Burlington';
 
 --PRODUCT
-DROP TABLE IF EXISTS dwh.product_dim;
+--creating a table
+DROP TABLE IF EXISTS dwh.product_dim ;
 CREATE TABLE dwh.product_dim
 (
- product_id   serial NOT NULL,
- category     varchar(15) NOT NULL,
- subcategory  varchar(11) NOT NULL,
- segment      varchar(11) NOT NULL,
+ prod_id      serial NOT NULL, --we created surrogated key
+ product_id   varchar(50) NOT NULL,  --exist in ORDERS table
  product_name varchar(127) NOT NULL,
- CONSTRAINT PK_5 PRIMARY KEY ( product_id )
+ category     varchar(15) NOT NULL,
+ sub_category varchar(11) NOT NULL,
+ segment      varchar(11) NOT NULL,
+ CONSTRAINT PK_product_dim PRIMARY KEY ( prod_id )
 );
 
+--deleting rows
+TRUNCATE TABLE dwh.product_dim;
+
+--inserting
+INSERT INTO dwh.product_dim 
+SELECT 100+ROW_NUMBER() OVER() AS prod_id ,product_id, product_name, category, subcategory, segment 
+FROM (SELECT DISTINCT product_id, product_name, category, subcategory, segment FROM superstore.orders ) a;
+
+--checking
+SELECT * FROM dwh.product_dim cd;
+
 --SHIPPING
+--creating a table
 DROP TABLE IF EXISTS dwh.shipping_dim;
 CREATE TABLE dwh.shipping_dim
 (
- ship_id   serial NOT NULL,
- ship_mode varchar(14) NOT NULL,
- CONSTRAINT PK_4 PRIMARY KEY ( ship_id )
+ ship_id       serial NOT NULL,
+ shipping_mode varchar(14) NOT NULL,
+ CONSTRAINT PK_shipping_dim PRIMARY KEY ( ship_id )
 );
+
+--deleting rows
+TRUNCATE TABLE dwh.shipping_dim;
+
+--generating ship_id AND inserting ship_mode FROM orders
+INSERT INTO dwh.shipping_dim 
+SELECT 100+ROW_NUMBER() OVER(), ship_mode 
+FROM (SELECT distinct ship_mode FROM superstore.orders ) a;
+
+--checking
+SELECT * FROM dwh.shipping_dim sd;
 
 --METRICS
-DROP TABLE IF EXISTS dwh.sales_fact;
+--creating a table
+DROP TABLE IF EXISTS dwh.sales_fact ;
 CREATE TABLE dwh.sales_fact
 (
- row_id      int4range NOT NULL,
- order_id    varchar(14) NOT NULL,
- sales       numeric(9,4) NOT NULL,
- quantity    int4range NOT NULL,
- discount    numeric(4,2) NOT NULL,
- profit      numeric(21,16) NOT NULL,
- order_date  date NOT NULL,
- ship_date   date NOT NULL,
- ship_id     int NOT NULL,
- geo_id      int NOT NULL,
- product_id  int NOT NULL,
- customer_id serial NOT NULL,
- CONSTRAINT PK_2 PRIMARY KEY ( row_id ),
- CONSTRAINT FK_1 FOREIGN KEY ( order_date, ship_date ) REFERENCES dwh.calendar_dim ( order_date, ship_date ),
- CONSTRAINT FK_2 FOREIGN KEY ( ship_id ) REFERENCES dwh.shipping_dim ( ship_id ),
- CONSTRAINT FK_3 FOREIGN KEY ( geo_id ) REFERENCES dwh.geography_dim ( geo_id ),
- CONSTRAINT FK_4 FOREIGN KEY ( product_id ) REFERENCES dwh.product_dim ( product_id ),
- CONSTRAINT FK_5 FOREIGN KEY ( customer_id ) REFERENCES dwh.customer_dim ( customer_id )
-);
+ sales_id      serial NOT NULL,
+ cust_id       integer NOT NULL,
+ order_date_id integer NOT NULL,
+ ship_date_id  integer NOT NULL,
+ prod_id       integer NOT NULL,
+ ship_id       integer NOT NULL,
+ geo_id        integer NOT NULL,
+ order_id      varchar(25) NOT NULL,
+ sales         numeric(9,4) NOT NULL,
+ profit        numeric(21,16) NOT NULL,
+ quantity      int4 NOT NULL,
+ discount      numeric(4,2) NOT NULL,
+ CONSTRAINT PK_sales_fact PRIMARY KEY ( sales_id ));
 
-CREATE INDEX FK_1 ON dwh.sales_fact
-(
- order_date,
- ship_date
-);
+--inserting
+INSERT INTO dwh.sales_fact 
+SELECT
+	 100+ROW_NUMBER() OVER() AS sales_id
+	 ,cust_id
+	 ,to_char(order_date,'yyyymmdd')::int AS order_date_id
+	 ,to_char(ship_date,'yyyymmdd')::int AS ship_date_id
+	 ,p.prod_id
+	 ,s.ship_id
+	 ,geo_id
+	 ,o.order_id
+	 ,sales
+	 ,profit
+     ,quantity
+	 ,discount
+FROM superstore.orders o 
+INNER JOIN dwh.shipping_dim s on o.ship_mode = s.shipping_mode
+INNER JOIN dwh.geo_dim g on o.postal_code = g.postal_code AND g.country=o.country AND g.city = o.city AND o.state = g.state --City Burlington doesn't have postal code
+INNER JOIN dwh.product_dim p on o.product_name = p.product_name AND o.segment = p.segment AND o.subcategory = p.sub_category AND o.category = p.category AND o.product_id = p.product_id 
+INNER JOIN dwh.customer_dim cd on cd.customer_id = o.customer_id AND cd.customer_name=o.customer_name 
 
-CREATE INDEX FK_2 ON dwh.sales_fact
-(
- ship_id
-);
 
-CREATE INDEX FK_3 ON dwh.sales_fact
-(
- geo_id
-);
-
-CREATE INDEX FK_4 ON dwh.sales_fact
-(
- product_id
-);
+--do you get 9994rows?
+SELECT COUNT(*) FROM dwh.sales_fact sf
+INNER JOIN dwh.shipping_dim s on sf.ship_id = s.ship_id
+INNER JOIN dwh.geo_dim g on sf.geo_id = g.geo_id
+INNER JOIN dwh.product_dim p on sf.prod_id = p.prod_id
+INNER JOIN dwh.customer_dim cd on sf.cust_id = cd.cust_id;
 ```
