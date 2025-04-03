@@ -1,13 +1,13 @@
 ```sql
 --RETURNS
 
-DROP TABLE IF EXISTS returns;
-CREATE TABLE returns(
+DROP TABLE IF EXISTS superstore.returns;
+CREATE TABLE superstore.returns(
    Returned   VARCHAR(10) NOT NULL
   ,Order_id   VARCHAR(25) NOT NULL
 );
 
-INSERT INTO returns(Returned,Order_id) 
+INSERT INTO superstore.returns(Returned,Order_id) 
 VALUES ('Yes','CA-2016-100762'),
        ('Yes','CA-2016-100762'),
        ('Yes','CA-2016-100762'),
