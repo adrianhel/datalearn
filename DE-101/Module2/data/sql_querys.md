@@ -87,34 +87,7 @@ LIMIT 10;
 | Springfield   | 73            | 43054   |
 ___
 
-##### 2.2.7 Топ-10 Рейтинга клиентов (Customer Ranking)
-
-```sql
-SELECT
-    customer_name,
-    ROUND(SUM(sales)) AS sales
-FROM orders
-GROUP BY customer_name
-ORDER BY 2 desc
-LIMIT 10;
-```
-Ответ:
-
-| sales              | customer_name |
-|--------------------|---------------|
-| Sean Miller        | 25043         |
-| Tamara Chand       | 19052         |
-| Raymond Buch       | 15117         |
-| Tom Ashbrook       | 14596         |
-| Adrian Barton      | 14474         |
-| Ken Lonsdale       | 14175         |
-| Sanjit Chand       | 14142         |
-| Hunter Lopez       | 12873         |
-| Sanjit Engle       | 12209         |
-| Christopher Conant | 12129         |
-___
-
-##### 2.2.8 Продажи и прибыль по категориям (Sales and Profit by Category)
+##### 2.2.7 Продажи и прибыль по категориям (Sales and Profit by Category)
 
 ```sql
 SELECT
@@ -134,7 +107,7 @@ ORDER BY category DESC;
 | Furniture        | $742000  | $18451  |
 ___
 
-##### 2.2.9 Количество продаж по подкатегориям (Count of Sales by Sub-Category)
+##### 2.2.8 Количество продаж по подкатегориям (Count of Sales by Sub-Category)
 
 ```sql
 SELECT
@@ -167,7 +140,7 @@ ORDER BY 2 DESC;
 | Copiers     | 68    |
 ___
 
-##### 2.2.10 Региональные менеджеры (Regional Managers)
+##### 2.2.9 Региональные менеджеры (Regional Managers)
 
 ```sql
 SELECT
@@ -189,7 +162,7 @@ ORDER BY p.person ASC;
 | Kelly Williams    | $501240 | $39706  |
 ___
 
-##### 2.2.11 Продажи и прибыль по сегментам (Sales and Profit by Segment)
+##### 2.2.10 Продажи и прибыль по сегментам (Sales and Profit by Segment)
 
 ```sql
 SELECT
@@ -209,7 +182,7 @@ ORDER BY segment ASC;
 | Home Office | $429653  | $60299  |
 ___
 
-##### 2.2.12 Продажи и прибыль по штатам (Sales and Profit by State)
+##### 2.2.11 Продажи и прибыль по штатам (Sales and Profit by State)
 
 ```sql
 SELECT
@@ -275,7 +248,7 @@ ORDER BY state ASC;
 | Wyoming              | $1603   | $100    |
 ___
 
-##### 2.2.13 Продажи и прибыль по регионам (Sales and Profit by Region)
+##### 2.2.12 Продажи и прибыль по регионам (Sales and Profit by Region)
 
 ```sql
 SELECT
@@ -296,68 +269,23 @@ ORDER BY region ASC;
 | West    | $725458 | $108418 |
 ___
 
-##### 2.2.14 Количество возвратов по месяцам (Returned by Month)
+##### 2.2.13 Количество возвратов по годам (Returned by Years)
 
 ```sql
 SELECT
     EXTRACT(YEAR FROM o.order_date) AS year,
-    EXTRACT(MONTH FROM o.order_date) AS month,
     COUNT(*) AS count_returns
 FROM orders AS o
-INNER JOIN returns AS r ON o.order_id = r.order_id
-GROUP BY 1, 2
-ORDER BY 1, 2 ASC;
+JOIN returns AS r ON o.order_id = r.order_id
+GROUP BY 1
+ORDER BY 1 ASC;
 ```
 Ответ:
 
-| year | month | count_returns  |
-|------|-------|----------------|
-| 2016 | 1     | 4              |
-| 2016 | 2     | 4              |
-| 2016 | 3     | 26             |
-| 2016 | 4     | 20             |
-| 2016 | 5     | 15             |
-| 2016 | 6     | 2              |
-| 2016 | 7     | 65             |
-| 2016 | 8     | 97             |
-| 2016 | 9     | 164            |
-| 2016 | 10    | 10             |
-| 2016 | 11    | 63             |
-| 2016 | 12    | 129            |
-| 2017 | 1     | 35             |
-| 2017 | 2     | 30             |
-| 2017 | 3     | 25             |
-| 2017 | 4     | 42             |
-| 2017 | 5     | 54             |
-| 2017 | 6     | 4              |
-| 2017 | 7     | 1              |
-| 2017 | 8     | 45             |
-| 2017 | 9     | 31             |
-| 2017 | 10    | 100            |
-| 2017 | 11    | 91             |
-| 2017 | 12    | 125            |
-| 2018 | 1     | 26             |
-| 2018 | 2     | 1              |
-| 2018 | 3     | 36             |
-| 2018 | 4     | 44             |
-| 2018 | 5     | 93             |
-| 2018 | 6     | 73             |
-| 2018 | 7     | 46             |
-| 2018 | 8     | 53             |
-| 2018 | 9     | 93             |
-| 2018 | 10    | 93             |
-| 2018 | 11    | 23             |
-| 2018 | 12    | 208            |
-| 2019 | 1     | 38             |
-| 2019 | 2     | 63             |
-| 2019 | 3     | 79             |
-| 2019 | 4     | 55             |
-| 2019 | 5     | 4              |
-| 2019 | 6     | 81             |
-| 2019 | 7     | 36             |
-| 2019 | 8     | 196            |
-| 2019 | 9     | 354            |
-| 2019 | 10    | 101            |
-| 2019 | 11    | 99             |
-| 2019 | 12    | 149            |
+| month | count_returns   |
+|-------|-----------------|
+| 2016  | 599             |
+| 2017  | 583             |
+| 2018  | 789             |
+| 2019  | 1255            |
 ___
