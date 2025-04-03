@@ -76,30 +76,30 @@ CREATE TABLE dwh.sales_fact
  product_id  int NOT NULL,
  customer_id serial NOT NULL,
  CONSTRAINT PK_2 PRIMARY KEY ( row_id ),
- CONSTRAINT FK_1 FOREIGN KEY ( order_date, ship_date ) REFERENCES "public".calendar_dim ( order_date, ship_date ),
- CONSTRAINT FK_2 FOREIGN KEY ( ship_id ) REFERENCES "public".shipping_dim ( ship_id ),
- CONSTRAINT FK_3 FOREIGN KEY ( geo_id ) REFERENCES "public".geography_dim ( geo_id ),
- CONSTRAINT FK_4 FOREIGN KEY ( product_id ) REFERENCES "public".product_dim ( product_id ),
- CONSTRAINT FK_5 FOREIGN KEY ( customer_id ) REFERENCES "public".customer_dim ( customer_id )
+ CONSTRAINT FK_1 FOREIGN KEY ( order_date, ship_date ) REFERENCES dwh.calendar_dim ( order_date, ship_date ),
+ CONSTRAINT FK_2 FOREIGN KEY ( ship_id ) REFERENCES dwh.shipping_dim ( ship_id ),
+ CONSTRAINT FK_3 FOREIGN KEY ( geo_id ) REFERENCES dwh.geography_dim ( geo_id ),
+ CONSTRAINT FK_4 FOREIGN KEY ( product_id ) REFERENCES dwh.product_dim ( product_id ),
+ CONSTRAINT FK_5 FOREIGN KEY ( customer_id ) REFERENCES dwh.customer_dim ( customer_id )
 );
 
-CREATE INDEX FK_1 ON "public".sales_fact
+CREATE INDEX FK_1 ON dwh.sales_fact
 (
  order_date,
  ship_date
 );
 
-CREATE INDEX FK_2 ON "public".sales_fact
+CREATE INDEX FK_2 ON dwh.sales_fact
 (
  ship_id
 );
 
-CREATE INDEX FK_3 ON "public".sales_fact
+CREATE INDEX FK_3 ON dwh.sales_fact
 (
  geo_id
 );
 
-CREATE INDEX FK_4 ON "public".sales_fact
+CREATE INDEX FK_4 ON dwh.sales_fact
 (
  product_id
 );
