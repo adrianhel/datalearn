@@ -1,6 +1,10 @@
-```sql
---ORDERS
+### ORDERS
 
+#### [Назад в модуль 2 ⤶](/DE-101/Module2/readme.md)
+
+- создание таблицы
+
+```sql
 DROP TABLE IF EXISTS superstore.orders;
 CREATE TABLE superstore.orders(
    Row_ID        INTEGER NOT NULL PRIMARY KEY 
@@ -25,7 +29,10 @@ CREATE TABLE superstore.orders(
   ,Discount      NUMERIC(4,2) NOT NULL
   ,Profit        NUMERIC(21,16) NOT NULL
 );
+```
+- вставка данных
 
+```sql
 INSERT INTO superstore.orders(Row_ID,Order_ID,Order_Date,Ship_Date,Ship_Mode,Customer_ID,Customer_Name,Segment,Country,City,State,Postal_Code,Region,Product_ID,Category,SubCategory,Product_Name,Sales,Quantity,Discount,Profit) 
 VALUES (1,'CA-2018-152156','11/08/2018','11/11/2018','Second Class','CG-12520','Claire Gute','Consumer','United States','Henderson','Kentucky',42420,'South','FUR-BO-10001798','Furniture','Bookcases','Bush Somerset Collection Bookcase',261.96,2,0,41.9136),
        (2,'CA-2018-152156','11/08/2018','11/11/2018','Second Class','CG-12520','Claire Gute','Consumer','United States','Henderson','Kentucky',42420,'South','FUR-CH-10000454','Furniture','Chairs','Hon Deluxe Fabric Upholstered Stacking Chairs, Rounded Back',731.94,3,0,219.582),

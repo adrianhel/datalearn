@@ -1,5 +1,7 @@
 #### CALENDAR DIMENSION
 
+#### [Назад в модуль 2 ⤶](/DE-101/Module2/readme.md)
+
 - создание таблицы
 
 ```sql

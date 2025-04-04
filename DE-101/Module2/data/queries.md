@@ -1,5 +1,7 @@
 ##### 2.2.1 Общий объем продаж (Total Sales)
 
+#### [Назад в модуль 2 ⤶](/DE-101/Module2/readme.md)
+
 ```sql
 SELECT
     CONCAT('$', ROUND(SUM(sales)))

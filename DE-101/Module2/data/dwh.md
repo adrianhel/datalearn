@@ -1,3 +1,7 @@
+### DWH
+
+#### [Назад в модуль 2 ⤶](/DE-101/Module2/readme.md)
+
 ```sql
 -- CALENDAR DIMENSION
 DROP TABLE IF EXISTS dwh.calendar_dim;
