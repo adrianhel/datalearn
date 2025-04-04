@@ -1,6 +1,6 @@
 ### DWH
 
-#### [Назад в модуль 2 ⤶](/DE-101/Module2/readme.md)
+#### [Назад в Модуль 2 ⤶](/DE-101/Module2/readme.md)
 
 ```sql
 -- CALENDAR DIMENSION
