@@ -5,8 +5,8 @@
 - создание таблицы
 
 ```sql
-DROP TABLE IF EXISTS superstore.returns;
-CREATE TABLE superstore.returns(
+DROP TABLE IF EXISTS staging.returns;
+CREATE TABLE staging.returns(
    Returned   VARCHAR(10) NOT NULL
   ,Order_id   VARCHAR(25) NOT NULL
 );
@@ -15,7 +15,7 @@ CREATE TABLE superstore.returns(
 - вставка данных
 
 ```sql
-INSERT INTO superstore.returns(Returned,Order_id) 
+INSERT INTO staging.returns(Returned,Order_id) 
 VALUES ('Yes','CA-2016-100762'),
        ('Yes','CA-2016-100762'),
        ('Yes','CA-2016-100762'),

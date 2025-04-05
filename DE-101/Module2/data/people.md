@@ -5,8 +5,8 @@
 - создание таблицы
 
 ```sql
-DROP TABLE IF EXISTS superstore.people;
-CREATE TABLE superstore.people(
+DROP TABLE IF EXISTS staging.people;
+CREATE TABLE staging.people(
    Person VARCHAR(17) NOT NULL PRIMARY KEY
   ,Region VARCHAR(7) NOT NULL
 );
@@ -14,7 +14,7 @@ CREATE TABLE superstore.people(
 - вставка данных
 
 ```sql
-INSERT INTO superstore.people(Person,Region) 
+INSERT INTO staging.people(Person,Region) 
 VALUES ('Anna Andreadi','West'),
        ('Chuck Magee','East'),
        ('Kelly Williams','Central'),

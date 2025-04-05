@@ -3,8 +3,10 @@
 #### [Назад в Модуль 2 ⤶](/DE-101/Module2/readme.md)
 
 ```sql
-DROP TABLE IF EXISTS superstore.orders;
-CREATE TABLE superstore.orders(
+CREATE SCHEMA staging;
+
+DROP TABLE IF EXISTS staging.orders;
+CREATE TABLE staging.orders(
    Row_ID        INTEGER NOT NULL PRIMARY KEY 
   ,Order_ID      VARCHAR(14) NOT NULL
   ,Order_Date    DATE NOT NULL
@@ -28,19 +30,19 @@ CREATE TABLE superstore.orders(
   ,Profit        NUMERIC(21,16) NOT NULL
 );
 
-DROP TABLE IF EXISTS superstore.people;
-CREATE TABLE superstore.people(
+DROP TABLE IF EXISTS staging.people;
+CREATE TABLE staging.people(
    Person VARCHAR(17) NOT NULL PRIMARY KEY
   ,Region VARCHAR(7) NOT NULL
 );
 
-DROP TABLE IF EXISTS superstore.returns;
-CREATE TABLE superstore.returns(
+DROP TABLE IF EXISTS staging.returns;
+CREATE TABLE staging.returns(
    Returned   VARCHAR(10) NOT NULL
   ,Order_id   VARCHAR(25) NOT NULL
 );
 
-INSERT INTO superstore.orders(Row_ID,Order_ID,Order_Date,Ship_Date,Ship_Mode,Customer_ID,Customer_Name,Segment,Country,City,State,Postal_Code,Region,Product_ID,Category,SubCategory,Product_Name,Sales,Quantity,Discount,Profit) 
+INSERT INTO staging.orders(Row_ID,Order_ID,Order_Date,Ship_Date,Ship_Mode,Customer_ID,Customer_Name,Segment,Country,City,State,Postal_Code,Region,Product_ID,Category,SubCategory,Product_Name,Sales,Quantity,Discount,Profit) 
 VALUES (1,'CA-2018-152156','11/08/2018','11/11/2018','Second Class','CG-12520','Claire Gute','Consumer','United States','Henderson','Kentucky',42420,'South','FUR-BO-10001798','Furniture','Bookcases','Bush Somerset Collection Bookcase',261.96,2,0,41.9136),
        (2,'CA-2018-152156','11/08/2018','11/11/2018','Second Class','CG-12520','Claire Gute','Consumer','United States','Henderson','Kentucky',42420,'South','FUR-CH-10000454','Furniture','Chairs','Hon Deluxe Fabric Upholstered Stacking Chairs, Rounded Back',731.94,3,0,219.582),
        (3,'CA-2018-138688','06/12/2018','06/16/2018','Second Class','DV-13045','Darrin Van Huff','Corporate','United States','Los Angeles','California',90036,'West','OFF-LA-10000240','Office Supplies','Labels','Self-Adhesive Address Labels for Typewriters by Universal',14.62,2,0,6.8714),
@@ -10036,13 +10038,13 @@ VALUES (1,'CA-2018-152156','11/08/2018','11/11/2018','Second Class','CG-12520','
        (9993,'CA-2019-121258','02/26/2019','03/03/2019','Standard Class','DB-13060','Dave Brooks','Consumer','United States','Costa Mesa','California',92627,'West','OFF-PA-10004041','Office Supplies','Paper','It''s Hot Message Books with Stickers, 2 3/4" x 5"',29.6,4,0,13.32),
        (9994,'CA-2019-119914','05/04/2019','05/09/2019','Second Class','CC-12220','Chris Cortes','Consumer','United States','Westminster','California',92683,'West','OFF-AP-10002684','Office Supplies','Appliances','Acco 7-Outlet Masterpiece Power Center, Wihtout Fax/Phone Line Protection',243.16,2,0,72.948);
 
-INSERT INTO superstore.people(Person,Region) 
+INSERT INTO staging.people(Person,Region) 
 VALUES ('Anna Andreadi','West'),
        ('Chuck Magee','East'),
        ('Kelly Williams','Central'),
        ('Cassandra Brandow','South');
 
-INSERT INTO superstore.returns(Returned,Order_id) 
+INSERT INTO staging.returns(Returned,Order_id) 
 VALUES ('Yes','CA-2016-100762'),
        ('Yes','CA-2016-100762'),
        ('Yes','CA-2016-100762'),
