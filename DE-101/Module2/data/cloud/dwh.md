@@ -76,7 +76,7 @@ UPDATE dwh.geo_dim
 SET postal_code = '05401'
 WHERE city = 'Burlington' AND postal_code IS NULL;
 
-#### PRODUCT DIMENSION
+-- PRODUCT DIMENSION
 DROP TABLE IF EXISTS dwh.product_dim;
 CREATE TABLE dwh.product_dim
 (
