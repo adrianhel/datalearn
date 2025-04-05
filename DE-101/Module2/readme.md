@@ -108,3 +108,5 @@ CREATE SCHEMA dwh;
 
 - [Staging](data/cloud/staging.md) слой
 - [Business](data/cloud/dwh.md) слой
+
+Не забываем проверить наше Хранилище данных на количество строк.
