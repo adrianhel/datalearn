@@ -48,13 +48,3 @@ INNER JOIN dwh.product_dim p ON o.product_name = p.product_name AND o.segment = 
     AND o.subcategory = p.sub_category AND o.category = p.category AND o.product_id = p.product_id 
 INNER JOIN dwh.customer_dim cd ON cd.customer_id = o.customer_id AND cd.customer_name = o.customer_name 
 ```
-
-- Проверка нашего датасета, получилось 9994 строк?
-
-```sql
-SELECT COUNT(*) FROM dwh.sales_fact sf
-INNER JOIN dwh.shipping_dim s on sf.ship_id = s.ship_id
-INNER JOIN dwh.geo_dim g on sf.geo_id = g.geo_id
-INNER JOIN dwh.product_dim p on sf.prod_id = p.prod_id
-INNER JOIN dwh.customer_dim cd on sf.cust_id = cd.cust_id;
-```
