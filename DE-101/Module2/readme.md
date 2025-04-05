@@ -19,6 +19,9 @@ CREATE SCHEMA superstore;
 - _Таблица [People](data/people.md)_
 - _Таблица [Returns](data/returns.md)_
 
+#### Заключение
+На данном этапе **Staging** слой нашего Хранилища данных готов.
+
 ## 2.2 SQL запросы
 В соответсвии с планом отчетности пишем [SQL запросы](data/queries.md) к нашей БД.
 
@@ -89,5 +92,8 @@ CREATE SCHEMA dwh;
 - _Измерение [product_dim](data/product_dim.md)_
 - _Измерение [shipping_dim](data/shipping_dim.md)_
 - _Метрики [sales_fact](data/sales_fact.md)_
+
+#### Заключение
+На данном этапе **Business** слой нашего Хранилища данных готов.
 
 ## 2.4 База данных в облаке
