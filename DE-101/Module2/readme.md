@@ -102,7 +102,7 @@ CREATE SCHEMA dwh;
 Воспользуемся [облачным сервисом Яндекс](https://console.yandex.cloud).
 После создания кластера **PostgreSQL** с публичным хостом, подключимся к нашей БД через **DBeaver**.
 
-<img src="img/connect.png" width="90%">
+<img src="img/connect.png" width="50%">
 
 ### 2.4.2 Создаем наше Хранилище данных в подключенной БД
 

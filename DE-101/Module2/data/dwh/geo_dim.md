@@ -49,7 +49,7 @@ WHERE city = 'Burlington' AND postal_code IS NULL;
 - также обновляем файл источника данных
 
 ```sql
-UPDATE superstore.orders
+UPDATE staging.orders
 SET postal_code = '05401'
 WHERE city = 'Burlington' AND postal_code IS NULL;
 ```

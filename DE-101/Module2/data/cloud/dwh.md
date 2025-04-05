@@ -72,7 +72,12 @@ INSERT INTO dwh.geo_dim
 SELECT 100+ROW_NUMBER() OVER(), country, city, state, postal_code 
 FROM (SELECT DISTINCT country, city, state, postal_code FROM staging.orders ) a;
 
+
 UPDATE dwh.geo_dim
+SET postal_code = '05401'
+WHERE city = 'Burlington' AND postal_code IS NULL;
+
+UPDATE staging.orders
 SET postal_code = '05401'
 WHERE city = 'Burlington' AND postal_code IS NULL;
 
