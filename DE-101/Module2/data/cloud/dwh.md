@@ -148,5 +148,5 @@ INNER JOIN dwh.geo_dim g ON o.postal_code = g.postal_code::INTEGER AND o.country
     AND o.state = g.state
 INNER JOIN dwh.product_dim p ON o.product_name = p.product_name AND o.segment = p.segment 
     AND o.subcategory = p.sub_category AND o.category = p.category AND o.product_id = p.product_id 
-INNER JOIN dwh.customer_dim cd ON cd.customer_id = o.customer_id AND cd.customer_name=o.customer_name 
+INNER JOIN dwh.customer_dim cd ON cd.customer_id = o.customer_id AND cd.customer_name = o.customer_name 
 ```
