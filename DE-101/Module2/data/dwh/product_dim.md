@@ -29,7 +29,7 @@ TRUNCATE TABLE dwh.product_dim;
 ```sql
 INSERT INTO dwh.product_dim 
 SELECT 100+ROW_NUMBER() OVER() AS prod_id ,product_id, product_name, category, subcategory, segment 
-FROM (SELECT DISTINCT product_id, product_name, category, subcategory, segment FROM superstore.orders ) a;
+FROM (SELECT DISTINCT product_id, product_name, category, subcategory, segment FROM staging.orders ) a;
 ```
 
 - проверка таблицы

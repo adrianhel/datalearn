@@ -15,9 +15,9 @@ CREATE SCHEMA staging;
 ```
 
 Далее создаем таблицы и наполняем их данными.
-- _Таблица [Orders](data/orders.md)_
-- _Таблица [People](data/people.md)_
-- _Таблица [Returns](data/returns.md)_
+- _Таблица [Orders](data/staging/orders.md)_
+- _Таблица [People](data/staging/people.md)_
+- _Таблица [Returns](data/staging/returns.md)_
 
 #### Заключение
 На данном этапе **Staging** слой нашего Хранилища данных готов.
@@ -87,12 +87,12 @@ CREATE SCHEMA dwh;
 Используем сгенерированный код для создания нашего датасета, дополнив его проверками, 
 и наполним данными из Staging слоя.
 
-- _Измерение [calendar_dim](data/calendar_dim.md)_
-- _Измерение [customer_dim](data/customer_dim.md)_
-- _Измерение [geo_dim](data/geo_dim.md)_
-- _Измерение [product_dim](data/product_dim.md)_
-- _Измерение [shipping_dim](data/shipping_dim.md)_
-- _Метрики [sales_fact](data/sales_fact.md)_
+- _Измерение [calendar_dim](data/dwh/calendar_dim.md)_
+- _Измерение [customer_dim](data/dwh/customer_dim.md)_
+- _Измерение [geo_dim](data/dwh/geo_dim.md)_
+- _Измерение [product_dim](data/dwh/product_dim.md)_
+- _Измерение [shipping_dim](data/dwh/shipping_dim.md)_
+- _Метрики [sales_fact](data/dwh/sales_fact.md)_
 
 #### Заключение
 На данном этапе **Business** слой нашего Хранилища данных готов.

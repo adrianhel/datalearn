@@ -24,7 +24,7 @@ TRUNCATE TABLE dwh.customer_dim;
 ```sql
 INSERT INTO dwh.customer_dim 
 SELECT 100+ROW_NUMBER() OVER(), customer_id, customer_name 
-FROM (SELECT DISTINCT customer_id, customer_name FROM superstore.orders ) a;
+FROM (SELECT DISTINCT customer_id, customer_name FROM staging.orders ) a;
 ```
 
 - проверка таблицы

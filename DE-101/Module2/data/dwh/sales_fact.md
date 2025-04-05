@@ -40,7 +40,7 @@ SELECT
 	 ,profit
 	 ,quantity
 	 ,discount
-FROM superstore.orders o 
+FROM staging.orders o 
 INNER JOIN dwh.shipping_dim s ON o.ship_mode = s.shipping_mode
 INNER JOIN dwh.geo_dim g ON o.postal_code = g.postal_code::INTEGER AND o.country = g.country AND o.city = g.city 
     AND o.state = g.state

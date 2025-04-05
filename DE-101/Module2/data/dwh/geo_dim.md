@@ -28,7 +28,7 @@ TRUNCATE TABLE dwh.geo_dim;
 ```sql
 INSERT INTO dwh.geo_dim 
 SELECT 100+ROW_NUMBER() OVER(), country, city, state, postal_code 
-FROM (SELECT DISTINCT country, city, state, postal_code FROM superstore.orders ) a;
+FROM (SELECT DISTINCT country, city, state, postal_code FROM staging.orders ) a;
 ```
 
 - проверка качества данных
@@ -38,7 +38,7 @@ SELECT DISTINCT country, city, state, postal_code FROM dwh.geo_dim
 WHERE country IS NULL OR city IS NULL OR postal_code IS NULL;
 ```
 
-- города Burlington, Vermont не имеют почтового индекса, добавляем его
+- город Burlington, Vermont не имеет почтового индекса, добавляем его
 
 ```sql
 UPDATE dwh.geo_dim
