@@ -119,4 +119,6 @@ CREATE SCHEMA dwh;
 
 Воспользуемся популярным сервисом от Яндекса [DataLens](https://datalens.yandex.cloud/collections) 
 для визуализации данных.
+Подключаемся к БД, далее создаем датасет и на его основе – чарты, ключевые метрики и селекторы. Собираем наш дашборд.
 
+<img src="img/datalens_dashboard.png">
