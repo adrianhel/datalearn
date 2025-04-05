@@ -30,6 +30,12 @@ CREATE TABLE staging.orders(
   ,Profit        NUMERIC(21,16) NOT NULL
 );
 ```
+- устанавливаем формат ввода даты 
+
+```sql
+SET DATESTYLE TO 'MDY';
+```
+
 - вставка данных
 
 ```sql
