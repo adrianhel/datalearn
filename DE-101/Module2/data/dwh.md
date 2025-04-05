@@ -1,4 +1,4 @@
-### DWH
+### FROM STAGING TO DWH
 
 #### [Назад в Модуль 2 ⤶](/DE-101/Module2/readme.md)
 
