@@ -45,15 +45,15 @@ CREATE SCHEMA staging;
 Воспользуемся ресурсом [SqlDBM](https://sqldbm.com/Home/) для отрисовки модели данных нашего Superstore.
 - _Концептуальная схема_
 
-<img src="img/concept.png" width="90%">
+<img src="img/concept.png" width="70%">
 
 - _Логическая схема_
 
-<img src="img/logic.png" width="90%">
+<img src="img/logic.png" width="70%">
 
 - _Физическая схема_
 
-<img src="img/physical.png" width="90%">
+<img src="img/physical.png" width="70%">
 
 ### 2.3.3 Основные компоненты схемы
 #### Таблица фактов
