@@ -34,4 +34,4 @@
 
 #### _Прмиеры макетов дашбордов_
 
-<img src="img/makets.png" width="80%">
+<img src="img/makets.png">
