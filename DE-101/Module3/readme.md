@@ -40,4 +40,4 @@
 
 Я остановился на следующем примере макета.
 
-<img src="img/check_maket.png" width="25%">
+<img src="img/my_maket_01.png" width="70%">
