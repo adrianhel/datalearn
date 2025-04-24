@@ -7,12 +7,12 @@
 > _**ETL** (Extract, Transform, Load)_ — процесс извлечения, преобразования и загрузки данных в целевой пункт 
 > назначения (обычно это Хранилище данных).
 
-<img src="img/ETL.png" width="50%">
+<img src="img/ETL.png" width="60%">
 
 > _**ELT** (Extract, Load, Transform)_ — это современный подход к обработке данных, который отличается от традиционного 
 > ETL порядком выполнения операций.
 
-<img src="img/ELT.png" width="50%">
+<img src="img/ELT.png" width="60%">
 
 ### ETL vs ELT
 
