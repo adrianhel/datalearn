@@ -10,6 +10,9 @@ _Единая целевая БД – Хранилище данных._
 - #### Business Layer (слой для доступа к данным)
 _Данные как товар для целевой аудитории – бизнес клиентов, аналитиков._
 
+Воспользуемся программой **[draw.io](https://github.com/jgraph/drawio-desktop/releases/tag/v26.2.2)** для отрисовки 
+схемы нашей архитектуры.
+
 <img src="img/architecture_of_the_analytical_solution.png" width="90%">
 
 ##### [Скачать схему](data/architecture_of_the_analytical_solution.zip)
