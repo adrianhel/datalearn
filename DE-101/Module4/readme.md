@@ -65,8 +65,7 @@ _гибридные подходы_.
 
 В моем случае установлено было так:
 
-<img src="img/environment.png" width="50%">
-
+<img src="img/environment.png" width="40%">
 
 ### 4.3.2 Основные элементы и типы проектов
 ### Steps и Hops
