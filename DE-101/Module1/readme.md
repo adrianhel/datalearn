@@ -13,9 +13,7 @@ _Данные как товар для целевой аудитории – б�
 Воспользуемся программой **[draw.io](https://github.com/jgraph/drawio-desktop/releases/tag/v26.2.2)** для отрисовки 
 схемы нашей архитектуры.
 
-<img src="img/architecture_of_the_analytical_solution.png" width="90%">
-
-##### [Скачать схему](data/architecture_of_the_analytical_solution.zip)
+<img src="img/architecture.png" width="90%">
 
 ## 1.2. Работа в Excel
 Задача построить отчеты и дашборд в **Excel** на основе [полученных данных](data/Sample%20-%20Superstore.xls).
