@@ -94,5 +94,6 @@ _гибридные подходы_.
 Они помогают организовать выполнение ETL-процессов, обеспечивая управление зависимостями и обработку ошибок.
 
 ### 4.3.3 План действий
-Работать будем с [исходными данными](Module1/data/Superstore.xls) нашего «Superstore» из 
-[Модуля 1](DE-101/Module1/readme.md).
+Работать будем с 
+[исходными данными](https://github.com/adrianhel/datalearn/blob/main/DE-101/Module1/data/Superstore.xls) 
+нашего «Superstore» из [Модуля 1](https://github.com/adrianhel/datalearn/blob/main/DE-101/Module1/readme.md).
