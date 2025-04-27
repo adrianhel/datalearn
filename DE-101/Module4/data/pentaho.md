@@ -41,11 +41,19 @@
 Работать будем с исходными данными нашего «Superstore» из 
 [Модуля 1](https://github.com/adrianhel/datalearn/blob/main/DE-101/Module1/readme.md).
 1. Сделаем job, где скачаем файл **superstore.xls** через _http_ протокол.
-2. Объединим данные из разных листов **superstore.xls** в одну таблицу **superstore_general.csv**.
-3. Подготовим исходные данные.
-4. Сделаем общий job, который будет выполнять эти задачи по порядку.
-5. Настроим выполнение job по расписанию через _Планировщик задач_.
-
+2. Объединим данные из разных листов «Superstore» в одну таблицу **superstore_general.csv** (формат **CSV**).
+3. Разобьем данные на разные форматы:
+    - Информацию о продуктах сохраним в **JSON**
+    - Информацию о возвратах сохраним в **XML**
+    - Информацию о заказах разобьем по регионам:
+        - CENTRAL - одним файлом в формате **XLS**
+        - WEST - несколько файлов, разбитых по штатам в формате **CSV**
+        - SOUTH - одним файлом в **ZIP** архиве в формате **CSV**
+        - EAST - одним текстовым файлом с расширением **.dat**
+4. Добавим ошибки, эмулируя реальные проблемы:
+    - WEST - разные названия страны (US, USA, United States), лишние символы в поле `City`
+    - EAST - опечатки в названиях городов (сложнопрогнозируемые для ручного исправления)
+    - SOUTH - дубли заказов
 ### 4.3.4 Исполнение плана
 После запуска PDI, для удобства в работе, нажимаем комбинацию клавиш CTRL-ALT-J и настраиваем окружение — 
 выбираем папку для хранения jobs и transformations (в моем случае _work_), и папку для хранения собранных данных 
@@ -61,3 +69,7 @@
 2. [Transformation для создания Superstore general](/DE-101/Module4/data/pentaho/transformation_general.ktr)
 
 <img src="/DE-101/Module4/img/transform_general.png" width="80%">
+
+3. [Transformation для разбиения Superstore general](/DE-101/Module4/data/pentaho/transformation_general_splitting.ktr)
+
+<img src="/DE-101/Module4/img/transform_general_split.png" width="80%">
