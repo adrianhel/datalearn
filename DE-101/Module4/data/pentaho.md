@@ -103,7 +103,13 @@
 ```bash
 "E:\...\Pentaho\design-tools\data-integration\Kitchen.bat" /file:"E:\...\work\job_final.kjb" /level:Basic
 ```
-У меня скрипт получился вот [таким](/DE-101/Module4/data/pentaho/job_final.bat). После запуска job отработал и в папке 
-назначения появились все ожидаемые файлы.
+У меня скрипт получился вот [таким](/DE-101/Module4/data/pentaho/job_final.bat). 
+
+### 4.3.6 Запускаем скрипт через Планировщик заданий
+Запускаем Планировщик заданий Windows и создаем Задачу для запуска нашего job'а.
+
+<img src="/DE-101/Module4/img/scheduler.png" width="50%">
+
+После запуска job отработал и в папке назначения появились все ожидаемые файлы.
 
 <img src="/DE-101/Module4/img/job_result.png" width="20%">
