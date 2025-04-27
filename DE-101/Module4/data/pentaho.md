@@ -106,4 +106,4 @@
 У меня скрипт получился вот [таким](/DE-101/Module4/data/pentaho/job_final.bat). После запуска job отработал и в папке 
 назначения появились все ожидаемые файлы.
 
-<img src="/DE-101/Module4/img/job_result.png" width="80%">
+<img src="/DE-101/Module4/img/job_result.png" width="20%">
