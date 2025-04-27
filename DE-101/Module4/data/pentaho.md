@@ -60,4 +60,4 @@
 
 2. [Transformation для создания Superstore general](/DE-101/Module4/data/pentaho/transformation_general.ktr)
 
-<img src="/DE-101/Module4/img/transform_sales.png" width="80%">
+<img src="/DE-101/Module4/img/transform_general.png" width="80%">
