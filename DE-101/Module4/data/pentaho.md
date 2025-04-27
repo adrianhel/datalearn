@@ -89,3 +89,5 @@
 Метрики
 
 <img src="/DE-101/Module4/img/errors_metrics.png" width="90%">
+
+План выполнен.
