@@ -48,4 +48,9 @@
 
 ### 4.3.4 Исполнение плана
 1. [Job для скачивания исходного файла](/DE-101/Module4/data/pentaho/job_download_superstore.kjb)
+
+<img src="/DE-101/Module4/img/job_download.png" width="50%">
+
 2. [Transformation для создания Sales](/DE-101/Module4/data/pentaho/transformation_sales.ktr)
+
+<img src="/DE-101/Module4/img/transform_sales.png" width="80%">
