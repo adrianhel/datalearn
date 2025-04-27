@@ -40,8 +40,8 @@
 ### 4.3.3 План действий
 Работать будем с исходными данными нашего «Superstore» из 
 [Модуля 1](https://github.com/adrianhel/datalearn/blob/main/DE-101/Module1/readme.md).
-1. Сделаем job, где скачаем файл **Superstore.xls** через _http_ протокол.
-2. Объединим данные из разных листов Superstore.xls в одну таблицу **Sales**.
+1. Сделаем job, где скачаем файл **superstore.xls** через _http_ протокол.
+2. Объединим данные из разных листов **superstore.xls** в одну таблицу **superstore_general.csv**.
 3. Подготовим исходные данные.
 4. Сделаем общий job, который будет выполнять эти задачи по порядку.
 5. Настроим выполнение job по расписанию через _Планировщик задач_.
@@ -54,10 +54,10 @@
 <img src="/DE-101/Module4/img/envi_var.png" width="40%">
 
 Приступаем к выполнению.
-1. [Job для скачивания исходного файла](/DE-101/Module4/data/pentaho/job_download_superstore.kjb)
+1. [Job для скачивания исходного файла Superstore](/DE-101/Module4/data/pentaho/job_download_superstore.kjb)
 
 <img src="/DE-101/Module4/img/job_download.png" width="50%">
 
-2. [Transformation для создания Sales](/DE-101/Module4/data/pentaho/transformation_sales.ktr)
+2. [Transformation для создания Superstore general](/DE-101/Module4/data/pentaho/transformation_general.ktr)
 
 <img src="/DE-101/Module4/img/transform_sales.png" width="80%">
