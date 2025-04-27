@@ -50,7 +50,7 @@
 После запуска PDI, нажимаем комбинацию клавиш CTRL-ALT-J и настраиваем окружение — выбираем папку для хранения 
 jobs и transformations (в моем случае _work_), и папку для хранения собранных данных (в моем случае _data_).
 
-<img src="/DE-101/Module4/img/envi_var.png" width="50%">
+<img src="/DE-101/Module4/img/envi_var.png" width="60%">
 
 Приступаем к выполнению.
 1. [Job для скачивания исходного файла](/DE-101/Module4/data/pentaho/job_download_superstore.kjb)
