@@ -95,3 +95,15 @@
 5. [Финальный job со всеми трансформациями](/DE-101/Module4/data/pentaho/job_final.kjb)
 
 <img src="/DE-101/Module4/img/job_final.png" width="80%">
+
+### 4.3.5 Пишем скрипт для запуска нашего joba
+Открываем текстовый редактор. Сначала указываем путь до Kitchen.bat, а потом путь до нашего финального job'а. 
+Не забываем сменить расширение файла на **.bat** 
+
+```bash
+"E:\...\Pentaho\design-tools\data-integration\Kitchen.bat" /file:"E:\...\work\job_final.kjb" /level:Basic
+```
+У меня скрипт получился вот [таким](/DE-101/Module4/data/pentaho/job_final.bat). После запуска job отработал и в папке 
+назначения появились все ожидаемые файлы.
+
+<img src="/DE-101/Module4/img/job_result.png" width="80%">
