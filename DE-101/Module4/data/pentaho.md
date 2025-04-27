@@ -54,7 +54,7 @@
     - WEST - разные названия страны (US, USA, United States), лишние символы в поле `City`
     - EAST - опечатки в названиях городов (сложнопрогнозируемые для ручного исправления)
     - SOUTH - дубли заказов
-### 4.3.4 Исполнение плана
+### 4.3.4 Выполнение плана
 После запуска PDI, для удобства в работе, нажимаем комбинацию клавиш **«CTRL-ALT-J»** и настраиваем окружение — 
 выбираем папку для хранения jobs и transformations (в моем случае _work_), и папку для хранения собранных данных 
 (в моем случае _data_).
@@ -84,10 +84,9 @@
 
 4. [Transformation для добавления ошибок](/DE-101/Module4/data/pentaho/transformation_add_errors.ktr)
 
-<img src="/DE-101/Module4/img/transform_add_errors.png" width="100%">
+<img src="/DE-101/Module4/img/transform_add_errors.png" width="90%">
 
 Метрики
 
 <img src="/DE-101/Module4/img/errors_metrics.png" width="90%">
 
-План выполнен.
