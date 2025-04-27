@@ -81,3 +81,11 @@
 Метрики
 
 <img src="/DE-101/Module4/img/split_metrics.png" width="90%">
+
+4. [Transformation для добавления ошибок](/DE-101/Module4/data/pentaho/transformation_add_errors.ktr)
+
+<img src="/DE-101/Module4/img/transform_add_errors.png" width="100%">
+
+Метрики
+
+<img src="/DE-101/Module4/img/errors_metrics.png" width="90%">
