@@ -70,6 +70,7 @@
 
 <img src="/DE-101/Module4/img/transform_general.png" width="80%">
 
-3. [Transformation для разбиения Superstore general](/DE-101/Module4/data/pentaho/transformation_general_splitting.ktr)
+3. [Transformation для разбиения Superstore general](/DE-101/Module4/data/pentaho/transformation_general_split.ktr)
 
 <img src="/DE-101/Module4/img/transform_general_split.png" width="80%">
+<img src="/DE-101/Module4/img/split_metrics.png" width="80%">
