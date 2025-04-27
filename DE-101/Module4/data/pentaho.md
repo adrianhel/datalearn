@@ -108,8 +108,8 @@
 ### 4.3.6 Запускаем скрипт через Планировщик заданий
 Запускаем Планировщик заданий Windows и создаем Задачу для запуска нашего job'а.
 
-<img src="/DE-101/Module4/img/scheduler.png" width="50%">
+<img src="/DE-101/Module4/img/scheduler.png" width="60%">
 
 После запуска job отработал и в папке назначения появились все ожидаемые файлы.
 
-<img src="/DE-101/Module4/img/job_result.png" width="20%">
+<img src="/DE-101/Module4/img/job_result.png" width="30%">
