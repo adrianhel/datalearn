@@ -25,7 +25,7 @@ TRUNCATE TABLE dwh.shipping_dim;
 ```sql
 INSERT INTO dwh.shipping_dim 
 SELECT 100+ROW_NUMBER() OVER(), ship_mode 
-FROM (SELECT distinct ship_mode FROM staging.orders ) a;
+FROM (SELECT distinct ship_mode FROM staging.orders) a;
 ```
 
 - проверка таблицы

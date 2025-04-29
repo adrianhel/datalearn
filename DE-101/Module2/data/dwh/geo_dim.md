@@ -28,7 +28,7 @@ TRUNCATE TABLE dwh.geo_dim;
 ```sql
 INSERT INTO dwh.geo_dim 
 SELECT 100+ROW_NUMBER() OVER(), country, city, state, postal_code 
-FROM (SELECT DISTINCT country, city, state, postal_code FROM staging.orders ) a;
+FROM (SELECT DISTINCT country, city, state, postal_code FROM staging.orders) a;
 ```
 
 - проверка качества данных
