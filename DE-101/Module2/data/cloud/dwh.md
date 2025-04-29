@@ -52,7 +52,7 @@ TRUNCATE TABLE dwh.customer_dim;
 
 INSERT INTO dwh.customer_dim 
 SELECT 100+ROW_NUMBER() OVER(), customer_id, customer_name 
-FROM (SELECT DISTINCT customer_id, customer_name FROM staging.orders ) a;
+FROM (SELECT DISTINCT customer_id, customer_name FROM staging.orders) a;
 
 -- GEOGRAPHY DIMENSION
 DROP TABLE IF EXISTS dwh.geo_dim;
@@ -70,7 +70,7 @@ TRUNCATE TABLE dwh.geo_dim;
 
 INSERT INTO dwh.geo_dim 
 SELECT 100+ROW_NUMBER() OVER(), country, city, state, postal_code 
-FROM (SELECT DISTINCT country, city, state, postal_code FROM staging.orders ) a;
+FROM (SELECT DISTINCT country, city, state, postal_code FROM staging.orders) a;
 
 
 UPDATE dwh.geo_dim
@@ -98,7 +98,7 @@ TRUNCATE TABLE dwh.product_dim;
 
 INSERT INTO dwh.product_dim 
 SELECT 100+ROW_NUMBER() OVER() AS prod_id ,product_id, product_name, category, subcategory, segment 
-FROM (SELECT DISTINCT product_id, product_name, category, subcategory, segment FROM staging.orders ) a;
+FROM (SELECT DISTINCT product_id, product_name, category, subcategory, segment FROM staging.orders) a;
 
 -- SHIPPING DIMENSION
 DROP TABLE IF EXISTS dwh.shipping_dim;
@@ -113,7 +113,7 @@ TRUNCATE TABLE dwh.shipping_dim;
 
 INSERT INTO dwh.shipping_dim 
 SELECT 100+ROW_NUMBER() OVER(), ship_mode 
-FROM (SELECT distinct ship_mode FROM staging.orders ) a;
+FROM (SELECT distinct ship_mode FROM staging.orders) a;
 
 -- METRICS
 DROP TABLE IF EXISTS dwh.sales_fact ;
