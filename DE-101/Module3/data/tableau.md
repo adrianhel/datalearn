@@ -12,4 +12,4 @@
 Решил использовать такой спорный элемент, как **pie-chart** (или "пончик"). В неё я соединил продажи по регионам 
 с ключевыми метриками: _Sales_, _Profit_ и _Discount_.
 
-<img src="img/donut.png" width="60%">
+<img src="/DE-101/Module2/img/donut.png" width="60%">
