@@ -9,22 +9,26 @@
 
 
 ### 3.3.2 Строим элементы будущего дашборда
-### Key-metrics Donut
+### Donut
 Решил использовать такой спорный элемент, как **pie-chart** (или "пончик"). 
 
 В нем я соединил **продажи по регионам** 
 с ключевыми метриками: _Sales_, _Profit_ и _Discount_.
 
-<img src="/DE-101/Module3/img/donut_tp.png" width="40%">
+<img src="/DE-101/Module3/img/donut_tp.png" width="30%">
 
 Он будет использоваться в паре с легендой, дублирующими основные метрки.
 
-<img src="/DE-101/Module3/img/legend_tp.png" width="40%">
+<img src="/DE-101/Module3/img/legend_tp.png" width="30%">
 
 ### Bar-chart
 Для продаж по суб-категориям решил использовать **bar-chart**. В нем будет отображеное следующее — сумма продаж, 
 сумма прибыли и количество продаж.
 
-<img src="/DE-101/Module3/img/bar_sub_tp.png" width="90%">
+<img src="/DE-101/Module3/img/bar_sub_tp.png">
+
+В следующем блоке будет отображена продажи и прибыль по менеджерам. Для этого тоже использую bar-chart.
+
+
 
 ### [Ссылка на дашборд](https://public.tableau.com/app/profile/adrian.hel7121/viz/superstore_17462750560080/Dashboard)
