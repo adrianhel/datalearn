@@ -17,6 +17,7 @@
 
 <img src="/DE-101/Module3/img/donut_tp.png" width="30%">
 
+### Legend
 Он будет использоваться в паре с легендой, дублирующими основные метрки.
 
 <img src="/DE-101/Module3/img/legend_tp.png" width="30%">
@@ -29,9 +30,9 @@
 
 В следующем блоке будет отображена продажи и прибыль по менеджерам. Для этого тоже использую bar-chart.
 
-<img src="/DE-101/Module3/img/bar_sales_tp.png" width="40%">
+<img src="/DE-101/Module3/img/bar_sales_tp.png" width="30%">
 
-<img src="/DE-101/Module3/img/bar_profit_tp.png" width="40%">
+<img src="/DE-101/Module3/img/bar_profit_tp.png" width="30%">
 
 ### Jitter-plot
 В качестве эксперимента, решил добавить в последний блок такой элемент, как **Jitter-plot**.
@@ -39,5 +40,15 @@
 
 <img src="/DE-101/Module3/img/jitter_tp.png" width="50%">
 
+### Filter
+Т.к. дашборд будет интерактивным, необходимо создать фильтр по годам.
 
-### [Ссылка на дашборд](https://public.tableau.com/app/profile/adrian.hel7121/viz/superstore_17462750560080/Dashboard)
+### 3.3.3 Собираем дашборд
+После того, как дашборд собран, нажимаем **CTRL+S** чтобы сохранить его в Tableau Public.
+
+<img src="/DE-101/Module3/img/dashboard_tp.png" width="100%">
+
+
+### [Посмотреть на сайте](https://public.tableau.com/app/profile/adrian.hel7121/viz/superstore_17462750560080/Dashboard)
+
+### [Скачать дашборд](/DE-101/Module3/data/tableau/superstore.twbx)
