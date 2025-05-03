@@ -20,3 +20,10 @@
 Он будет использоваться в паре с легендой, дублирующими основные метрки.
 
 <img src="/DE-101/Module3/img/legend_tp.png" width="40%">
+
+
+
+
+
+
+### [Ссылка на дашборд](https://public.tableau.com/app/profile/adrian.hel7121/viz/superstore_17462750560080/Dashboard)
