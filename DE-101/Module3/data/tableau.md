@@ -29,8 +29,15 @@
 
 В следующем блоке будет отображена продажи и прибыль по менеджерам. Для этого тоже использую bar-chart.
 
+<img src="/DE-101/Module3/img/bar_sales_tp.png" width="40%">
+
+<img src="/DE-101/Module3/img/bar_profit_tp.png" width="40%">
+
 ### Jitter-plot
 В качестве эксперимента, решил добавить в последний блок такой элемент, как **Jitter-plot**.
 Это точечная диаграмма. В моем случае она будет отображать количество отправлений товара тем или иным способом.
+
+<img src="/DE-101/Module3/img/jitter_tp.png" width="50%">
+
 
 ### [Ссылка на дашборд](https://public.tableau.com/app/profile/adrian.hel7121/viz/superstore_17462750560080/Dashboard)
