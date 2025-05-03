@@ -41,14 +41,15 @@
 <img src="/DE-101/Module3/img/jitter_tp.png" width="50%">
 
 ### Filter
-Т.к. дашборд будет интерактивным, необходимо создать фильтр по годам.
+В связи с тем, что дашборд будет интерактивным, необходимо создать фильтр по годам.
 
 ### 3.3.3 Собираем дашборд
-После того, как дашборд собран, нажимаем **CTRL+S** чтобы сохранить его в Tableau Public.
+Итак, когда наш дашборд собран и настроены все *action* для интерактивности, нажимаем **CTRL+S**, чтобы сохранить
+его в Tableau Public.
 
 <img src="/DE-101/Module3/img/dashboard_tp.png" width="100%">
 
 
-### [Посмотреть на сайте](https://public.tableau.com/app/profile/adrian.hel7121/viz/superstore_17462750560080/Dashboard)
+#### [Посмотреть на сайте](https://public.tableau.com/app/profile/adrian.hel7121/viz/superstore_17462750560080/Dashboard)
 
-### [Скачать дашборд](/DE-101/Module3/data/tableau/superstore.twbx)
+#### [Скачать дашборд](/DE-101/Module3/data/tableau/superstore.twbx)
