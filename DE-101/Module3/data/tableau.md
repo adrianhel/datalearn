@@ -21,9 +21,10 @@
 
 <img src="/DE-101/Module3/img/legend_tp.png" width="40%">
 
+### Bar-chart
+Для продаж по суб-категориям решил использовать **bar-chart**. В нем будет отображеное следующее — сумма продаж, 
+сумма прибыли и количество продаж.
 
-
-
-
+<img src="/DE-101/Module3/img/bar_sub_tp.png" width="90%">
 
 ### [Ссылка на дашборд](https://public.tableau.com/app/profile/adrian.hel7121/viz/superstore_17462750560080/Dashboard)
