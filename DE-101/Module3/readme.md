@@ -49,3 +49,4 @@ BI-инструментов существует не мало на рынке, 
 
 В рамках курса, я рассмотрю некоторые из них.
 ### - [Tableau](/DE-101/Module3/data/tableau.md)
+### - [Power BI](/DE-101/Module3/data/power_bi.md)
