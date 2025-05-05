@@ -48,5 +48,11 @@ BI-инструментов существует не мало на рынке, 
 - **Интеграция**: Подключение к БД, облачным хранилищам, CRM и ERP-системам.
 
 В рамках курса, я рассмотрю некоторые из них.
+
+## Модельно-ориентированные
 ### - [Tableau](/DE-101/Module3/data/tableau.md)
 ### - [Power BI](/DE-101/Module3/data/power_bi.md)
+
+## SQL-ориентированные
+### - [Metabase](/DE-101/Module3/data/metabase.md)
+### - [Superset](/DE-101/Module3/data/superset.md)
