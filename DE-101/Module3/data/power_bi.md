@@ -3,7 +3,7 @@
 #### [Назад в Модуль 3 ⤶](/DE-101/Module3/readme.md)
 
 В качестве BI-инструмента будем использовать 
-**[Power BI](https://www.microsoft.com/en-us/power-platform/products/power-bi/getting-started-with-power-bi)**.
+**[Power BI](https://www.microsoft.com/en-us/power-platform/products/power-bi/desktop)**.
 
 > ***Microsoft Power BI*** — это мощный инструмент бизнес-аналитики, который позволяет пользователям визуализировать 
 > данные и делиться отчетами в организации. Он предоставляет широкий спектр возможностей для анализа данных и создания интерактивных дашбордов.
