@@ -57,7 +57,7 @@ _Microsoft предоставляет обширные ресурсы для о�
 
 <img src="/DE-101/Module3/img/funnel_pbi.png" width="40%">
 
-### Column chart
+### Column bar-chart
 Оставшееся место займем двумя колоночными диаграммами по менеджерам. Одна будет отображать _Sales_, другая _Profit._
 
 <img src="/DE-101/Module3/img/sales_column_pbi.png" width="20%"> <img src="/DE-101/Module3/img/profit_column_pbi.png" width="20%">
