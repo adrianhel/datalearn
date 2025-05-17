@@ -4,6 +4,7 @@
 
 [Краткое руководство](https://superset.apache.org/docs/quickstart/) по установке Apache Superset 
 (**Docker** и **Git** должны быть установлены).
+Версия python 3.10
 
 #### 1. Проверяем git и docker
 
