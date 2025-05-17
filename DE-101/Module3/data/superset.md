@@ -29,6 +29,7 @@ _Имеет большое сообщество разработчиков и п
 <img src="/DE-101/Module3/img/maket_super.png" width="60%">
 
 ### 3.4.3 Установка и настройка Superset
+
 [Руководство по установке](DE-101/Module3/data/superset/superset_install.md)
 
 ### 3.4.4 Строим элементы будущего дашборда
