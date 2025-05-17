@@ -48,10 +48,10 @@ _Имеет большое сообщество разработчиков и п
 ### Donut
 В первом крупном блоке расположим пончик с продажами по регионам.
 
-<img src="/DE-101/Module3/img/donut_ss.png" width="40%">
+<img src="/DE-101/Module3/img/donut_ss.png" width="60%">
 
 ### Line-chart
 В следующем блоке, расположим линейную диаграмму, которая будет отображать динамику изменений продаж и дохода 
 с течением времени.
 
-<img src="/DE-101/Module3/img/line_ss.png" width="40%">
+<img src="/DE-101/Module3/img/line_ss.png" width="60%">
