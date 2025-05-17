@@ -1,4 +1,4 @@
-### 3.4.3 Установка и настройка Superset
+### 3.4.2 Установка и настройка Superset
 
 #### [Назад к Superset ⤶](/DE-101/Module3/data/superset.md)
 
