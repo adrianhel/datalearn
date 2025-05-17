@@ -4,6 +4,7 @@
 
 В качестве BI-инструмента будем использовать 
 **[Power BI](https://www.microsoft.com/en-us/power-platform/products/power-bi/desktop)**.
+
 Если возникли трудности с поиском и скачиванием, можно попробовать скачать desktop версию
 [тут](https://www.microsoft.com/en-us/download/details.aspx?id=58494).
 
