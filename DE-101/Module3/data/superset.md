@@ -36,3 +36,8 @@ _Имеет большое сообщество разработчиков и п
 Подключаемся к нашей БД и приступаем к созданию дашборда.
 
 <img src="/DE-101/Module3/img/connect_ss.png" width="30%">
+
+### Cards
+В верхней части расположим Key Metrics
+
+<img src="/DE-101/Module3/img/card_sale_ss.png" width="30%">
