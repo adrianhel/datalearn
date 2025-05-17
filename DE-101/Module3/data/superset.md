@@ -38,11 +38,21 @@ _Имеет большое сообщество разработчиков и п
 <img src="/DE-101/Module3/img/connect_ss.png" width="30%">
 
 ### Cards
-В верхней части расположим Key Metrics
+В верхней части расположим Key Metrics:
+- _Sales_
 
 <img src="/DE-101/Module3/img/card_sale_ss.png" width="30%">
+
+- _Profit_
+
 <img src="/DE-101/Module3/img/card_prof_ss.png" width="30%">
+
+- _Discount_
+
 <img src="/DE-101/Module3/img/card_disc_ss.png" width="18.5%">
+
+- _Quantity_
+
 <img src="/DE-101/Module3/img/card_quant_ss.png" width="18.5%">
 
 ### Donut
