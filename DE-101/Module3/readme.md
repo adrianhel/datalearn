@@ -52,6 +52,8 @@ BI-инструментов существует не мало на рынке, 
 ### - [Tableau](/DE-101/Module3/data/tableau.md)
 ### - [Power BI](/DE-101/Module3/data/power_bi.md)
 
-### 3.4 Fancy BI-инструменты
+## 3.4 Fancy BI-инструменты
+Так же попробуем open-source решения.
+
 ### - [Metabase](/DE-101/Module3/data/metabase.md)
 ### - [Superset](/DE-101/Module3/data/superset.md)
