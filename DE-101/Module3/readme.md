@@ -47,13 +47,13 @@ BI-инструментов существует не мало на рынке, 
 - **Аналитика**: Прогнозирование, Drill-down (детализация), агрегация.
 - **Интеграция**: Подключение к БД, облачным хранилищам, CRM и ERP-системам.
 
-В рамках курса рассмотрим некоторые из них. Самыми известными на рынке являются **Tableau**, **Microsoft Power BI**.
+В рамках курса рассмотрим некоторые из них. Самыми известными на рынке являются **Tableau** и **Microsoft Power BI**.
 
 ### - [Tableau](/DE-101/Module3/data/tableau.md)
 ### - [Power BI](/DE-101/Module3/data/power_bi.md)
 
 ## 3.4 Fancy BI-инструменты
-Так же попробуем open-source решения.
+Так же по фану попробуем open-source такие известные решения, как *Metabase* и *Apache Superset*.
 
 ### - [Metabase](/DE-101/Module3/data/metabase.md)
 ### - [Superset](/DE-101/Module3/data/superset.md)
