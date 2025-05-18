@@ -53,7 +53,7 @@ BI-инструментов существует не мало на рынке, 
 ### - [Power BI](/DE-101/Module3/data/power_bi.md)
 
 ## 3.4 Fancy BI-инструменты
-Так же по фану попробуем open-source такие известные решения, как *Metabase* и *Apache Superset*.
+Так же по фану попробуем такие известные open-source решения, как **Metabase** и **Apache Superset**.
 
 ### - [Metabase](/DE-101/Module3/data/metabase.md)
 ### - [Superset](/DE-101/Module3/data/superset.md)
