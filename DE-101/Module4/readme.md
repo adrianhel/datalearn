@@ -63,10 +63,8 @@ ETL инструментов очень много, их можно раздел
 ### - [Pentaho DI](/DE-101/Module4/data/pentaho.md)
 
 ### 4.4 ETL подсистемы
-Процесс ETL включает 34 подсистемы в 4 группах: 
+Процесс ETL включает [34 подсистемы](/DE-101/Module4/data/subsystems.md) в 4 группах: 
 1. ***Извлечение данных*** (_data extracting_).
 2. ***Очистка и приведение в соответствие данных*** (_cleaning and conforming data_), подготовка к загрузке в DWH.
 3. ***Предоставление данных для презентации*** (_delivering data for presentation_), обработка в DWH.
 4. ***Управление и мониторинг компонентов ETL*** (_managing the ETL environment_).
-
-
