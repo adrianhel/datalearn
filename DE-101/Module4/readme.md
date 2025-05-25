@@ -69,11 +69,11 @@ ETL инструментов очень много, их можно раздел
 
 #### Staging
 
-<img src="/DE-101/Module4/img/stg_orders.png" width="40%">
+<img src="/DE-101/Module4/img/stg_orders.png" width="30%">
 
 Метрики
 
-<img src="/DE-101/Module4/img/stg_metrics.png" width="90%">
+<img src="/DE-101/Module4/img/stg_metrics.png" width="80%">
 
 
 
