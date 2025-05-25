@@ -94,7 +94,7 @@ _Метрики_
 
 5. [Финальный job со всеми трансформациями](/DE-101/Module4/data/pentaho/job_final.kjb)
 
-<img src="/DE-101/Module4/img/job_final.png" width="80%">
+<img src="/DE-101/Module4/img/job_final.png" width="75%">
 
 ### 4.3.5 Пишем скрипт для запуска нашего job'a
 Открываем текстовый редактор. Сначала указываем путь до Kitchen.bat, а потом путь до нашего финального job'а. 
