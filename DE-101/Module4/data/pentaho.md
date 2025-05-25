@@ -72,7 +72,7 @@
 
 <img src="/DE-101/Module4/img/transform_general.png" width="80%">
 
-Метрики
+_Метрики_
 
 <img src="/DE-101/Module4/img/general_metrics.png" width="90%">
 
@@ -80,7 +80,7 @@
 
 <img src="/DE-101/Module4/img/transform_general_split.png" width="100%">
 
-Метрики
+_Метрики_
 
 <img src="/DE-101/Module4/img/split_metrics.png" width="90%">
 
@@ -88,7 +88,7 @@
 
 <img src="/DE-101/Module4/img/transform_add_errors.png" width="90%">
 
-Метрики
+_Метрики_
 
 <img src="/DE-101/Module4/img/errors_metrics.png" width="90%">
 
