@@ -66,15 +66,15 @@
 Приступаем к выполнению.
 1. [Job для скачивания исходного файла Superstore](/DE-101/Module4/data/pentaho/job_download_superstore.kjb)
 
-<img src="/DE-101/Module4/img/job_download.png" width="50%">
+<img src="/DE-101/Module4/img/job_download.png" width="40%">
 
 2. [Transformation для создания Superstore general](/DE-101/Module4/data/pentaho/transformation_general.ktr)
 
-<img src="/DE-101/Module4/img/transform_general.png" width="80%">
+<img src="/DE-101/Module4/img/transform_general.png" width="70%">
 
 _Метрики_
 
-<img src="/DE-101/Module4/img/general_metrics.png" width="90%">
+<img src="/DE-101/Module4/img/general_metrics.png" width="80%">
 
 3. [Transformation для разбиения Superstore general](/DE-101/Module4/data/pentaho/transformation_general_split.ktr)
 
@@ -82,15 +82,15 @@ _Метрики_
 
 _Метрики_
 
-<img src="/DE-101/Module4/img/split_metrics.png" width="90%">
+<img src="/DE-101/Module4/img/split_metrics.png" width="100%">
 
 4. [Transformation для добавления ошибок](/DE-101/Module4/data/pentaho/transformation_add_errors.ktr)
 
-<img src="/DE-101/Module4/img/transform_add_errors.png" width="90%">
+<img src="/DE-101/Module4/img/transform_add_errors.png" width="80%">
 
 _Метрики_
 
-<img src="/DE-101/Module4/img/errors_metrics.png" width="90%">
+<img src="/DE-101/Module4/img/errors_metrics.png" width="100%">
 
 5. [Финальный job со всеми трансформациями](/DE-101/Module4/data/pentaho/job_final.kjb)
 
