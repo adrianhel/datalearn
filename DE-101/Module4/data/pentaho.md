@@ -82,7 +82,7 @@ _Метрики_
 
 _Метрики_
 
-<img src="/DE-101/Module4/img/split_metrics.png" width="100%">
+<img src="/DE-101/Module4/img/split_metrics.png" width="90%">
 
 4. [Transformation для добавления ошибок](/DE-101/Module4/data/pentaho/transformation_add_errors.ktr)
 
@@ -90,7 +90,7 @@ _Метрики_
 
 _Метрики_
 
-<img src="/DE-101/Module4/img/errors_metrics.png" width="100%">
+<img src="/DE-101/Module4/img/errors_metrics.png" width="90%">
 
 5. [Финальный job со всеми трансформациями](/DE-101/Module4/data/pentaho/job_final.kjb)
 
