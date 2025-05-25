@@ -67,11 +67,15 @@ ETL инструментов очень много, их можно раздел
 После знакомства с инструментом выполним задание по созданию двухуровнего Хранилища данных с помощью **PDI** для нашего 
 «Superstore».
 
+#### Staging
+
 <img src="/DE-101/Module4/img/stg_orders.png" width="90%">
 
 Метрики
 
 <img src="/DE-101/Module4/img/stg_metrics.png" width="90%">
+
+
 
 ## 4.4 ETL подсистемы (ETL Subsystems)
 Процесс ETL включает **[34 подсистемы](/DE-101/Module4/data/subsystems.md)** в 4 группах: 
