@@ -12,9 +12,11 @@
 без необходимости в локальной инфраструктуре.
 
 ### Основные типы облаков
-##### Публичные облака:
+#### Публичные облака:
 - Доступны для общего пользования.
-Примеры: Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform.
+- Примеры: 
+  - Зарубежные: Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform.
+  - Отечественные: VK Cloud, Yandex Cloud, SberCloud, Cloud.ru, Selectel.
 
 #### Частные облака:
 - Используются исключительно одной организацией.
