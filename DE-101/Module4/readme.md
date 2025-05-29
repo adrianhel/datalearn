@@ -67,15 +67,17 @@ ETL инструментов очень много, их можно раздел
 После знакомства с инструментом выполним задание по созданию двухуровнего Хранилища данных с помощью **PDI** для нашего 
 «Superstore».
 
-#### Staging
+### Staging
 
-_Трансформации_
+[Transformation для создания Staging слоя](/DE-101/Module4/data/pentaho/transform_stg.ktr)
 
 <img src="/DE-101/Module4/img/stg_orders.png" width="35%">
 
 _Метрики_
 
 <img src="/DE-101/Module4/img/stg_metrics.png" width="80%">
+
+### DWH
 
 
 
