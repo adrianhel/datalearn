@@ -69,7 +69,7 @@ ETL инструментов очень много, их можно раздел
 
 ### Staging
 
-[Transformation для создания Staging слоя](/DE-101/Module4/data/pentaho/transform_stg.ktr)
+[Transformation для создания Staging слоя](/DE-101/Module4/data/pentaho/transformation_stg.ktr)
 
 <img src="/DE-101/Module4/img/stg_orders.png" width="35%">
 
