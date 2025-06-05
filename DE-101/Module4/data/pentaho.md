@@ -1,4 +1,4 @@
-### 4.3.1 Начало работы с Pentaho DI
+### 4.3.1 Знакомство с Pentaho Data Integration
 
 #### [Назад в Модуль 4 ⤶](/DE-101/Module4/readme.md)
 
