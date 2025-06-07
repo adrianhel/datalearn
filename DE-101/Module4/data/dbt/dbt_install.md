@@ -53,27 +53,25 @@ ls
 Установка:
 1. Открываем терминал.
 2. Запускаем команды:
-3.
+
 ```bash
-pip install dbt-core #Установка
-последней версии;
+pip install dbt-core #Установка последней версии
 ```
 4.
 ```bash
-pip install dbt-core==1.4.0 #Установка конкретной версии.
+pip install dbt-core==1.4.0 #Установка конкретной версии
 ```
 5.
 ```bash
-dbt —version #Проверка установленной
-версии.
+dbt —version #Проверка установленной версии
 ```
 
 Для обновления можно использовать следующие команды:
 
 ```bash
-pip install —upgrade dbt-core #Установка последней версии;
+pip install —upgrade dbt-core #Установка последней версии
 ```
 
 ```bash
-pip install —upgrade dbt-core==1.4.0 #Установка конкретной версии.
+pip install —upgrade dbt-core==1.4.0 #Установка конкретной версии
 ```
