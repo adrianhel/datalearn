@@ -57,11 +57,11 @@ ls
 ```bash
 pip install dbt-core #Установка последней версии
 ```
-4.
+
 ```bash
 pip install dbt-core==1.4.0 #Установка конкретной версии
 ```
-5.
+
 ```bash
 dbt —version #Проверка установленной версии
 ```
