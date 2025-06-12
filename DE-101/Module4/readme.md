@@ -79,6 +79,7 @@ _Метрики_
 <img src="/DE-101/Module4/img/stg_metrics.png" width="80%">
 
 ### DWH
+...
 
 ## 4.4 ETL подсистемы (ETL Subsystems)
 Процесс ETL включает **[34 подсистемы](/DE-101/Module4/data/subsystems.md)** в 4 группах: 
