@@ -88,4 +88,8 @@ _Метрики_
 4. ***Управление и мониторинг компонентов ETL***.
 
 ## 4.5 Fancy ETL инструменты
-Знакомство с популярными инструментами мы начнем с **[Data Build Tool](/DE-101/Module4/data/dbt.md)**.
+Рассмотрим некотрые популярные инструменты.
+
+### - [Apache Airflow](/DE-101/Module4/data/airflow.md)
+### - [Dagster](/DE-101/Module4/data/dagster.md)
+### - [Data Build Tool](/DE-101/Module4/data/dbt.md)
