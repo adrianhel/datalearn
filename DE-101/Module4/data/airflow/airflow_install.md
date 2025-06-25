@@ -18,3 +18,16 @@ curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.11.0/docker-compose.
 Remove-item alias:curl
 ```
 
+### 2. Создаем файл окружения
+Создаем в корне проекта `.env` файл со следующим содержимым:
+
+```
+AIRFLOW_UID=50000
+```
+
+### 3. Запускаем docker-compose
+Запускаем docker-compose файл и инициализируем БД следующей командой:
+
+```bash
+docker compose up airflow-init
+```
