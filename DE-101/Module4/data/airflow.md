@@ -32,4 +32,6 @@ _batch_-процессов.
 
 ### 4.5.2 Установка Airflow
 
+[Руководство по установке и настройке Airflow](airflow/airflow_install.md)
+
 ### 4.5.3 Структура Airflow
