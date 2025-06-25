@@ -31,3 +31,10 @@ AIRFLOW_UID=50000
 ```bash
 docker compose up airflow-init
 ```
+
+### 4. Запускаем все службы
+Будут подняты все необходимые сервисы (включая бд Postgres, redis, celery воркеры и тд).
+
+```bash
+docker-compose up
+```
