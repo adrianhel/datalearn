@@ -25,7 +25,7 @@ Remove-item alias:curl
 AIRFLOW_UID=50000
 ```
 
-### 3. Запускаем docker-compose
+### 3. Инициализация Базы данных
 Запускаем docker-compose файл и инициализируем БД следующей командой:
 
 ```bash
