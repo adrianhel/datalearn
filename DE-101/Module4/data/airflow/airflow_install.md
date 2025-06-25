@@ -4,7 +4,7 @@
 
 [Краткое руководство](https://airflow.apache.org/docs/apache-airflow/2.11.0/howto/docker-compose/index.html)
 
-**Docker** и *Python* должны быть установлены.
+**Docker** и **Python** должны быть установлены.
 
 ### 1. Качаем в локальную папку docker-compose файл
 
