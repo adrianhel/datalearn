@@ -31,6 +31,7 @@ AIRFLOW_UID=50000
 ```bash
 docker compose up airflow-init
 ```
+Будут созданы необходимые директории для создания дагов и плагинов, а так-же директория с логами.
 
 ### 4. Запускаем все службы
 Будут подняты все необходимые сервисы (включая бд Postgres, redis, celery воркеры и тд).
@@ -38,3 +39,5 @@ docker compose up airflow-init
 ```bash
 docker-compose up
 ```
+
+### 5. Авторизация
