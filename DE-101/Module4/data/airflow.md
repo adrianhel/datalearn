@@ -26,6 +26,8 @@ _Пользователи определяют DAG на Python, добавляя
 
 <img src="img/DAG.png" width="90%">
 
+<img src="img/ELT.png" width="65%">
+
 
 ### 4.5.2 Установка Airflow
 
