@@ -69,7 +69,7 @@ _Папка, где хранятся Python-скрипты, определяющ
 
 - **Web Server** отображает статус в реальном времени и логи.
 
-<img src="/DE-101/Module4/img/airflow_architecture.png" width="80%">
+<img src="/DE-101/Module4/img/airflow_architecture.png" width="90%">
 
 `DAG → Scheduler → Queue → Executor/Worker → Результат в БД → Отображение в UI`
 
