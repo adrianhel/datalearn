@@ -23,11 +23,7 @@ _Пользователи определяют DAG на Python, добавляя
 
 > ***DAG (Directed Acyclic Graph)*** – направленный ациклический граф.
 
-
-<img src="img/DAG.png" width="90%">
-
-<img src="img/ELT.png" width="65%">
-
+<img src="/DE-101/Module4/img/DAG.png" width="60%">
 
 ### 4.5.2 Установка Airflow
 
