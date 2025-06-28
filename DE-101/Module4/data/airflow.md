@@ -81,20 +81,20 @@ _Папка, где хранятся Python-скрипты, определяющ
 
 **1. Импорт библиотек:**
 
-`from airflow import DAG`: 
+- `from airflow import DAG`: 
 
 _Импорт класса DAG из Airflow._
 
-`from airflow.operators.dummy_operator import DummyOperator`:
+- `from airflow.operators.dummy_operator import DummyOperator`:
 
 _Импорт оператора, который не выполняет никаких действий 
 (используется для обозначения начала и конца)._
 
-`from airflow.operators.python_operator import PythonOperator`:
+- `from airflow.operators.python_operator import PythonOperator`:
 
 _Импорт оператора для выполнения Python-функций._
 
-`from datetime import datetime`: 
+- `from datetime import datetime`: 
 
 _Импорт класса datetime для работы с датами._
 
