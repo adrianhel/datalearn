@@ -1,3 +1,7 @@
+
+
+
+```python
 from airflow import DAG
 from airflow.operators.dummy_operator import DummyOperator
 from airflow.operators.python_operator import PythonOperator
@@ -42,3 +46,4 @@ end = DummyOperator(
 
 # Определение порядка выполнения задач
 start >> run_my_task >> end
+```
