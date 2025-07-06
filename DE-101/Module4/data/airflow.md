@@ -74,7 +74,7 @@ _Папка, где хранятся Python-скрипты, определяющ
 
 ### 4.5.5 Пишем первый DAG
 
-[Первый DAG](airflow/first_DAG.md)
+[Первый DAG](airflow/first_dag)
 
 ### Состовляющие DAG:
 
