@@ -1,6 +1,6 @@
 ### 3.4.1 Знакомство с Metabase
 
-#### [Назад в Модуль 3 ⤶](/DE-101/Module3/readme.md)
+### [Назад в Модуль 3 ⤶](/DE-101/Module3/readme.md)
 
 В качестве BI-инструмента будем использовать **[Metabase](https://www.metabase.com/)**.
 

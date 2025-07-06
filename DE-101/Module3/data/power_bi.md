@@ -1,6 +1,6 @@
 ### 3.3.1 Знакомство с Power BI
 
-#### [Назад в Модуль 3 ⤶](/DE-101/Module3/readme.md)
+### [Назад в Модуль 3 ⤶](/DE-101/Module3/readme.md)
 
 В качестве BI-инструмента будем использовать 
 **[Power BI](https://www.microsoft.com/en-us/power-platform/products/power-bi/desktop)**.

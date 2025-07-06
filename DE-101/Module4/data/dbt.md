@@ -1,6 +1,6 @@
 ### 4.5.1 Знакомство с Data Build Tool
 
-#### [Назад в Модуль 4 ⤶](/DE-101/Module4/readme.md)
+### [Назад в Модуль 4 ⤶](/DE-101/Module4/readme.md)
 
 Офсайт с документацией **[dbt](https://docs.getdbt.com/)**.
 
