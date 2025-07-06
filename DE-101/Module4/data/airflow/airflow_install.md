@@ -1,5 +1,8 @@
 ### 4.5.2 Установка и настройка Airflow
 
+![Python](https://img.shields.io/badge/python-3.10-green)
+![Airflow](https://img.shields.io/badge/airflow-2.11.0-green)
+
 ### [Назад к Airflow ⤶](/DE-101/Module4/data/airflow.md)
 
 [Краткое руководство](https://airflow.apache.org/docs/apache-airflow/2.11.0/howto/docker-compose/index.html)

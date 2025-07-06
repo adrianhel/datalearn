@@ -1,8 +1,5 @@
 ### 4.5.1 Знакомство с Apache Airflow
 
-![Python](https://img.shields.io/badge/python-3.10-yellow)
-![Airflow](https://img.shields.io/badge/airflow-2.11.0-green)
-
 ### [Назад в Модуль 4 ⤶](/DE-101/Module4/readme.md)
 
 Офсайт с документацией **[Airflow](https://airflow.apache.org/docs/)**.
