@@ -1,6 +1,6 @@
 ### 4.5.2 Установка и настройка Airflow
 
-![Docker](https://img.shields.io/badge/docker-green?logo=docker)
+![Docker](https://img.shields.io/badge/docker-desktop-green?logo=docker)
 ![Python](https://img.shields.io/badge/python-3.10-green?logo=pypi)
 ![Airflow](https://img.shields.io/badge/airflow-2.11.0-green?logo=airbnb)
 
