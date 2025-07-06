@@ -1,12 +1,10 @@
 ### 4.5.2 Установка и настройка Airflow
 
-![Docker](https://img.shields.io/badge/docker-desktop-green?logo=docker)
-![Python](https://img.shields.io/badge/python-3.10-green?logo=pypi)
-![Airflow](https://img.shields.io/badge/airflow-2.11.0-green?logo=airbnb)
+[![Docker](https://img.shields.io/badge/docker-desktop-green?logo=docker)](https://www.docker.com/products/docker-desktop/)
+[![Python](https://img.shields.io/badge/python-3.10.0-green?logo=pypi)](https://www.python.org/downloads/release/python-3100/)
+[![Airflow](https://img.shields.io/badge/airflow-2.11.0-green?logo=airbnb)](https://airflow.apache.org/docs/apache-airflow/2.11.0/howto/docker-compose/index.html)
 
 ### [Назад к Airflow ⤶](/DE-101/Module4/data/airflow.md)
-
-[Краткое руководство](https://airflow.apache.org/docs/apache-airflow/2.11.0/howto/docker-compose/index.html)
 
 **Docker** и **Python** должны быть установлены.
 
