@@ -1,4 +1,8 @@
 # Data Learn
+
+![da](https://img.shields.io/badge/data_analytics-green)
+![de](https://img.shields.io/badge/data_engineering-green)
+
 #### [Назад к списку репозиториев ⤶](https://github.com/adrianhel/contents)
 
 > _Репозиторий по основам аналитики и инженерии данных._
