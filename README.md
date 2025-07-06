@@ -1,8 +1,8 @@
 # Data Learn
 
-![da](https://img.shields.io/badge/data_analytics-grey)
-![de](https://img.shields.io/badge/data_engineering-grey)
-![do](https://img.shields.io/badge/data_operations-grey)
+![da](https://img.shields.io/badge/data-analytics-blue)
+![de](https://img.shields.io/badge/data-engineering-blue)
+![do](https://img.shields.io/badge/data-operations-blue)
 
 ### [Назад к Содержанию ⤶](https://github.com/adrianhel/contents)
 
