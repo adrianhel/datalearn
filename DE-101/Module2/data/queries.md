@@ -1,4 +1,4 @@
-##### 2.2.1 Общий объем продаж (Total Sales)
+## 2.2.1 Общий объем продаж (Total Sales)
 
 ### [Назад в Модуль 2 ⤶](/DE-101/Module2/readme.md)
 
@@ -8,9 +8,8 @@ SELECT
 FROM orders;
   ```
 Ответ: $2297201
-___
 
-##### 2.2.2 Общая прибыль (Total Profit)
+## 2.2.2 Общая прибыль (Total Profit)
 
 ```sql
 SELECT
@@ -18,9 +17,8 @@ SELECT
 FROM orders;
 ```
 Ответ: $286397
-___
 
-##### 2.2.3 Коэффициент прибыли (Profit Ratio)
+## 2.2.3 Коэффициент прибыли (Profit Ratio)
 
 ```sql
 SELECT
@@ -28,9 +26,8 @@ SELECT
 FROM orders;
 ```
 Ответ: 12%
-___
 
-##### 2.2.4 Средняя скидка (Avg. Discount)
+## 2.2.4 Средняя скидка (Avg. Discount)
 
 ```sql
 SELECT
@@ -38,9 +35,8 @@ SELECT
 FROM orders;
 ```
 Ответ: 16%
-___
 
-##### 2.2.5 Продажи и прибыль по годам (Sales and Profit by Year)
+## 2.2.5 Продажи и прибыль по годам (Sales and Profit by Year)
 
 ```sql
 SELECT
@@ -59,9 +55,8 @@ ORDER BY 1 ASC;
 | 2017 | $470533 | $61619 |
 | 2018 | $609206 | $81795 |
 | 2019 | $733215 | $93439 |
-___
 
-##### 2.2.6 Топ-10 Городов по заказам и продажам (Number Orders and Sales by City)
+## 2.2.6 Топ-10 Городов по заказам и продажам (Number Orders and Sales by City)
 
 ```sql
 SELECT
@@ -87,9 +82,8 @@ LIMIT 10;
 | San Diego     |      88       |  47521  |
 | Jacksonville  |      61       |  44713  |
 | Springfield   |      73       |  43054  |
-___
 
-##### 2.2.7 Продажи и прибыль по категориям (Sales and Profit by Category)
+## 2.2.7 Продажи и прибыль по категориям (Sales and Profit by Category)
 
 ```sql
 SELECT
@@ -107,9 +101,8 @@ ORDER BY category DESC;
 | Technology       | $836154  | $145455 |
 | Office Supplies  | $719047  | $122491 |
 | Furniture        | $742000  | $18451  |
-___
 
-##### 2.2.8 Количество продаж по подкатегориям (Count of Sales by Sub-Category)
+## 2.2.8 Количество продаж по подкатегориям (Count of Sales by Sub-Category)
 
 ```sql
 SELECT
@@ -140,9 +133,8 @@ ORDER BY 2 DESC;
 | Supplies    |  190  |
 | Machines    |  115  |
 | Copiers     |  68   |
-___
 
-##### 2.2.9 Региональные менеджеры (Regional Managers)
+## 2.2.9 Региональные менеджеры (Regional Managers)
 
 ```sql
 SELECT
@@ -162,9 +154,8 @@ ORDER BY p.person ASC;
 | Cassandra Brandow | $391722 | $46749  |
 | Chuck Magee       | $678781 | $91523  |
 | Kelly Williams    | $501240 | $39706  |
-___
 
-##### 2.2.10 Продажи и прибыль по сегментам (Sales and Profit by Segment)
+## 2.2.10 Продажи и прибыль по сегментам (Sales and Profit by Segment)
 
 ```sql
 SELECT
@@ -182,9 +173,8 @@ ORDER BY segment ASC;
 | Consumer    | $1161401 | $134119 |
 | Corporate   | $706146  | $91979  |
 | Home Office | $429653  | $60299  |
-___
 
-##### 2.2.11 Продажи и прибыль по штатам (Sales and Profit by State)
+## 2.2.11 Продажи и прибыль по штатам (Sales and Profit by State)
 
 ```sql
 SELECT
@@ -248,9 +238,8 @@ ORDER BY state ASC;
 | West Virginia        |  $1210  |  $186   |
 | Wisconsin            | $32115  |  $8402  |
 | Wyoming              |  $1603  |  $100   |
-___
 
-##### 2.2.12 Продажи и прибыль по регионам (Sales and Profit by Region)
+## 2.2.12 Продажи и прибыль по регионам (Sales and Profit by Region)
 
 ```sql
 SELECT
@@ -269,9 +258,8 @@ ORDER BY region ASC;
 | East    | $678781 | $91523  |
 | South   | $391722 | $46749  |
 | West    | $725458 | $108418 |
-___
 
-##### 2.2.13 Количество возвратов по годам (Returned by Years)
+## 2.2.13 Количество возвратов по годам (Returned by Years)
 
 ```sql
 SELECT
