@@ -1,6 +1,6 @@
 ## 4.5.1 Знакомство с Apache Airflow
 
-[![Airflow](https://img.shields.io/badge/airflow-green?logo=airbnb)](https://airflow.apache.org/docs/)
+[![Airflow](https://img.shields.io/badge/apache-airflow-green?logo=airbnb)](https://airflow.apache.org/docs/)
 
 ### [Назад в Модуль 4 ⤶](/DE-101/Module4/readme.md)
 

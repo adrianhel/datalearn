@@ -1,8 +1,8 @@
 ## 4.5.1 Знакомство с Dagster
 
-### [Назад в Модуль 4 ⤶](/DE-101/Module4/readme.md)
+[![Python](https://img.shields.io/badge/dagster-green?logo=pypi)](https://docs.dagster.io/)
 
-Офсайт с документацией **[Dagster](https://docs.dagster.io/)**.
+### [Назад в Модуль 4 ⤶](/DE-101/Module4/readme.md)
 
 > ***Dagster*** — это система управления рабочими процессами _(workflow management system)_, предназначенная для 
 > разработки, развертывания и мониторинга данных.
