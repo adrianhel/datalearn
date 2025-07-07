@@ -1,8 +1,8 @@
 ## 4.5.1 Знакомство с Apache Airflow
 
-### [Назад в Модуль 4 ⤶](/DE-101/Module4/readme.md)
+[![Airflow](https://img.shields.io/badge/airflow-green?logo=airbnb)](https://airflow.apache.org/docs/)
 
-Офсайт с документацией **[Airflow](https://airflow.apache.org/docs/)**.
+### [Назад в Модуль 4 ⤶](/DE-101/Module4/readme.md)
 
 > ***Apache Airflow*** — это _open-source_ оркестратор для управления процессами загрузки и обработки данных.
 
