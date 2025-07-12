@@ -9,12 +9,13 @@
 Для установки нам понадобится скачать **Java JDK**, **Scala**, **Spark** и ещё 1 файлик с **github**.
 Прежде, чем начать, проверьте в 
 [таблице совместимости](https://community.cloudera.com/t5/Community-Articles/Spark-Scala-Version-Compatibility-Matrix/ta-p/383713)
-версии **Java JDK**, **Scala** и **Spark** соответственно.
+версии *Java JDK*, *Scala* и *Spark* соответственно.
 
 ### 7.2.1 Установка Java
 - Скачать _[Java JDK-21](https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe)_   
 - Установить _Java JDK_  
 - Добавляем системную переменную: Имя: `JAVA_HOME`, Значение: `C:\Program Files\Java\jdk-21`
+- Выбираем среду `Path` и нажимаем  `Изменить`, далее нажимаем `Создать` и добавляем значение: `%JAVA_HOME%\bin` 
 - Откройте командную строку и введите:
 
 ```bash
@@ -30,6 +31,7 @@ java --version
 - Скачать _[Scala 2.12.18](https://github.com/scala/scala/releases/download/v2.12.18/scala-2.12.18.msi)_  
 - Установить _Scala_   
 - Добавляем системную переменную: Имя: `SCALA_HOME`, Значение: `C:\Program Files (x86)\scala` 
+- Выбираем среду `Path` и нажимаем  `Изменить`, далее нажимаем `Создать` и добавляем значение: `%SCALA_HOME%\bin`  
 - В командной строке введите следующую команду:  
 
 ```bash
@@ -50,14 +52,17 @@ scala
 ### 7.2.4 Загрузка утилит Windows
 Если вы хотите работать с данными _Hadoop_, выполните следующие действия, чтобы загрузить утилиту для _Hadoop_:
 
-- Скачайте файл _[winutils.exe](https://github.com/steveloughran/winutils/tree/master)_  
+- Скачайте файл _[winutils.exe](https://github.com/steveloughran/winutils/tree/master) для hadoop3_  
 - Скопируйте файл в папку `C:\hadoop\bin`  
 - Добавляем системную переменную: Имя: `HADOOP_HOME`, Значение: `C:\hadoop`  
 - Выбираем среду `Path` и нажимаем  `Изменить`, далее нажимаем `Создать` и добавляем значение: `%HADOOP_HOME%\bin`  
 
-
-- Выполните команду, чтобы проверить установку Spark, как показано ниже:
+### 7.2.5 Запуск Spark
+- Выполните команду, чтобы проверить установку _Spark_, как показано ниже:
 
 ```bash
 spark-shell
 ```
+Ниже отобразится информация об запуске _Spark_:
+
+<img src="/data/Module7/img/spark_version.png" width="60%">
