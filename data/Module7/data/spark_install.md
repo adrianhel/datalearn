@@ -12,14 +12,14 @@
 версии *Java JDK*, *Scala* и *Spark* соответственно.
 
 ### 7.2.1 Установка Java
-- Скачать _[Java JDK-21](https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe)_   
+- Скачать [Java JDK-21](https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe)   
 - Установить _Java JDK_  
 - Добавляем системную переменную: Имя: `JAVA_HOME`, Значение: `C:\Program Files\Java\jdk-21`
 - Выбираем среду `Path` и нажимаем  `Изменить`, далее нажимаем `Создать` и добавляем значение: `%JAVA_HOME%\bin` 
 - Откройте командную строку и введите:
 
 ```bash
-java --version
+java -version
 ```
 
 Ниже отобразится информация об установке _Java_:
@@ -28,7 +28,7 @@ java --version
 
 
 ### 7.2.2 Установка Scala
-- Скачать _[Scala 2.12.18](https://github.com/scala/scala/releases/download/v2.12.18/scala-2.12.18.msi)_  
+- Скачать [Scala 2.12.18](https://github.com/scala/scala/releases/download/v2.12.18/scala-2.12.18.msi)  
 - Установить _Scala_   
 - Добавляем системную переменную: Имя: `SCALA_HOME`, Значение: `C:\Program Files (x86)\scala` 
 - Выбираем среду `Path` и нажимаем  `Изменить`, далее нажимаем `Создать` и добавляем значение: `%SCALA_HOME%\bin`  
@@ -44,7 +44,7 @@ scala
 
 
 ### 7.2.3 Установка Spark
-- Скачать _[Spark](https://dlcdn.apache.org/spark/spark-3.5.6/spark-3.5.6-bin-hadoop3.tgz)_
+- Скачать [Spark](https://dlcdn.apache.org/spark/spark-3.5.6/spark-3.5.6-bin-hadoop3.tgz)
 - Распаковать скачанный архив на диск, например в папку `C:\spark`  
 - Добавляем системную переменную: Имя: `SPARK_HOME`, Значение: `C:\spark\spark-3.5.6-bin-hadoop3`  
 - Выбираем среду `Path` и нажимаем  `Изменить`, далее нажимаем `Создать` и добавляем значение: `%SPARK_HOME%\bin`  
@@ -52,7 +52,7 @@ scala
 ### 7.2.4 Загрузка утилит Windows
 Если вы хотите работать с данными _Hadoop_, выполните следующие действия, чтобы загрузить утилиту для _Hadoop_:
 
-- Скачайте файл _[winutils.exe](https://github.com/steveloughran/winutils/tree/master) для hadoop3_  
+- Скачайте файл [winutils.exe](https://github.com/steveloughran/winutils/tree/master) для _hadoop3_  
 - Скопируйте файл в папку `C:\hadoop\bin`  
 - Добавляем системную переменную: Имя: `HADOOP_HOME`, Значение: `C:\hadoop`  
 - Выбираем среду `Path` и нажимаем  `Изменить`, далее нажимаем `Создать` и добавляем значение: `%HADOOP_HOME%\bin`  
