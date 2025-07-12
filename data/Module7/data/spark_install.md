@@ -9,7 +9,7 @@
 ### 7.2.1 Установка Java
 - Скачать _[Java JDK-21](https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe)_   
 - Установить _Java JDK_  
-- Добавьте `JAVA_HOME` в `PATH` со значением `C:\Program Files\Java\jdk-21`  
+- Добавьте в пользовательскую переменную `JAVA_HOME` в `PATH` со значением `C:\Program Files\Java\jdk-21`  
 - Откройте командную строку и введите:
 
 ```bash
@@ -22,8 +22,9 @@ java --version
 
 
 ### 7.2.2 Установка Scala
-- Скачать _[Scala 2.13.11](https://github.com/scala/scala/releases/download/v2.13.11/scala-2.13.11.msi)_.  
+- Скачать _[Scala 2.13.11](https://github.com/scala/scala/releases/download/v2.13.11/scala-2.13.11.msi)_  
 - Установить _Scala_  
+- Добавьте в пользовательскую переменную `SCALA_HOME` в `PATH` со значением `C:\Program Files (x86)\scala`  
 - В командной строке введите следующую команду:  
 
 ```bash
@@ -37,6 +38,17 @@ scala
 
 ### 7.2.3 Установка Spark
 - Скачать _[Spark](https://dlcdn.apache.org/spark/spark-3.5.6/spark-3.5.6-bin-hadoop3-scala2.13.tgz)_
-- Распаковать скачанный архив на диск, например в папку `C:\Spark`
-- В пользовательской переменной добавьте `SPARK_HOME` в `PATH` со значением `C:\Spark\spark-3.5.6-bin-hadoop3-scala2.13`
-- В системной переменной добавьте `%SPARK_HOME%\bin` в переменную `PATH`
+- Распаковать скачанный архив на диск, например в папку `C:\spark`  
+- В пользовательской переменной добавьте `SPARK_HOME` в `PATH` со значением `C:\spark\spark-3.5.6-bin-hadoop3\spark-3.5.6-bin-hadoop3-scala2.13`  
+- В системной переменной добавьте `%SPARK_HOME%\bin` в переменную `PATH`  
+
+### 7.2.4 Загрузка утилит Windows
+Если вы хотите работать с данными _Hadoop_, выполните следующие действия, чтобы загрузить утилиту для _Hadoop_:
+
+- Скачайте файл _[winutils.exe](https://github.com/stonefl/winutils/raw/master/hadoop-2.7.1/bin/winutils.exe)_  
+- Скопируйте файл в папку `C:\spark\spark-3.5.6-bin-hadoop3\spark-3.5.6-bin-hadoop3-scala2.13\bin`  
+- Выполните команду, чтобы проверить установку Spark, как показано ниже:
+
+```bash
+spark-shell
+```
