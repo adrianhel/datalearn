@@ -65,4 +65,4 @@ spark-shell
 ```
 Ниже отобразится информация об запуске _Spark_:
 
-<img src="/data/Module7/img/spark_version.png" width="80%">  
+<img src="/data/Module7/img/spark_version.png" width="90%">  
