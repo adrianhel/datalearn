@@ -8,8 +8,8 @@
 
 ### 7.2.1 Установка Java
 - Скачать _[Java JDK-21](https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe)_   
-- Установить _Java JDK-21_  
-- Добавьте _JAVA_HOME_ в _PATH_ со значением `C:\Program Files\Java\jdk-21`  
+- Установить _Java JDK_  
+- Добавьте `JAVA_HOME` в `PATH` со значением `C:\Program Files\Java\jdk-21`  
 - Откройте командную строку и введите:
 
 ```bash
@@ -23,7 +23,7 @@ java --version
 
 ### 7.2.2 Установка Scala
 - Скачать _[Scala 2.13.11](https://github.com/scala/scala/releases/download/v2.13.11/scala-2.13.11.msi)_.  
-- Установить _Scala 2.13.11_  
+- Установить _Scala_  
 - В командной строке введите следующую команду:  
 
 ```bash
@@ -36,3 +36,7 @@ scala
 
 
 ### 7.2.3 Установка Spark
+- Скачать _[Spark](https://dlcdn.apache.org/spark/spark-3.5.6/spark-3.5.6-bin-hadoop3-scala2.13.tgz)_
+- Распаковать скачанный архив на диск, например в папку `C:\Spark`
+- В пользовательской переменной добавьте `SPARK_HOME` в `PATH` со значением `C:\Spark\spark-3.5.6-bin-hadoop3-scala2.13`
+- В системной переменной добавьте `%SPARK_HOME%\bin` в переменную `PATH`
