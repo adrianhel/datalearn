@@ -39,7 +39,7 @@ scala
 ### 7.2.3 Установка Spark
 - Скачать _[Spark](https://dlcdn.apache.org/spark/spark-3.5.6/spark-3.5.6-bin-hadoop3-scala2.13.tgz)_
 - Распаковать скачанный архив на диск, например в папку `C:\spark`  
-- В пользовательской переменной добавьте `SPARK_HOME` в `PATH` со значением `C:\spark\spark-3.5.6-bin-hadoop3\spark-3.5.6-bin-hadoop3-scala2.13`  
+- Добавляем системную переменную: Имя: `SPARK_HOME`, Значение: `C:\spark\spark-3.5.6-bin-hadoop3`  
 - В системной переменной добавьте `%SPARK_HOME%\bin` в переменную `PATH`  
 
 ### 7.2.4 Загрузка утилит Windows
