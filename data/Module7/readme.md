@@ -11,5 +11,5 @@
 
 ## 7.2 Установка Apache Spark
 
-[Руководство по установке и настройке Apache Spark](/data/spark_install.md)
+[Руководство по установке и настройке Apache Spark](data/spark_install.md)
 
