@@ -23,8 +23,8 @@ java --version
 
 ### 7.2.2 Установка Scala
 - Скачать _[Scala 2.13.11](https://github.com/scala/scala/releases/download/v2.13.11/scala-2.13.11.msi)_  
-- Установить _Scala_  
-- Добавьте в пользовательскую переменную `SCALA_HOME` в `PATH` со значением `C:\Program Files (x86)\scala`  
+- Установить _Scala_   
+- Добавляем системную переменную: Имя: `SCALA_HOME`, Значение: `C:\Program Files (x86)\scala` 
 - В командной строке введите следующую команду:  
 
 ```bash
@@ -46,7 +46,10 @@ scala
 Если вы хотите работать с данными _Hadoop_, выполните следующие действия, чтобы загрузить утилиту для _Hadoop_:
 
 - Скачайте файл _[winutils.exe](https://github.com/stonefl/winutils/raw/master/hadoop-2.7.1/bin/winutils.exe)_  
-- Скопируйте файл в папку `C:\spark\spark-3.5.6-bin-hadoop3\spark-3.5.6-bin-hadoop3-scala2.13\bin`  
+- Скопируйте файл в папку `C:\hadoop\bin`  
+- Добавляем системную переменную: Имя: `HADOOP_HOME`, Значение: `C:\hadoop`  
+
+
 - Выполните команду, чтобы проверить установку Spark, как показано ниже:
 
 ```bash
