@@ -9,7 +9,7 @@
 ### 7.2.1 Установка Java
 - Скачать _[Java JDK-21](https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe)_   
 - Установить _Java JDK_  
-- Добавляем системную переменную: Имя: `JAVA_HOME`, Значение: `C:\Program Files\Java\jdk-21`  
+- Добавляем системную переменную: Имя: `JAVA_HOME`, Значение: `C:\Program Files\Java\jdk-21`
 - Откройте командную строку и введите:
 
 ```bash
@@ -40,7 +40,7 @@ scala
 - Скачать _[Spark](https://dlcdn.apache.org/spark/spark-3.5.6/spark-3.5.6-bin-hadoop3-scala2.13.tgz)_
 - Распаковать скачанный архив на диск, например в папку `C:\spark`  
 - Добавляем системную переменную: Имя: `SPARK_HOME`, Значение: `C:\spark\spark-3.5.6-bin-hadoop3`  
-- В системной переменной добавьте `%SPARK_HOME%\bin` в переменную `PATH`  
+- Выбираем среду `Path` и нажимаем  `Изменить`, далее нажимаем `Создать` и добавляем значение: `%SPARK_HOME%\bin`  
 
 ### 7.2.4 Загрузка утилит Windows
 Если вы хотите работать с данными _Hadoop_, выполните следующие действия, чтобы загрузить утилиту для _Hadoop_:
@@ -48,6 +48,7 @@ scala
 - Скачайте файл _[winutils.exe](https://github.com/stonefl/winutils/raw/master/hadoop-2.7.1/bin/winutils.exe)_  
 - Скопируйте файл в папку `C:\hadoop\bin`  
 - Добавляем системную переменную: Имя: `HADOOP_HOME`, Значение: `C:\hadoop`  
+- Выбираем среду `Path` и нажимаем  `Изменить`, далее нажимаем `Создать` и добавляем значение: `%HADOOP_HOME%\bin`  
 
 
 - Выполните команду, чтобы проверить установку Spark, как показано ниже:
