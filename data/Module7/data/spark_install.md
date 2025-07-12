@@ -18,7 +18,8 @@ java --version
 
 Ниже отобразится информация об установке _Java_.
 
-<img src="/img/java_version.png" width="100%">
+<img src="/DE-101/Module7/img/java_version.png" width="100%">
+
 
 ### 7.2.2 Установка Scala
 - Скачать _[Scala 2.13.11](https://github.com/scala/scala/releases/download/v2.13.11/scala-2.13.11.msi)_.  
@@ -31,6 +32,7 @@ scala
 
 Ниже отобразится информация об установке _Scala_.
 
-<img src="/img/scala_version.png" width="100%">
+<img src="/DE-101/Module7/img/scala_version.png" width="100%">
+
 
 ### 7.2.3 Установка Spark
