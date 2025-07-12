@@ -68,71 +68,102 @@ _Папка, где хранятся Python-скрипты, определяющ
 
 - **Web Server** отображает статус в реальном времени и логи.
 
-<img src="/DE-101/Module4/img/airflow_architecture.png" width="80%">
+<img src="/data/Module4/img/airflow_architecture.png" width="80%">
 
 `DAG → Scheduler → Queue → Executor/Worker → Результат в БД → Отображение в UI`
 
-## 4.5.5 Пишем первый DAG
+## 4.5.5 Первый DAG
 
-[Первый DAG](airflow/first_dag.md)
+Пишем [Первый DAG](airflow/first_dag.md).
 
-### Состовляющие DAG:
+### Состовляющие DAG
+**1. Импорт библиотек:**  
+- `from airflow import DAG`: _Импорт класса DAG из Airflow._  
+- `from airflow.operators.dummy_operator import DummyOperator`: _Импорт оператора, который не выполняет никаких действий 
+(используется для обозначения начала и конца)._  
+- `from airflow.operators.python_operator import PythonOperator`: _Импорт оператора для выполнения Python-функций._  
+- `from datetime import datetime`: _Импорт класса `datetime` для работы с датами._  
 
-**1. Импорт библиотек:**
-
-- `from airflow import DAG`: 
-
-_Импорт класса DAG из Airflow._
-
-- `from airflow.operators.dummy_operator import DummyOperator`:
-
-_Импорт оператора, который не выполняет никаких действий 
-(используется для обозначения начала и конца)._
-
-- `from airflow.operators.python_operator import PythonOperator`:
-
-_Импорт оператора для выполнения Python-функций._
-
-- `from datetime import datetime`: 
-
-_Импорт класса datetime для работы с датами._
-
-**2. Определение функции:**
-
-- `def my_task()`: 
-
-_Определение функции, которую мы будем выполнять в одной из задач. В данном случае она просто выводит сообщение._
+**2. Определение функции:**  
+- `def my_task()`:
+_Определение функции, которую мы будем выполнять в одной из задач. В данном случае она просто выводит сообщение._  
 
 **3. Настройки по умолчанию:**
-
-- `default_args`: 
-
+- `default_args`:
 _Словарь, содержащий параметры по умолчанию для задач в DAG. 
-Здесь мы указываем владельца, дату начала и количество попыток при ошибках._
+Здесь мы указываем владельца, дату начала и количество попыток при ошибках._  
 
-**4. Создание DAG:**
+**4. Создание DAG:**  
+- `dag = DAG(...)`: _Создание экземпляра класса DAG с указанием имени, параметров по умолчанию, описания и расписания 
+выполнения._  
 
-- `dag = DAG(...)`: 
+**5. Определение задач:**  
+- `start = DummyOperator(...)`: _Создание задачи, которая просто обозначает начало процесса._
+- `run_my_task = PythonOperator(...)`: _Создание задачи, которая будет выполнять нашу функцию my_task._
+- `end = DummyOperator(...)`: _Создание задачи, которая обозначает конец процесса._  
 
-_Создание экземпляра класса DAG с указанием имени, параметров по умолчанию, описания и расписания выполнения._
+**6. Определение порядка выполнения задач:**  
+- `start >> run_my_task >> end`: _Указание порядка выполнения задач. Здесь мы указываем, что сначала выполняется задача 
+`start`, затем `run_my_task` и в конце `end`._  
 
-**5. Определение задач:**
+## 4.5.6 Сенсоры в Apache Airflow
+Сенсоры — это специальные операторы, которые ожидают выполнения определенного условия перед тем, как продолжить 
+выполнение следующих задач в рабочем процессе (DAG). Они полезны для синхронизации задач и контроля за состоянием внешних систем.
 
-- `start = DummyOperator(...)`: 
+### Основные виды сенсоров
+- **FileSensor**: Ожидает появления файла в указанной директории.
 
-_Создание задачи, которая просто обозначает начало процесса._
+```python
+from airflow.sensors.filesystem import FileSensor
 
-- `run_my_task = PythonOperator(...)`: 
+file_sensor = FileSensor(
+     task_id='check_file',
+     filepath='/path/to/file.txt',
+     fs_conn_id='fs_default',
+     poke_interval=10,
+     timeout=600
+)
+```
 
-_Создание задачи, которая будет выполнять нашу функцию my_task._
+- **ExternalTaskSensor**: Ожидает завершения задачи в другом DAG.
 
-- `end = DummyOperator(...)`: 
+```python
+from airflow.sensors.external_task import ExternalTaskSensor
 
-_Создание задачи, которая обозначает конец процесса._
+external_task_sensor = ExternalTaskSensor(
+     task_id='wait_for_other_dag',
+     external_dag_id='other_dag',
+     external_task_id='task_in_other_dag',
+     mode='poke',
+     timeout=600
+)
+```
 
-**6. Определение порядка выполнения задач:**
+- **TimeDeltaSensor**: Ожидает определенного времени перед выполнением задачи.
 
-- `start >> run_my_task >> end`: 
+```python
+from airflow.sensors.time_delta import TimeDeltaSensor
+from datetime import timedelta
 
-_Указание порядка выполнения задач. Здесь мы указываем, что сначала выполняется задача start, затем run_my_task, 
-и в конце end._
+time_delta_sensor = TimeDeltaSensor(
+    task_id='wait_for_time_delta',
+    delta=timedelta(minutes=5)
+)
+```
+
+- **SqlSensor**: Ожидает выполнения SQL-запроса, который возвращает результат.
+
+```python
+from airflow.sensors.sql import SqlSensor
+
+sql_sensor = SqlSensor(
+    task_id='check_sql_condition',
+    sql='SELECT COUNT(*) FROM my_table WHERE condition = true',
+    conn_id='my_database'
+)
+```
+
+### Настройка сенсоров
+- **poke_interval**: Интервал между попытками проверки условия.  
+- **timeout**: Максимальное время ожидания, после которого сенсор завершится с ошибкой.  
+- **mode**: Режим работы сенсора, может быть `poke` (проверка с интервалами) или `reschedule` (ожидание события).  
