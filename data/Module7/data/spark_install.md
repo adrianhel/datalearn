@@ -1,7 +1,7 @@
 ## 7.2 Установка Apache Spark
 
-[![Scala](https://img.shields.io/badge/scala-2.12.18-red)](https://scala-lang.org/download/)
 [![Java](https://img.shields.io/badge/java_JDK-21.0.7-red)](https://www.oracle.com/java/technologies/downloads/)
+[![Scala](https://img.shields.io/badge/scala-2.12.18-red)](https://scala-lang.org/download/)
 [![Spark](https://img.shields.io/badge/apache_spark-3.5.6-red)](https://spark.apache.org/downloads.html)
 
 ### [Назад в Модуль 7 ⤶](/data/Module7/readme.md)
