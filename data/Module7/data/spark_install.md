@@ -2,7 +2,7 @@
 
 [![Scala](https://img.shields.io/badge/scala-2.12.18-red)](https://scala-lang.org/download/)
 [![Java](https://img.shields.io/badge/java_JDK-21.0.7-red)](https://www.oracle.com/java/technologies/downloads/)
-[![Spark](https://img.shields.io/badge/apache_spark-3.5.0-red)](https://spark.apache.org/downloads.html)
+[![Spark](https://img.shields.io/badge/apache_spark-3.5.6-red)](https://spark.apache.org/downloads.html)
 
 ### [Назад в Модуль 7 ⤶](/data/Module7/readme.md)
 
@@ -42,7 +42,7 @@ scala
 
 
 ### 7.2.3 Установка Spark
-- Скачать _[Spark](https://dlcdn.apache.org/spark/spark-3.5.0/spark-3.5.6-bin-hadoop3-scala2.13.tgz)_
+- Скачать _[Spark](https://dlcdn.apache.org/spark/spark-3.5.6/spark-3.5.6-bin-hadoop3.tgz)_
 - Распаковать скачанный архив на диск, например в папку `C:\spark`  
 - Добавляем системную переменную: Имя: `SPARK_HOME`, Значение: `C:\spark\spark-3.5.6-bin-hadoop3`  
 - Выбираем среду `Path` и нажимаем  `Изменить`, далее нажимаем `Создать` и добавляем значение: `%SPARK_HOME%\bin`  
