@@ -50,11 +50,11 @@ BI-инструментов существует не мало на рынке, 
 
 В рамках курса рассмотрим некоторые из них. Самыми известными на рынке являются **Tableau** и **Microsoft Power BI**.
 
-### - [Tableau](/data/Module3/data/tableau.md)
-### - [Power BI](/data/Module3/data/power_bi.md)
+### - [Tableau](data/tableau.md)
+### - [Power BI](data/power_bi.md)
 
 ## 3.4 Fancy BI-инструменты
 Так же по фану попробуем такие известные open-source решения, как **Metabase** и **Apache Superset**.
 
-### - [Metabase](/data/Module3/data/metabase.md)
-### - [Superset](/data/Module3/data/superset.md)
+### - [Metabase](data/metabase.md)
+### - [Superset](data/superset.md)

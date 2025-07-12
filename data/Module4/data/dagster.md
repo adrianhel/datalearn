@@ -1,6 +1,6 @@
 ## 4.5.1 Знакомство с Dagster
 
-[![Python](https://img.shields.io/badge/dagster-green?logo=pypi)](https://docs.dagster.io/)
+[![Python](https://img.shields.io/badge/dagster-purple?logo=pypi)](https://docs.dagster.io/)
 
 ### [Назад в Модуль 4 ⤶](/data/Module4/readme.md)
 

@@ -27,39 +27,39 @@ _Легкая интеграция с другими инструментами 
 ## 3.4.3 Макет будущего дашборда
 Для знакомства с инструментом сделаем простой интерактивный дашборд, состоящий из ключевых метрик и 4-х основных блоков.
 
-<img src="/DE-101/Module3/img/maket_mb.png" width="50%">
+<img src="/data/Module3/img/maket_mb.png" width="50%">
 
 ## 3.4.4 Строим элементы будущего дашборда
 Подключаемся к нашей БД и приступаем к созданию дашборда.
 
-<img src="/DE-101/Module3/img/connect_mb.png" width="30%">
+<img src="/data/Module3/img/connect_mb.png" width="30%">
 
 ### Cards
 В верхней части расположим карточки с _Key Metrics_.
 
-<img src="/DE-101/Module3/img/key_metrics_mb.png" width="100%">
+<img src="/data/Module3/img/key_metrics_mb.png" width="100%">
 
 ### Donut
 В первом крупном блоке расположим пончик с продажами по регионам.
 
-<img src="/DE-101/Module3/img/donut_mb.png" width="60%">
+<img src="/data/Module3/img/donut_mb.png" width="60%">
 
 ### Map
 В следующем блоке, расположим карту продаж по штатам.
 
-<img src="/DE-101/Module3/img/map_mb.png" width="60%">
+<img src="/data/Module3/img/map_mb.png" width="60%">
 
 ### Horizontal Bar-chart
 В нижем левом блоке отобразим продажи и доходы по категориям товаров.
 
-<img src="/DE-101/Module3/img/bar_cat_mb.png" width="60%">
+<img src="/data/Module3/img/bar_cat_mb.png" width="60%">
 
 ### Vertical Bar-chart
 В следующем блоке разместим продажи и доходы по менеджерам.
 
-<img src="/DE-101/Module3/img/bar_man_mb.png" width="60%">
+<img src="/data/Module3/img/bar_man_mb.png" width="60%">
 
 ## 3.4.5 Собираем дашборд
 Масшатбируем мышкой и распологаем элементы в нужном порядке перетаскиванием. Настраиваем зависимости и тултипы.
 
-<img src="/DE-101/Module3/img/dashboard_mb.png">
+<img src="/data/Module3/img/dashboard_mb.png">

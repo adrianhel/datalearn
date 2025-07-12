@@ -25,7 +25,7 @@ _Tableau имеет активное сообщество пользовател
 ## 3.3.2 Макет будущего дашборда
 Для знакомства с инструментом сделаем простой интерактивный дашборд, состоящий из 4-х основных блоков.
 
-<img src="/DE-101/Module3/img/maket_tp.png" width="50%">
+<img src="/data/Module3/img/maket_tp.png" width="50%">
 
 ## 3.3.3 Строим элементы будущего дашборда
 ### Donut
@@ -33,24 +33,24 @@ _Tableau имеет активное сообщество пользовател
 
 Соединим в нем **продажи по регионам** с ключевыми метриками: _Sales_, _Profit_ и _Discount_.
 
-<img src="/DE-101/Module3/img/donut_tp.png" width="30%">
+<img src="/data/Module3/img/donut_tp.png" width="30%">
 
 ### Legend
 Пончик будет хорошо смотреться в паре с легендой, являющейся подсказкой к секторам нашего пончика.
 
-<img src="/DE-101/Module3/img/legend_tp.png" width="30%">
+<img src="/data/Module3/img/legend_tp.png" width="30%">
 
 ### Bar-chart
 Для продаж по суб-категориям будем использовать **horizontal bar-chart**. В нем будут такие метрики, как сумма продаж, 
 сумма прибыли и количество продаж.
 
-<img src="/DE-101/Module3/img/bar_sub_tp.png">
+<img src="/data/Module3/img/bar_sub_tp.png">
 
 В следующем блоке будет отображена деятельность региональных менеджеров. Для этого используем **vertical bar-chart**.
 
-<img src="/DE-101/Module3/img/bar_sales_tp.png" width="30%">
+<img src="/data/Module3/img/bar_sales_tp.png" width="30%">
 
-<img src="/DE-101/Module3/img/bar_profit_tp.png" width="30%">
+<img src="/data/Module3/img/bar_profit_tp.png" width="30%">
 
 Две диаграммы можно было соединить в одну с разбивкой по цвету и Sales/Profit.
 
@@ -58,7 +58,7 @@ _Tableau имеет активное сообщество пользовател
 В качестве эксперимента, последний блок будет представлен в виде диаграммы **Jitter-plot**. Это точечная диаграмма. 
 В нашем случае она будет отображать количество отправлений товара тем или иным способом.
 
-<img src="/DE-101/Module3/img/jitter_tp.png" width="50%">
+<img src="/data/Module3/img/jitter_tp.png" width="50%">
 
 ### Filter
 Дашборд будет интерактивным, поэтому необходимо создать и добавить фильтр по годам.
@@ -67,7 +67,7 @@ _Tableau имеет активное сообщество пользовател
 Итак, когда наш дашборд собран и настроены все *action*'ы для интерактивности, нажимаем **CTRL+S**, чтобы сохранить
 его в **Tableau Public**.
 
-<img src="/DE-101/Module3/img/dashboard_tp.png" width="100%">
+<img src="/data/Module3/img/dashboard_tp.png" width="100%">
 
 ## 3.3.5 Ссылки на дашборд
 #### [Посмотреть на сайте](https://public.tableau.com/app/profile/adrian.hel7121/viz/superstore_17462750560080/Dashboard)

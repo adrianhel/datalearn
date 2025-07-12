@@ -10,7 +10,7 @@
 
 В моем случае установлено было так:
 
-<img src="/DE-101/Module4/img/environment.png" width="40%">
+<img src="/data/Module4/img/environment.png" width="40%">
 
 ## 4.3.2 Основные элементы и типы проектов PDI
 ### Steps и Hops
@@ -39,7 +39,7 @@
 
 ## 4.3.3 План действий
 Работать будем с исходными данными нашего «Superstore» из 
-[Модуля 1](https://github.com/adrianhel/datalearn/blob/main/DE-101/Module1/readme.md).
+[Модуля 1](https://github.com/adrianhel/datalearn/blob/main/data/Module1/readme.md).
 1. Сделаем job, где скачаем файл **superstore.xls** через _http_ протокол.
 2. Объединим данные из разных листов «Superstore» в одну таблицу **superstore_general.csv** (формат **CSV**).
 3. Разобьем данные на разные форматы:
@@ -61,40 +61,40 @@
 выбираем папку для хранения jobs и transformations (в моем случае _work_), и папку для хранения собранных данных 
 (в моем случае _data_).
 
-<img src="/DE-101/Module4/img/envi_var.png" width="40%">
+<img src="/data/Module4/img/envi_var.png" width="40%">
 
 Приступаем к выполнению.
 1. [Job для скачивания исходного файла Superstore](/data/Module4/data/pentaho/job_download_superstore.kjb)
 
-<img src="/DE-101/Module4/img/job_download.png" width="40%">
+<img src="/data/Module4/img/job_download.png" width="40%">
 
 2. [Transformation для создания Superstore general](/data/Module4/data/pentaho/transformation_general.ktr)
 
-<img src="/DE-101/Module4/img/transform_general.png" width="70%">
+<img src="/data/Module4/img/transform_general.png" width="70%">
 
 _Метрики_
 
-<img src="/DE-101/Module4/img/general_metrics.png" width="80%">
+<img src="/data/Module4/img/general_metrics.png" width="80%">
 
 3. [Transformation для разбиения Superstore general](/data/Module4/data/pentaho/transformation_general_split.ktr)
 
-<img src="/DE-101/Module4/img/transform_general_split.png" width="100%">
+<img src="/data/Module4/img/transform_general_split.png" width="100%">
 
 _Метрики_
 
-<img src="/DE-101/Module4/img/split_metrics.png" width="90%">
+<img src="/data/Module4/img/split_metrics.png" width="90%">
 
 4. [Transformation для добавления ошибок](/data/Module4/data/pentaho/transformation_add_errors.ktr)
 
-<img src="/DE-101/Module4/img/transform_add_errors.png" width="80%">
+<img src="/data/Module4/img/transform_add_errors.png" width="80%">
 
 _Метрики_
 
-<img src="/DE-101/Module4/img/errors_metrics.png" width="90%">
+<img src="/data/Module4/img/errors_metrics.png" width="90%">
 
 5. [Финальный job со всеми трансформациями](/data/Module4/data/pentaho/job_final.kjb)
 
-<img src="/DE-101/Module4/img/job_final.png" width="75%">
+<img src="/data/Module4/img/job_final.png" width="75%">
 
 ## 4.3.5 Пишем скрипт для запуска нашего job'a
 Открываем текстовый редактор. Сначала указываем путь до Kitchen.bat, а потом путь до нашего финального job'а. 
@@ -108,8 +108,8 @@ _Метрики_
 ### 4.3.6 Запускаем скрипт через Планировщик заданий (Windows Task Scheduler)
 Запускаем _Планировщик заданий Windows_ и создаем Задачу для запуска нашего job'а.
 
-<img src="/DE-101/Module4/img/scheduler.png" width="60%">
+<img src="/data/Module4/img/scheduler.png" width="60%">
 
 После запуска job отработал и в папке назначения появились все ожидаемые файлы.
 
-<img src="/DE-101/Module4/img/job_result.png" width="30%">
+<img src="/data/Module4/img/job_result.png" width="30%">

@@ -30,56 +30,56 @@ _Имеет большое сообщество разработчиков и п
 ## 3.4.3 Макет будущего дашборда
 Для знакомства с инструментом сделаем простой интерактивный дашборд, состоящий из 4-х основных блоков.
 
-<img src="/DE-101/Module3/img/maket_ss.png" width="50%">
+<img src="/data/Module3/img/maket_ss.png" width="50%">
 
 ## 3.4.4 Строим элементы будущего дашборда
 Подключаемся к нашей БД и приступаем к созданию дашборда.
 
-<img src="/DE-101/Module3/img/connect_ss.png" width="30%">
+<img src="/data/Module3/img/connect_ss.png" width="30%">
 
 ### Cards
 В верхней части расположим Key Metrics:
 - _Sales_
 
-<img src="/DE-101/Module3/img/card_sale_ss.png" width="30%">
+<img src="/data/Module3/img/card_sale_ss.png" width="30%">
 
 - _Profit_
 
-<img src="/DE-101/Module3/img/card_prof_ss.png" width="30%">
+<img src="/data/Module3/img/card_prof_ss.png" width="30%">
 
 - _Discount_
 
-<img src="/DE-101/Module3/img/card_disc_ss.png" width="18.5%">
+<img src="/data/Module3/img/card_disc_ss.png" width="18.5%">
 
 - _Quantity_
 
-<img src="/DE-101/Module3/img/card_quant_ss.png" width="18.5%">
+<img src="/data/Module3/img/card_quant_ss.png" width="18.5%">
 
 ### Donut
 В первом крупном блоке расположим пончик с продажами по регионам.
 
-<img src="/DE-101/Module3/img/donut_ss.png" width="60%">
+<img src="/data/Module3/img/donut_ss.png" width="60%">
 
 ### Line-chart
 В следующем блоке, расположим линейную диаграмму, которая будет отображать динамику изменений продаж и дохода 
 с течением времени.
 
-<img src="/DE-101/Module3/img/line_ss.png" width="60%">
+<img src="/data/Module3/img/line_ss.png" width="60%">
 
 ### Bar-chart
 В нижем левом блоке отобразим продажи по категориям товаров.
 
-<img src="/DE-101/Module3/img/bar_cat_ss.png" width="60%">
+<img src="/data/Module3/img/bar_cat_ss.png" width="60%">
 
 ### Funnel
 В следующем блоке разместим воронку топ-10 продаж по субкатегориям товаров.
 
-<img src="/DE-101/Module3/img/funnel_ss.png" width="60%">
+<img src="/data/Module3/img/funnel_ss.png" width="60%">
 
 ## 3.4.5 Собираем дашборд
 Распологаем элементы в нужном порядке перетаскиванием. Дашборд полностью интерактивен.
 
-<img src="/DE-101/Module3/img/dashboard_ss.png" width="100%">
+<img src="/data/Module3/img/dashboard_ss.png" width="100%">
 
 ## 3.4.6 Ссылка на дашборд
 
