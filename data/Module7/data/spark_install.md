@@ -18,7 +18,7 @@ java --version
 
 Ниже отобразится информация об установке _Java_.
 
-<img src="/DE-101/Module7/img/java_version.png" width="100%">
+<img src="/DE-101/data/Module7/img/java_version.png" width="100%">
 
 
 ### 7.2.2 Установка Scala
@@ -32,7 +32,7 @@ scala
 
 Ниже отобразится информация об установке _Scala_.
 
-<img src="/DE-101/Module7/img/scala_version.png" width="100%">
+<img src="/DE-101/data/Module7/img/scala_version.png" width="100%">
 
 
 ### 7.2.3 Установка Spark
