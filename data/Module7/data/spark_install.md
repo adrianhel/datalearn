@@ -6,10 +6,10 @@
 
 ### [Назад в Модуль 7 ⤶](/data/Module7/readme.md)
 
-Для установки нам понадобится скачать **Java JDK**, **Scala*, **Spark** и ещё 1 файлик с **github**.
+Для установки нам понадобится скачать **Java JDK**, **Scala**, **Spark** и ещё 1 файлик с **github**.
 Прежде, чем начать, проверьте в 
 [таблице совместимости](https://community.cloudera.com/t5/Community-Articles/Spark-Scala-Version-Compatibility-Matrix/ta-p/383713)
-версии **Java JDK**, **Scala**, **Spark** соответственно.
+версии **Java JDK**, **Scala** и **Spark** соответственно.
 
 ### 7.2.1 Установка Java
 - Скачать _[Java JDK-21](https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe)_   
