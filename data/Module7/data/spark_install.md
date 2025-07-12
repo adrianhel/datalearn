@@ -9,7 +9,7 @@
 ### 7.2.1 Установка Java
 - Скачать _[Java JDK-21](https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe)_   
 - Установить _Java JDK_  
-- Добавьте в пользовательскую переменную `JAVA_HOME` в `PATH` со значением `C:\Program Files\Java\jdk-21`  
+- Добавляем системную переменную: Имя: `JAVA_HOME`, Значение: `C:\Program Files\Java\jdk-21`  
 - Откройте командную строку и введите:
 
 ```bash
