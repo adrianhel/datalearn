@@ -7,30 +7,30 @@
 ### [Назад в Модуль 7 ⤶](/data/Module7/readme.md)
 
 ### 7.2.1 Установка Java
-- Скачать _[Java JDK-21](https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe)_.  
-- Установить _Java JDK-21_.  
-- Добавьте _JAVA_HOME_ в _PATH_ со значением `C:\Program Files\Java\jdk-21`.  
+- Скачать _[Java JDK-21](https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe)_   
+- Установить _Java JDK-21_  
+- Добавьте _JAVA_HOME_ в _PATH_ со значением `C:\Program Files\Java\jdk-21`  
 - Откройте командную строку и введите:
 
 ```bash
 java --version
 ```
 
-Ниже отобразится информация об установке _Java_.
+Ниже отобразится информация об установке _Java_:
 
 <img src="/data/Module7/img/java_version.png" width="60%">
 
 
 ### 7.2.2 Установка Scala
 - Скачать _[Scala 2.13.11](https://github.com/scala/scala/releases/download/v2.13.11/scala-2.13.11.msi)_.  
-- Установить _Scala 2.13.11_.  
-- В командной строке введите следующую команду:
+- Установить _Scala 2.13.11_  
+- В командной строке введите следующую команду:  
 
 ```bash
 scala
 ```
 
-Ниже отобразится информация об установке _Scala_.
+Ниже отобразится информация об установке _Scala_:  
 
 <img src="/data/Module7/img/scala_version.png" width="60%">
 
