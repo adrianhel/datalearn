@@ -24,7 +24,7 @@ java -version
 
 Ниже отобразится информация об установке _Java_:
 
-<img src="/data/Module7/img/java_version.png" width="60%">
+<img src="/data/Module7/img/java_version.png" width="90%">
 
 
 ### 7.2.2 Установка Scala
@@ -40,7 +40,7 @@ scala
 
 Ниже отобразится информация об установке _Scala_:  
 
-<img src="/data/Module7/img/scala_version.png" width="60%">
+<img src="/data/Module7/img/scala_version.png" width="90%">
 
 
 ### 7.2.3 Установка Spark
@@ -89,5 +89,9 @@ pyspark
 quit
 ```
 
+<img src="/data/Module7/img/pyspark_version.png" width="90%">
+
 ### 7.2.7 Spark UI
 Spark UI доступен по адресу http://localhost:4040
+
+<img src="/data/Module7/img/spark_ui.png" width="90%">
