@@ -94,4 +94,4 @@ quit
 ### 7.2.7 Spark UI
 Spark UI доступен по адресу http://localhost:4040
 
-<img src="/data/Module7/img/spark_ui.png" width="90%">
+<img src="/data/Module7/img/spark_ui.png" width="50%">
