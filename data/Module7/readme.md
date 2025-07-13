@@ -11,7 +11,7 @@
 
 ### Эко система Apache Spark
 
-<img src="/data/Module7/img/spark_system.png" width="60%">
+<img src="/data/Module7/img/spark_system.png" width="40%">
 
 **Spark** представляет собой комбинацию нескольких библиотек: _SQL, Dataframes, GraphX, MLlib_ и _Spark Streaming_.
 
