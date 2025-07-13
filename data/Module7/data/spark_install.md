@@ -82,6 +82,9 @@ spark-shell
 ```bash
 pyspark
 ```
+Ниже отобразится информация об запуске _Spark_:
+
+<img src="/data/Module7/img/pyspark_version.png" width="80%">
 
 Для выхода:
 
@@ -89,9 +92,7 @@ pyspark
 quit
 ```
 
-<img src="/data/Module7/img/pyspark_version.png" width="80%">
-
 ### 7.2.7 Spark UI
 Spark UI доступен по адресу http://localhost:4040
 
-<img src="/data/Module7/img/spark_ui.png" width="50%">
+<img src="/data/Module7/img/spark_ui.png" width="80%">
