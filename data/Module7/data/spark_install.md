@@ -1,7 +1,7 @@
 ## 7.2 Установка Apache Spark
 
 [![Java](https://img.shields.io/badge/java_JDK-21.0.7-red)](https://www.oracle.com/java/technologies/downloads/)
-[![Scala](https://img.shields.io/badge/scala-2.12.18-red)](https://scala-lang.org/download/)
+[![Scala](https://img.shields.io/badge/scala-2.13.16-red)](https://scala-lang.org/download/)
 [![Spark](https://img.shields.io/badge/apache_spark-3.5.6-red)](https://spark.apache.org/downloads.html)
 
 ### [Назад в Модуль 7 ⤶](/data/Module7/readme.md)
@@ -28,7 +28,7 @@ java -version
 
 
 ### 7.2.2 Установка Scala
-- Скачать [Scala 2.12.18](https://github.com/scala/scala/releases/download/v2.12.18/scala-2.12.18.msi)  
+- Скачать [Scala 2.13.16](https://github.com/scala/scala/releases/download/v2.13.16/scala-2.13.16.msi)  
 - Установить _Scala_   
 - Добавляем системную переменную: Имя: `SCALA_HOME`, Значение: `C:\Program Files (x86)\scala` 
 - Выбираем среду `Path` и нажимаем  `Изменить`, далее нажимаем `Создать` и добавляем значение: `%SCALA_HOME%\bin`  
