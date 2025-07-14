@@ -1,6 +1,6 @@
 # 7. Apache Spark
 
-### [Назад в Содержание ⤶](/README.md#Модуль_7:_Apache_Spark)
+### [Назад в Содержание ⤶](/README.md#модуль-7-apache-spark)
 
 ## 7.1 Знакомство с Apache Spark
 > ***Apache Spark*** — это _open-source_ распределённая вычислительная платформа, предназначенная для обработки 
