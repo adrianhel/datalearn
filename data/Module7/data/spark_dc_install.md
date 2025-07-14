@@ -1,4 +1,4 @@
-## 7.2 Установка Apache Spark (локально)
+## 7.2 Установка Apache Spark (docker-compose)
 
 [![Docker](https://img.shields.io/badge/Docker-Compose-blue?logo=docker)](https://www.oracle.com/java/technologies/downloads/)
 [![Java](https://img.shields.io/badge/java_JDK-21.0.7-blue?logo=java)](https://www.oracle.com/java/technologies/downloads/)
