@@ -1,8 +1,9 @@
 ## 7.2 Установка Apache Spark
 
-[![Java](https://img.shields.io/badge/java_JDK-21.0.7-red)](https://www.oracle.com/java/technologies/downloads/)
-[![Scala](https://img.shields.io/badge/scala-2.13.16-red)](https://scala-lang.org/download/)
-[![Spark](https://img.shields.io/badge/apache_spark-3.5.6-red)](https://spark.apache.org/downloads.html)
+[![Java](https://img.shields.io/badge/java_JDK-21.0.7-blue?logo=java)](https://www.oracle.com/java/technologies/downloads/)
+[![Scala](https://img.shields.io/badge/scala-2.13.16-blue)](https://scala-lang.org/download/)
+[![Python](https://img.shields.io/badge/python-3.11.0-blue?logo=pypi)](https://www.python.org/downloads/release/python-3110/)
+[![Spark](https://img.shields.io/badge/apache_spark-3.5.6-blue)](https://spark.apache.org/downloads.html)
 
 ### [Назад в Модуль 7 ⤶](/data/Module7/readme.md)
 
@@ -57,7 +58,7 @@ scala
 - Добавляем системную переменную: Имя: `HADOOP_HOME`, Значение: `C:\hadoop`  
 - Выбираем среду `Path` и нажимаем  `Изменить`, далее нажимаем `Создать` и добавляем значение: `%HADOOP_HOME%\bin`  
 
-### 7.2.5 Переменные для pyspark
+### 7.2.5 Установка Python
 - Добавляем системную переменную: Имя: `PYSPARK_HOME`, Значение: `C:\Users\andy\AppData\Local\Programs\Python\Python311\python.exe`
 - Выбираем среду `Path` и нажимаем  `Изменить`, далее нажимаем `Создать` и добавляем значение: `%PYSPARK%` 
 
