@@ -19,7 +19,9 @@
 
 ## 7.2 Установка Apache Spark
 
-[Руководство по установке и настройке Apache Spark](data/spark_install.md)
+[Руководство по установке и настройке Apache Spark (локально)](data/spark_install.md)  
+
+[Руководство по установке и настройке Apache Spark (docker-compose)](data/spark_dc_install.md)
 
 ## 7.3 Режимы работы Apache Spark
 **Spark** работает в 4 различных режимах:
