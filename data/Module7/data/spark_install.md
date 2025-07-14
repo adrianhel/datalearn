@@ -1,4 +1,4 @@
-## 7.2 Установка Apache Spark
+## 7.2 Установка Apache Spark (локально)
 
 [![Java](https://img.shields.io/badge/java_JDK-21.0.7-blue?logo=java)](https://www.oracle.com/java/technologies/downloads/)
 [![Scala](https://img.shields.io/badge/scala-2.13.16-blue)](https://scala-lang.org/download/)
