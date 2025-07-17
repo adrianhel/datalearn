@@ -6,3 +6,5 @@
 ### [Назад в Модуль 7 ⤶](/data/Module7/readme.md)
 
 **Docker** и **Docker Compose** должны быть установлены.
+
+[Spark](data/docker compose.yml)
