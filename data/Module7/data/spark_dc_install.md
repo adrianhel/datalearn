@@ -7,4 +7,4 @@
 
 **Docker** и **Docker Compose** должны быть установлены.
 
-[Spark](data/docker compose.yml)
+[Spark](data/docker-compose.yml)
