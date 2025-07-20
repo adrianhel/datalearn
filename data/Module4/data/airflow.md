@@ -155,6 +155,42 @@ _Указание порядка выполнения задач. Здесь м�
 - **GoogleCloudStorageToBigQueryOperator** — загружает данные из _Google Cloud Storage_ в _BigQuery_.  
 3. **Sensor Operators**: Ожидают наступления определенного события или условия.
 
+### Наиболее часто используемые операторы в Airflow
+- **BashOperator**: 
+_Запускает команды в операционной системе, используя интерпретатор командной строки (например, Bash)._
+
+```python
+from airflow.operators.bash import BashOperator
+
+run_bash_command = BashOperator(
+    task_id='run_bash_command',
+    bash_command='echo "Hello, World!"',
+    dag=dag,
+)
+```
+- **EmailOperator**: 
+_Отправляет электронные письма._  
+
+```python
+from airflow import DAG
+from airflow.operators.email import EmailOperator
+from datetime import datetime
+
+dag = DAG('email_example', start_date=datetime(2025, 1, 1))
+
+task = EmailOperator(
+    task_id='send_email',
+    to='adrianhel@mail.ru',
+    subject='Airflow Email',
+    html_content='<p>This is an Airflow email.</p>',
+    dag=dag
+)
+```
+
+
+
+
+
 ## 4.5.7 Сенсоры в Apache Airflow (Sensor Operators)
 > ***Сенсоры*** — это операторы, ожидающие выполнения определенного условия, для продолжения выполнения следующих задач 
 > в рабочем процессе.  
