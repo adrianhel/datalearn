@@ -297,7 +297,8 @@ _Выполняет HTTP-запросы к удаленным серверам._
 Полезны для синхронизации задач и контроля за состоянием внешних систем.
 
 ### Основные виды сенсоров
-- **FileSensor**: Ожидает появления файла в указанной директории.
+- **FileSensor**: 
+_Ожидает появления файла в указанной директории._  
 
 ```python
 from airflow.sensors.filesystem import FileSensor
@@ -311,7 +312,8 @@ file_sensor = FileSensor(
 )
 ```
 
-- **ExternalTaskSensor**: Ожидает завершения задачи в другом DAG.
+- **ExternalTaskSensor**: 
+_Ожидает завершения задачи в другом DAG._  
 
 ```python
 from airflow.sensors.external_task import ExternalTaskSensor
@@ -325,7 +327,8 @@ external_task_sensor = ExternalTaskSensor(
 )
 ```
 
-- **TimeDeltaSensor**: Ожидает определенного времени перед выполнением задачи.
+- **TimeDeltaSensor**: 
+_Ожидает определенного времени перед выполнением задачи._  
 
 ```python
 from airflow.sensors.time_delta import TimeDeltaSensor
@@ -337,7 +340,8 @@ time_delta_sensor = TimeDeltaSensor(
 )
 ```
 
-- **SqlSensor**: Ожидает выполнения SQL-запроса, который возвращает результат.
+- **SqlSensor**: 
+_Ожидает выполнения SQL-запроса, который возвращает результат._  
 
 ```python
 from airflow.sensors.sql import SqlSensor
