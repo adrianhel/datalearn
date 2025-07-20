@@ -168,6 +168,7 @@ run_bash_command = BashOperator(
     dag=dag,
 )
 ```
+
 - **EmailOperator**: 
 _Отправляет электронные письма._  
 
@@ -183,6 +184,62 @@ task = EmailOperator(
     to='adrianhel@mail.ru',
     subject='Airflow Email',
     html_content='<p>This is an Airflow email.</p>',
+    dag=dag
+)
+```
+
+- **PythonOperator**:
+_Выполняет произвольный код Python в рамках оператора._  
+
+```python
+from airflow import DAG
+from airflow.operators.python import PythonOperator
+from datetime import datetime
+
+dag = DAG('python_example', start_date=datetime(2025, 1, 1))
+
+def print_hello():
+    print("Hello Airflow")
+
+task = PythonOperator(
+    task_id='print_hello',
+    python_callable=print_hello,
+    dag=dag
+)
+```
+
+- **SQLExecuteQueryOperator**: 
+_Выполняет SQL-запросы на заданном подключении к базе данных._
+
+```python
+from airflow import DAG
+from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
+from datetime import datetime
+
+dag = DAG('sql_example', start_date=datetime(2025, 1, 1))
+
+task = SQLExecuteQueryOperator(
+    task_id='run_sql',
+    sql='SELECT * FROM my_table',
+    database='my_database',
+    dag=dag
+)
+```
+
+- **DockerOperator**: 
+_Запускает контейнеры Docker._
+
+```python
+from airflow import DAG
+from airflow.providers.docker.operators.docker import DockerOperator
+from datetime import datetime
+
+dag = DAG('docker_example', start_date=datetime(2023, 1, 1))
+
+task = DockerOperator(
+    task_id='run_container',
+    image='my_image:latest',
+    command='python script.py',
     dag=dag
 )
 ```
