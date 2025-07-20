@@ -14,7 +14,7 @@ def my_task():
 
 # Определение DAG
 default_args = {
-    'owner': 'airflow',
+    'owner': 'adrianhel',
     'start_date': datetime(2025, 1, 1),
     'retries': 1,
 }
