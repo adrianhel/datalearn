@@ -238,7 +238,7 @@ from airflow import DAG
 from airflow.providers.docker.operators.docker import DockerOperator
 from datetime import datetime
 
-dag = DAG('docker_example', start_date=datetime(2023, 1, 1))
+dag = DAG('docker_example', start_date=datetime(2025, 1, 1))
 
 task = DockerOperator(
     task_id='run_container',
@@ -250,8 +250,53 @@ task = DockerOperator(
 Этот _DAG_ с одной задачей, которая запускает _Docker_-контейнер из указанного образа с помощью оператора DockerOperator, 
 плюс *python script.py* выполняется внутри контейнера.
 
+- **DummyOperator**:
+_Это оператор, который ничего не делает._
 
+```python
+from airflow.operators.dummy_operator import DummyOperator
 
+start_task = DummyOperator(
+    task_id='start_task',
+    dag=dag,
+)
+```
+Обычно используется для создания _пустых_ задач, которые могут служить в качестве маркеров или для управления зависимостями.  
+
+- **BranchPythonOperator**: 
+_Позволяет создать ветвление в DAG._
+
+```python
+from airflow.operators.branch_operator import BranchPythonOperator
+
+branching = BranchPythonOperator(
+    task_id='branching',
+    python_callable=my_branching_function,
+    dag=dag,
+)
+```
+На основе результата выполнения функции можно выбрать, какая задача будет выполнена дальше.
+
+- **HiveOperator**: 
+_Выполняет операции Hive._  
+- **S3FileTransferOperator**: 
+_Копирует файлы между локальной файловой системой и Amazon S3._  
+- **SlackAPIOperator**: 
+_Отправляет сообщения в Slack._  
+- **SparkSubmitOperator**: 
+_Отправляет задачи Spark для выполнения на кластере Apache Spark._  
+- **HttpOperator**: 
+_Выполняет HTTP-запросы к удаленным серверам._  
+
+Можно создавать собственные пользовательские операторы, наследуемые от базового класса **BaseOperator**, чтобы выполнить 
+специфические для вашего рабочего процесса задачи.  
+
+### При использовании операторов в Airflow рекомендуется
+- Использовать параметры для управления поведением операторов, чтобы сделать выполнение задач более гибким и настраиваемым.  
+- Определять зависимости между задачами ясно и логически, используя _set_upstream()_ или _set_downstream()_, 
+либо операторы `>>` и `<<`.  
+- Избегать запуска тяжелых процессов непосредственно в операторах, таких как **PythonOperator**, и вместо этого вызывать 
+внешние скрипты или сервисы.  
 
 ## 4.5.7 Сенсоры в Apache Airflow (Sensor Operators)
 > ***Сенсоры*** — это операторы, ожидающие выполнения определенного условия, для продолжения выполнения следующих задач 
