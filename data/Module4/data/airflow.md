@@ -168,6 +168,7 @@ run_bash_command = BashOperator(
     dag=dag,
 )
 ```
+Этот _DAG_ с одной задачей, которая выводит строку _Hello, World!_.
 
 - **EmailOperator**: 
 _Отправляет электронные письма._  
@@ -187,6 +188,7 @@ task = EmailOperator(
     dag=dag
 )
 ```
+Этот _DAG_ с одной задачей, которая отправляет электронное письмо с помощью **EmailOperator**.
 
 - **PythonOperator**:
 _Выполняет произвольный код Python в рамках оператора._  
@@ -207,6 +209,7 @@ task = PythonOperator(
     dag=dag
 )
 ```
+Этот _DAG_ с одной задачей, которая выполняет функцию _print_hello_, выводящую строку _Hello Airflow_.
 
 - **SQLExecuteQueryOperator**: 
 _Выполняет SQL-запросы на заданном подключении к базе данных._
@@ -225,6 +228,7 @@ task = SQLExecuteQueryOperator(
     dag=dag
 )
 ```
+Этот _DAG_ с одной задачей, которая выполняет запрос с помощью _SQLExecuteQueryOperator._
 
 - **DockerOperator**: 
 _Запускает контейнеры Docker._
@@ -243,7 +247,8 @@ task = DockerOperator(
     dag=dag
 )
 ```
-
+Этот _DAG_ с одной задачей, которая запускает _Docker_-контейнер из указанного образа с помощью оператора DockerOperator, 
+плюс *python script.py* выполняется внутри контейнера.
 
 
 
