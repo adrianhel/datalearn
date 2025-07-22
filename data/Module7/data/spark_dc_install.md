@@ -1,4 +1,4 @@
-## 7.2 Установка Apache Spark (docker)
+## 7.2 Установка PySpark c помощью Docker
 
 [![Docker](https://img.shields.io/badge/docker_desktop-4.43.2-blue?logo=docker)](https://www.docker.com/)
 [![Spark](https://img.shields.io/badge/apache_spark-3.3.0-blue?logo=apache)](https://spark.apache.org/downloads.html)
