@@ -99,10 +99,14 @@ task_2= BashOperator(
 
 В _DAG_ выше, сначала выполнится `task_2`, потом `task_1`.
 
-### Celery Executor
+### CeleryExecutor
 Этот экзекьютор позволяет запускать задачи на других компьютерах. **Airflow** установлен на _мастер-узле_, а задачи 
 исполняются на других машинах. Это позволяет горизонтально масштабировать выполнение наших пайплайнов.  
 
 <p align="center">
-    <img src="/data/Module4/img/cel_exe.gif" width="100%">
+    <img src="/data/Module4/img/cel_exe.gif" width="60%">
 </p>
+
+### KubernetesExecutor
+_KubernetesExecutor_ является наиболее подходящим для больших проектов и продакшн решений. Работает примерно 
+по такому же принципу, как и _CeleryExecutor_.
