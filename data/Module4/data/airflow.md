@@ -27,7 +27,7 @@ _Пользователи определяют DAG на Python, добавляя
 - **Scheduler (Планировщик)**:
 _Отвечает за парсинг DAG-файлов, планирование задач и передачу их в очередь. Работает как демон-процесс._  
 
-- **Executor ([Исполнитель](airflow/executors.md)**:  
+- **Executor ([Исполнитель](airflow/executors.md))**:  
     - _Sequential Executor (однопоточный режим),_  
     - _LocalExecutor (для одной машины),_  
     - _CeleryExecutor (распределённые задачи через Celery),_  
