@@ -20,7 +20,7 @@ default_args = {
 }
 
 dag = DAG(
-    'simple_dag',
+    dag_id='simple_dag',
     default_args=default_args,
     description='My first DAG',
     schedule_interval='@daily',
