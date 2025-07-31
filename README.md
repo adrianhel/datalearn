@@ -40,3 +40,22 @@ _В модуле 6 нашей задачей является знакомств
 ## [Модуль 7: Apache Spark](data/Module7/readme.md)
 _В модуле 7 нашей задачей является знакомство с open-source решением для аналитики и инжиниринга данных – 
 **Apache Spark** и его коммерческой версией **Databricks**._
+
+## Используемые инструменты
+- **Excel**
+- **draw.io**
+- **PostgreSQL**
+- **SqlDBM**
+- **Yandex Cloud**
+- **DataLens**
+- **Tableau**
+- **Power BI**
+- **Metabase**
+- **Apache Superset**
+- **Pentaho DI**
+- **Apache Airflow**
+- **Dagster**
+- **dbt**
+- **ClickHouse**
+- **Greenplum**
+- **Apache Spark**
