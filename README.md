@@ -57,5 +57,4 @@ _В модуле 7 нашей задачей является знакомств
 - **Dagster**
 - **dbt**
 - **ClickHouse**
-- **Greenplum**
 - **Apache Spark**
