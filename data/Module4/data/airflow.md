@@ -4,6 +4,10 @@
 
 ### [Назад в Модуль 4 ⤶](/data/Module4/readme.md)
 
+<p align="center">
+<img src="/data/Module4/img/airflow_logo.png" width="50%">
+</p>
+
 > ***Apache Airflow*** — это _open-source_ оркестратор для управления процессами загрузки и обработки данных.
 
 ### Преимущества Airflow

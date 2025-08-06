@@ -4,7 +4,7 @@
 
 <p align="center">
 <img src="/data/Module7/img/spark.png" width="80%">
-</p>>
+</p>
 
 ## 7.1 Знакомство с Apache Spark
 > ***Apache Spark*** — это _open-source_ распределённая вычислительная платформа, предназначенная для обработки 
@@ -15,7 +15,9 @@
 
 ### Эко система Apache Spark
 
+<p align="center">
 <img src="/data/Module7/img/spark_system.png" width="50%">
+</p>
 
 **Spark** представляет собой комбинацию нескольких библиотек: _SQL, Dataframes, GraphX, MLlib_ и _Spark Streaming_.
 
