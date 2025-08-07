@@ -1,5 +1,7 @@
 ### 4.5.2 Установка и настройка dbt
 
+[![dbt](https://img.shields.io/badge/dbt-1.4.0-blue?logo=dbt)](https://docs.getdbt.com/)
+
 ### [Назад к dbt ⤶](/data/Module4/data/dbt.md)
 
 [Краткое руководство](https://docs.getdbt.com/docs/core/docker-install)

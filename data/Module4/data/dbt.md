@@ -1,7 +1,5 @@
 ## 4.5.1 Знакомство с Data Build Tool
 
-[![dbt](https://img.shields.io/badge/dbt-1.8.9-blue?logo=dbt)](https://docs.getdbt.com/)
-
 ### [Назад в Модуль 4 ⤶](/data/Module4/readme.md)
 
 <p align="center">
