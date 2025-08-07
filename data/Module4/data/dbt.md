@@ -2,6 +2,10 @@
 
 ### [Назад в Модуль 4 ⤶](/data/Module4/readme.md)
 
+<p align="center">
+<img src="/data/Module4/img/dbt_logo.png" width="50%">
+</p>
+
 Офсайт с документацией **[dbt](https://docs.getdbt.com/)**.
 
 > _**Data Build Tool** (dbt)_ — это инструмент для трансформации данных.
