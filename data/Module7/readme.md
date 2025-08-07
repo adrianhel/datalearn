@@ -3,7 +3,7 @@
 ### [Назад в Содержание ⤶](/README.md)
 
 <p align="center">
-<img src="/data/Module7/img/spark.png" width="80%">
+<img src="/data/Module7/img/spark_logo.png" width="80%">
 </p>
 
 ## 7.1 Знакомство с Apache Spark
