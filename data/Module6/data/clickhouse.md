@@ -5,7 +5,7 @@
 ### [Назад в Модуль 6 ⤶](/data/Module6/readme.md)
 
 <p align="center">
-<img src="/data/Module6/img/ch_logo.png" width="100%">
+<img src="/data/Module6/img/ch_logo.png" width="40%">
 </p>
 
 > ***ClickHouse*** — это высокопроизводительная, масштабируемая колоночная система управления базами данных (СУБД), 
