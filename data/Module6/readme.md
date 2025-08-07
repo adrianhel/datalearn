@@ -20,5 +20,5 @@ _**OLAP** (**O**nline **A**nalytical **P**rocessing)_.
 - хранение исторических данных.
 
 ## 6.2 Обзор аналитических СУБД
-
+### - [ClickHouse](/data/Module6/data/clickhouse.md)
 
