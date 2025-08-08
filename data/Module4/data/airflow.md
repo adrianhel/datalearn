@@ -27,7 +27,7 @@ _Пользователи определяют DAG на Python, добавляя
 
 ## 4.5.2 Установка Airflow
 
-[Руководство по установке и настройке Airflow](airflow/airflow_install.md)
+- [Руководство по установке и настройке Airflow](airflow/airflow_install.md)
 
 ## 4.5.3 Архитектура Airflow
 - **Scheduler (Планировщик)**:
