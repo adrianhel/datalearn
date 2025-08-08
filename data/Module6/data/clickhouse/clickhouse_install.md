@@ -4,8 +4,8 @@
 
 ### [Назад к ClickHouse ⤶](/data/Module6/data/clickhouse.md)
 
-Экземпляр **ClickHouse** с одним узлом и одним _Keeper-сервером ClickHouse_.
-По умолчанию используется последняя версия **ClickHouse**, а **ClickHouse Keeper** — последняя версия на `alpine`. 
+Экземпляр **ClickHouse** с одним узлом и одним _Keeper-сервером ClickHouse_.  
+По умолчанию используется последняя версия **ClickHouse**, а **ClickHouse Keeper** — последняя версия на `alpine`.  
 Можно указать конкретные версии, задав переменные среды перед запуском `docker compose up`.
 
 ```bash
