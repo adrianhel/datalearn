@@ -1,6 +1,6 @@
 ## 6.2.1 Знакомство с ClickHouse
 
-[![ClickHouse](https://img.shields.io/badge/click_house-blue?logo=clickhouse)](https://clickhouse.com/docs/ru/)
+[![ClickHouse](https://img.shields.io/badge/clickhouse-blue?logo=clickhouse)](https://clickhouse.com/docs/ru/)
 
 ### [Назад в Модуль 6 ⤶](/data/Module6/readme.md)
 
