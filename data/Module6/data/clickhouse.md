@@ -165,3 +165,5 @@ CREATE TABLE logs
 ENGINE = MergeTree()
 ORDER BY (timestamp, user_id);
 ```
+
+## 6.2.9 Сжатие данных
