@@ -214,3 +214,18 @@ ORDER BY id
 TTL event_time + INTERVAL 30 DAY;
 ```
 
+### Дедупликация и агрегация на уровне хранения
+Некоторые движки, такие как **ReplacingMergeTree** и **SummingMergeTree**, позволяют реализовать дедупликацию или 
+агрегирование данных на этапе слияния частей. Это важно для сценариев, где обновления или агрегаты должны формироваться 
+автоматически при объединении данных.  
+
+```sql
+CREATE TABLE dedup_example
+(
+    id UInt32,
+    value String,
+    version UInt32
+)
+ENGINE = ReplacingMergeTree(version)
+ORDER BY id;
+```
