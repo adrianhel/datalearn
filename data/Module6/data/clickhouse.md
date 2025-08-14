@@ -186,3 +186,4 @@ ENGINE = MergeTree()
 ORDER BY id;
 ```
 
+## 6.2.10 Механизмы в ClickHouse
