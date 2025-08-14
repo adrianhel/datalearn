@@ -213,3 +213,4 @@ ENGINE = MergeTree()
 ORDER BY id
 TTL event_time + INTERVAL 30 DAY;
 ```
+
