@@ -229,3 +229,16 @@ CREATE TABLE dedup_example
 ENGINE = ReplacingMergeTree(version)
 ORDER BY id;
 ```
+
+### Функции для управления хранением
+- `OPTIMIZE TABLE` — инициирует принудительное слияние частей таблицы.  
+- `ALTER TABLE ... DROP PARTITION` — удаляет партицию.  
+- `ALTER TABLE ... FREEZE PARTITION` — создаёт резервную копию партиции.  
+
+#### Пример
+
+```sql
+OPTIMIZE TABLE visits FINAL;
+ALTER TABLE visits DROP PARTITION '202406';
+ALTER TABLE visits FREEZE PARTITION '202406';
+```
