@@ -72,3 +72,18 @@ CREATE TABLE stripe_log_example
 )
 ENGINE = StripeLog;
 ```
+
+### 4. Memory
+Данные хранятся только в оперативной памяти, что обеспечивает максимальную скорость операций, однако при перезапуске 
+**ClickHouse** данные теряются. Используется для временных или промежуточных таблиц.  
+
+#### Пример создания таблицы Memory
+
+```sql
+CREATE TABLE memory_table
+(
+    id UInt32,
+    value String
+)
+ENGINE = Memory;
+```
