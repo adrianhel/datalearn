@@ -25,3 +25,17 @@
 - **CollapsingMergeTree** — поддерживает логику хранения событий с парой флагов (например, для учета отмен).  
 - **VersionedCollapsingMergeTree** — вариант **CollapsingMergeTree** с поддержкой версионности строк.  
 - **GraphiteMergeTree** — специализирован для хранения временных рядов графит-данных.  
+
+#### Пример создания таблицы MergeTree
+
+```sql
+CREATE TABLE visits
+(
+    UserID UInt64,
+    VisitDate Date,
+    Page String
+)
+ENGINE = MergeTree
+PARTITION BY toYYYYMM(VisitDate)
+ORDER BY (UserID, VisitDate);
+```
