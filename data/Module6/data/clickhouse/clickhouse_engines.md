@@ -147,3 +147,20 @@ CREATE TABLE dist_table
 )
 ENGINE = Distributed('cluster_name', 'default', 'local_table', rand());
 ```
+
+### 9. View (Материализованные и обычные)
+**VIEW** — виртуальная таблица, результат выполнения запроса `SELECT`. Данные не хранятся физически.  
+**MATERIALIZED VIEW** — материализованное представление, физически сохраняющее результаты запроса, с автоматическим 
+обновлением при изменении исходных данных.  
+
+#### Пример создания таблицы View
+
+```sql
+CREATE MATERIALIZED VIEW mv_example
+ENGINE = MergeTree
+ORDER BY id
+AS
+SELECT id, count() as cnt
+FROM main_table
+GROUP BY id;
+```
