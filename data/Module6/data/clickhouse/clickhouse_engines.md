@@ -116,3 +116,20 @@ CREATE TABLE buffer_table
 )
 ENGINE = Buffer(default, main_table, 16, 10, 60, 10000, 100000, 1000000, 10000000);
 ```
+
+### 7. External (File, URL, JDBC, ODBC)
+- **File** — чтение и запись данных из файлов в различных форматах (*CSV*, *TSV*, *Parquet* и др.).  
+- **URL** — данные читаются по *HTTP/HTTPS*-запросу.  
+- **JDBC/ODBC** — интеграция с внешними СУБД через соответствующие протоколы.  
+
+#### Пример создания таблицы External
+
+```sql
+CREATE TABLE file_table
+(
+    id UInt32,
+    value String
+)
+ENGINE = File(CSV, '/var/lib/clickhouse/user_files/data.csv');
+```
+
