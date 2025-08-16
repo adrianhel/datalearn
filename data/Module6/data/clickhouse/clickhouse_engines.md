@@ -133,3 +133,17 @@ CREATE TABLE file_table
 ENGINE = File(CSV, '/var/lib/clickhouse/user_files/data.csv');
 ```
 
+### 8. Distributed
+Движок для организации распределённого хранения и обработки данных. Позволяет прозрачно обращаться к таблицам, 
+физически размещённым на других серверах **ClickHouse**, обеспечивая масштабируемость и отказоустойчивость.  
+
+#### Пример создания таблицы Distributed
+
+```sql
+CREATE TABLE dist_table
+(
+    id UInt32,
+    value String
+)
+ENGINE = Distributed('cluster_name', 'default', 'local_table', rand());
+```
