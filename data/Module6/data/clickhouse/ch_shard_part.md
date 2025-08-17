@@ -23,9 +23,7 @@
 
 #### Формула распределения строки по сегментам
 
-<p align="center">
 ***`shard_number = hash(key_column) % number_of_shards`***
-</p>
 
 где ***`key_column`*** — выбранный для шардирования столбец, ***`number_of_shards`*** — общее количество сегментов.  
 
