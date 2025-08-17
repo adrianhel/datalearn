@@ -23,9 +23,9 @@
 
 #### Формула распределения строки по сегментам
 
-***`shard_number = hash(key_column) % number_of_shards`***
+*`shard_number = hash(key_column) % number_of_shards`*
 
-где ***`key_column`*** — выбранный для шардирования столбец, ***`number_of_shards`*** — общее количество сегментов.  
+где *`key_column`* — выбранный для шардирования столбец, *`number_of_shards`* — общее количество сегментов.  
 
 #### Пример создания распределённой таблицы
 
