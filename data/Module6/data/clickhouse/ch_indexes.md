@@ -36,3 +36,19 @@
 - Индексы не гарантируют исключение всех нерелевантных блоков, но существенно уменьшают объём сканируемых данных.  
 
 ## 3. Реализация индексов в ClickHouse
+#### Primary Key Index
+Primary key формируется на основе выражения `ORDER BY`:
+
+```sql
+CREATE TABLE events
+(
+    event_date Date,
+    user_id UInt32,
+    event_type String
+)
+ENGINE = MergeTree
+ORDER BY (event_date, user_id);
+```
+                  
+- Данные физически хранятся отсортированными по `event_date` и `user_id`.  
+- Запросы с фильтрами по этим полям работают наиболее эффективно.  
