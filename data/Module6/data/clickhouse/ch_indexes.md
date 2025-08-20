@@ -37,7 +37,7 @@
 
 ## 3. Реализация индексов в ClickHouse
 ### Primary Key Index
-Primary key формируется на основе выражения `ORDER BY`:
+**Primary Key** формируется на основе выражения `ORDER BY`:
 
 ```sql
 CREATE TABLE events
