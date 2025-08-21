@@ -70,3 +70,21 @@ ORDER BY visit_date;
                   
 - Позволяет пропускать блоки, где `user_id` не попадает в диапазон.  
 - Фильтры по `user_id` выполняются быстрее.  
+
+### Skip Index (set)
+**Set-индекс** эффективен для низкой кардинальности:
+
+```sql
+CREATE TABLE logs
+(
+    level String,
+    message String,
+    INDEX idx_level level TYPE set(10) GRANULARITY 2
+)
+ENGINE = MergeTree
+ORDER BY tuple();
+```
+                  
+- Каждый блок хранит множество уникальных значений _level_.  
+- Быстро исключает блоки, не содержащие нужного уровня логирования.  
+
