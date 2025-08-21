@@ -85,6 +85,22 @@ ENGINE = MergeTree
 ORDER BY tuple();
 ```
                   
-- Каждый блок хранит множество уникальных значений _level_.  
+- Каждый блок хранит множество уникальных значений `level`.  
 - Быстро исключает блоки, не содержащие нужного уровня логирования.  
 
+### Skip Index (bloom_filter)
+**Bloom-фильтр** позволяет эффективно фильтровать по значениям с высокой кардинальностью:
+
+```sql
+CREATE TABLE payments
+(
+    transaction_id UUID,
+    amount Float32,
+    INDEX bf_transaction_id transaction_id TYPE bloom_filter(0.01) GRANULARITY 8
+)
+ENGINE = MergeTree
+ORDER BY tuple();
+```
+                  
+Индексирует значения `transaction_id` с вероятностью ложноположительного срабатывания 1%.  
+Эффективен для поиска по уникальным идентификаторам.  
