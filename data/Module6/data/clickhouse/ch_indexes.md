@@ -52,3 +52,21 @@ ORDER BY (event_date, user_id);
                   
 - Данные физически хранятся отсортированными по `event_date` и `user_id`.  
 - Запросы с фильтрами по этим полям работают наиболее эффективно.  
+
+### Skip Index (minmax)
+**Minmax-индекс** регистрирует минимальные и максимальные значения:
+
+```sql
+CREATE TABLE visits
+(
+    visit_date Date,
+    user_id UInt32,
+    url String,
+    INDEX idx_user_id user_id TYPE minmax GRANULARITY 4
+)
+ENGINE = MergeTree
+ORDER BY visit_date;
+```
+                  
+- Позволяет пропускать блоки, где `user_id` не попадает в диапазон.  
+- Фильтры по `user_id` выполняются быстрее.  
