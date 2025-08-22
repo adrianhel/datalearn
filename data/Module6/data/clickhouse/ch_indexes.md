@@ -131,3 +131,35 @@ ORDER BY tuple();
 **bloom_filter** — для высокой кардинальности.  
 - Проводить тестирование с реальными данными для оценки эффективности индексов.  
 
+## 7. Примеры запросов, использующих индексы
+#### Быстрый поиск по диапазону дат благодаря `ORDER BY`
+
+```sql
+SELECT count(*) 
+FROM events 
+WHERE event_date BETWEEN '2024-01-01' AND '2024-01-31';
+```
+
+#### Эффективная фильтрация по `user_id` с помощью **minmax**-индекса
+
+```sql
+SELECT * 
+FROM visits 
+WHERE user_id = 123456;
+```
+
+#### Фильтрация по уровню логирования с использованием *set-индекса*
+
+```sql
+SELECT count(*) 
+FROM logs 
+WHERE level = 'ERROR';
+```
+
+#### Поиск транзакции по `UUID` с помощью **bloom_filter**
+
+```sql
+SELECT * 
+FROM payments 
+WHERE transaction_id = 'a1b2c3d4-5678-90ab-cdef-1234567890ab';
+```
