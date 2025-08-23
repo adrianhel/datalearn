@@ -23,3 +23,19 @@
 - **NONE** — отсутствие сжатия.  
 Используется для специфических задач, где важна максимальная скорость доступа к данным, 
 а объем хранения не критичен.  
+
+#### Пример использования алгоритма сжатия ZSTD с уровнем 3
+
+```sql
+CREATE TABLE example
+(
+    id UInt32,
+    name String,
+    value Float64
+)
+ENGINE = MergeTree()
+ORDER BY id
+SETTINGS index_granularity = 8192,
+         compression = 'ZSTD(3)';
+```
+
