@@ -83,3 +83,14 @@ CREATE TABLE sensor_data
 ENGINE = MergeTree()
 ORDER BY timestamp;
 ```
+
+## 4. Настройка сжатия данных
+Сжатие настраивается на уровне таблицы или столбца при создании или изменении структуры таблицы. Можно изменить 
+параметры сжатия для уже существующих данных с помощью операций ALTER TABLE ... MODIFY COLUMN ... CODEC и OPTIMIZE TABLE ... FINAL для пересжатия данных.
+
+#### Изменение кодека для столбца
+
+```sql
+ALTER TABLE example
+MODIFY COLUMN value Float64 CODEC(ZSTD(7));
+```
