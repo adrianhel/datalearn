@@ -62,3 +62,24 @@ CREATE TABLE timeseries
 ENGINE = MergeTree()
 ORDER BY event_time;
 ```
+
+## 3. Комбинирование кодеков
+**ClickHouse** позволяет комбинировать несколько кодеков для одного столбца. Обычно сначала применяется 
+специализированный кодек (например, **Delta** или **Dictionary**), а затем — общий алгоритм сжатия (например, **LZ4** 
+или **ZSTD**).  
+
+Типичная последовательность применения кодеков:  
+- Преобразование данных специализированным кодеком (например, вычисление дельт).  
+- Сжатие общего назначения (например, **LZ4**).  
+
+#### Пример комбинированного сжатия  
+
+```sql
+CREATE TABLE sensor_data
+(
+    timestamp DateTime CODEC(DoubleDelta, ZSTD(5)),
+    temperature Float32 CODEC(Gorilla, ZSTD(1))
+)
+ENGINE = MergeTree()
+ORDER BY timestamp;
+```
