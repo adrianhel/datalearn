@@ -23,3 +23,22 @@
 INSERT INTO events (timestamp, user_id, action) VALUES ('2024-06-10 10:00:00', 123, 'click');
 ```
 
+## 2. Преобразование и очистка данных
+Данные, поступающие в хранилище, могут быть неструктурированными, содержать ошибки или дубликаты. 
+Для обеспечения аналитической ценности проводится их очистка и нормализация.  
+
+В **ClickHouse** преобразование может выполняться:
+- С помощью механизмов **Materialized Views** (материализованные представления) для агрегации и предобработки данных.  
+- Путём применения функций трансформации и фильтрации данных непосредственно в запросах (`SELECT` 
+с функциями `toDate()`, `replaceAll()` и др.).  
+- Использованием **таблиц-буферов** _(Buffer Tables)_ и промежуточных структур.   -
+
+```sql
+CREATE MATERIALIZED VIEW cleaned_events TO events_clean AS
+SELECT
+    toDate(timestamp) as event_date,
+    trim(user_id) as user_id,
+    lower(action) as action
+FROM events
+WHERE user_id != '';
+```
