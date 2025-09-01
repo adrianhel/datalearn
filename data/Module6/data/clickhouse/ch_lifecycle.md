@@ -70,3 +70,25 @@ ORDER BY (user_id, timestamp)
 SETTINGS index_granularity = 8192;
 ```
 
+## 4. 4. Обеспечение доступности и управления данными
+Данные должны быть доступны для аналитических запросов с высокой производительностью и надёжностью.  
+
+На этом этапе реализуются:  
+- **Механизмы репликации**: использование `ReplicatedMergeTree` и распределённых таблиц для обеспечения 
+отказоустойчивости и масштабируемости.  
+- **Контроль версий данных**: автоматическое слияние партиций _(background merges)_ для поддержания целостности.  
+- **Управление доступом**: настройка ролей, прав пользователей, политик безопасности.  
+- **Мониторинг состояния данных**: отслеживание целостности, объёма, скорости роста данных через системные таблицы 
+(`system.parts`, `system.merges` и др.).  
+
+```sql
+CREATE TABLE replicated_events
+(
+    timestamp DateTime,
+    user_id   UInt32,
+    action    String
+)
+ENGINE = ReplicatedMergeTree('/clickhouse/tables/{shard}/replicated_events', '{replica}')
+PARTITION BY toYYYYMM(timestamp)
+ORDER BY (user_id, timestamp);
+```
