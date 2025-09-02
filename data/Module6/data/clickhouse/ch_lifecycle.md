@@ -70,7 +70,7 @@ ORDER BY (user_id, timestamp)
 SETTINGS index_granularity = 8192;
 ```
 
-## 4. 4. Обеспечение доступности и управления данными
+## 4. Обеспечение доступности и управления данными
 Данные должны быть доступны для аналитических запросов с высокой производительностью и надёжностью.  
 
 На этом этапе реализуются:  
@@ -91,4 +91,24 @@ CREATE TABLE replicated_events
 ENGINE = ReplicatedMergeTree('/clickhouse/tables/{shard}/replicated_events', '{replica}')
 PARTITION BY toYYYYMM(timestamp)
 ORDER BY (user_id, timestamp);
+```
+
+## 5. Анализ и использование данных
+Данный этап включает выполнение сложных аналитических запросов, построение отчётов, дашбордов и извлечение бизнес-выводов.  
+
+Особенности ClickHouse:
+- Высокая производительность запросов за счёт колонкового хранения и параллелизма обработки.  
+- Поддержка оконных функций, агрегатов, вложенных подзапросов.  
+- Интеграция с BI-системами (например, **Tableau**, **Grafana**), языками анализа данных (**Python**, **R**, **SQL**).  
+- Использование `materialized views` и агрегирующих таблиц для предвычисления итогов.  
+
+```sql
+SELECT
+    toDate(timestamp) AS day,
+    count() AS events_count,
+    uniq(user_id) AS unique_users
+FROM events
+WHERE action = 'click'
+GROUP BY day
+ORDER BY day;
 ```
