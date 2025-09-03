@@ -112,3 +112,29 @@ WHERE action = 'click'
 GROUP BY day
 ORDER BY day;
 ```
+
+## 6. Архивирование и удаление данных
+Завершающий этап жизненного цикла — удаление устаревших данных или их перемещение в архив для экономии ресурсов 
+и соблюдения нормативных требований.  
+
+В **ClickHouse** реализуются следующие подходы:  
+- **TTL (Time-To-Live) политики**: автоматическое удаление или перемещение данных после истечения заданного срока хранения.  
+- **Архивирование данных**: экспорт данных во внешние системы или файлы (например, **S3**, **Hadoop**, локальные архивы).  
+- **Ручное удаление**: выполнение операторов `ALTER TABLE ... DROP PARTITION` для удаления партиций.  
+
+```sql
+CREATE TABLE events_with_ttl
+(
+    timestamp DateTime,
+    user_id   UInt32,
+    action    String
+)
+ENGINE = MergeTree()
+PARTITION BY toYYYYMM(timestamp)
+ORDER BY (user_id, timestamp)
+TTL timestamp + INTERVAL 1 MONTH;
+```
+
+```sql
+ALTER TABLE events DROP PARTITION '202405';
+```
