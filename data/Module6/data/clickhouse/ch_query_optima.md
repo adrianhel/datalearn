@@ -35,3 +35,28 @@ WHERE status = 'active'
 Рекомендуется помещать в `PREWHERE` наиболее селективные (сильно ограничивающие выборку) условия по столбцам, 
 входящим в сортировочный ключ.  
 
+### 2. Использование сортировочного ключа и партиционирования
+Сортировочный ключ (`ORDER BY`) и партиционирование (`PARTITION BY`) позволяют ограничить сканируемый объём данных.  
+
+```sql
+CREATE TABLE visits
+(
+    user_id UInt32,
+    event_date Date,
+    event_type String,
+    ...
+)
+ENGINE = MergeTree
+PARTITION BY toYYYYMM(event_date)
+ORDER BY (user_id, event_date)
+```
+                  
+В запросах рекомендуется использовать условия по полям, входящим в `ORDER BY` и `PARTITION BY`.  
+Это позволяет **ClickHouse** быстро определять, какие партиции и диапазоны строк нужно читать.  
+
+```sql
+SELECT count(*)
+FROM visits
+WHERE event_date BETWEEN '2024-05-01' AND '2024-05-31'
+  AND user_id = 12345
+```
