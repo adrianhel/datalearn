@@ -71,3 +71,24 @@ ALTER TABLE events ADD INDEX idx_type (event_type) TYPE set(100) GRANULARITY 1;
 - Скупые индексы эффективны при фильтрации по столбцам с небольшим количеством уникальных значений.  
 - Не заменяют партиционирование или сортировочный ключ, но дополняют их.  
 
+### 4. Оптимизация агрегаций
+- Использование агрегационных функций **ClickHouse** (`sum`, `avg`, `uniq`, `count`).  
+- Использование предварительно агрегированных таблиц или `AggregatingMergeTree`, если требуется часто делать 
+повторяющиеся агрегации.  
+
+```sql
+SELECT event_date, count(*) AS cnt
+FROM events
+WHERE event_type = 'click'
+GROUP BY event_date
+ORDER BY event_date
+```
+                  
+Для уникальных пользователей рекомендуется использовать специальные функции:  
+
+```sql
+SELECT count(DISTINCT user_id) FROM events;
+SELECT uniq(user_id) FROM events;
+```
+                  
+Функция `uniq` работает быстрее и масштабируется лучше, используя вероятностные структуры данных.  
