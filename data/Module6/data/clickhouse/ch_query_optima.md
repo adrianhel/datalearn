@@ -112,3 +112,23 @@ SELECT ...
 FROM A
 ANY INNER JOIN B ON A.key = B.key
 ```
+
+### 6. Использование материализованных представлений
+Материализованные представления позволяют автоматически агрегировать или фильтровать данные при записи, 
+что ускоряет последующие запросы.  
+
+```sql
+CREATE MATERIALIZED VIEW daily_stats
+ENGINE = SummingMergeTree
+PARTITION BY toYYYYMM(date)
+ORDER BY (date, user_id)
+AS
+SELECT
+    date,
+    user_id,
+    count() AS visit_count
+FROM visits
+GROUP BY date, user_id
+```
+                  
+Чтение из такого представления значительно быстрее, чем выполнение агрегации "на лету".  
