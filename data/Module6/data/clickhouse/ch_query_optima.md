@@ -146,3 +146,14 @@ GROUP BY date, user_id
 CREATE TABLE distributed_events AS events
 ENGINE = Distributed(cluster, db, events, rand())
 ```
+
+### 9. Минимизация передачи лишних данных
+- Выбирать только необходимые столбцы, избегать `SELECT *`.  
+- Ограничивать количество возвращаемых строк с помощью `LIMIT`.  
+
+```sql
+SELECT id, name
+FROM users
+WHERE registered = 1
+LIMIT 100
+```
