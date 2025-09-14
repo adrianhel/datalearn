@@ -157,3 +157,14 @@ FROM users
 WHERE registered = 1
 LIMIT 100
 ```
+
+### 10. Использование специализированных функций ClickHouse
+- Использование функций для работы с массивами, date/time, JSON, регулярными выражениями и др. для минимизации 
+промежуточных вычислений.  
+- Использование функций `arrayJoin`, `groupArray`, `groupUniqArray` для эффективной работы с массивами.  
+
+```sql
+SELECT user_id, arrayJoin(actions) AS action
+FROM user_logs
+WHERE has(actions, 'login')
+```
