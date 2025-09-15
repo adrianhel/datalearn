@@ -168,3 +168,12 @@ SELECT user_id, arrayJoin(actions) AS action
 FROM user_logs
 WHERE has(actions, 'login')
 ```
+
+## Диагностика и анализ производительности запросов
+- Использование `EXPLAIN` для анализа плана выполнения запроса.  
+- Использование `system.query_log` и `system.processes` для мониторинга запросов.  
+- Анализ показателей `read_rows`, `read_bytes`, `result_rows` для понимания объёма обработанных данных.  
+
+```sql
+EXPLAIN SELECT count(*) FROM events WHERE event_type = 'click';
+```
