@@ -194,3 +194,39 @@ EXPLAIN SELECT count(*) FROM events WHERE event_type = 'click';
 - Суммарный объём чтения:  
 `read_bytes = sum(bytes, считанных с диска по всем партициям)`  
 
+## Примеры оптимизированных запросов
+
+```sql
+-- Использование PREWHERE и агрегации
+SELECT user_id, count(*) AS cnt
+FROM events
+PREWHERE event_date = '2024-06-01'
+WHERE event_type = 'purchase'
+GROUP BY user_id
+ORDER BY cnt DESC
+LIMIT 10;
+```
+
+```sql
+-- Фильтрация по партиционированному столбцу + агрегатная функция
+SELECT toDate(event_time) AS day, uniq(user_id)
+FROM logs
+WHERE event_time >= '2024-05-01' AND event_time < '2024-06-01'
+GROUP BY day
+ORDER BY day;
+```
+
+```sql
+-- Использование skip index для ускорения фильтрации
+SELECT *
+FROM events
+WHERE low_cardinality_field = 'value'
+SETTINGS force_index_by_date = 1;
+```
+
+```sql
+-- Эффективное соединение с небольшой таблицей-словарём
+SELECT e.event_id, d.description
+FROM events e
+LEFT JOIN dict_table d ON e.type = d.type_id;
+```
