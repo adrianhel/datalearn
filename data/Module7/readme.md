@@ -38,7 +38,7 @@
 - **Hadoop YARN**: драйверы работают на главном узле приложения и управляются **YARN** в кластере.
 
 ## 7.4 Spark Session
-**Spark Session** является более высокоуровневым интерфейсом, который объединяет функциональность 
+**Spark Session** является высокоуровневым интерфейсом, который объединяет функциональность 
 **[Spark Context](data/spark_context.md)**, **SQL Context** и **Hive Context** в одном объекте. Он предоставляет доступ 
 к функциям **Spark Core**, **Spark SQL**, **Spark Streaming**, **MLlib** и **GraphX**.  
 
