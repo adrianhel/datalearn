@@ -20,4 +20,43 @@
 5. **Поддержка различных источников данных**: Spark Session позволяет работать с различными источниками данных, 
 включая файловые системы (**HDFS**, **S3** и т.д.), базы данных (**MySQL**, **PostgreSQL** и др.), **Apache Kafka** и другие.  
 
-## 7.4.3 
+## 7.4.3 Примеры создания
+#### Пример создания Spark Context на Python
+
+```python
+from pyspark import SparkContext
+
+# Создание объекта SparkContext
+sc = SparkContext(appName="MySparkApp")
+
+# Здесь можно выполнять операции с RDD
+
+# Закрытие SparkContext
+sc.stop()
+```
+        
+#### Пример создания Spark Session на Python
+
+```python
+from pyspark.sql import SparkSession
+
+# Создание объекта SparkSession
+spark = SparkSession.builder \
+    .appName("MySparkApp") \
+    .getOrCreate()
+
+# Здесь можно выполнять операции с DataFrames
+# Закрытие SparkSession
+spark.stop()
+```
+                  
+В обоих примерах мы используем PySpark для работы с Spark в языке Python.  
+
+В примере создания Spark Context мы импортируем модуль SparkContext из библиотеки PySpark и создаем объект sc с 
+указанием имени приложения. Затем мы можем выполнять операции с RDD, используя sc. По завершении работы необходимо 
+вызвать метод `stop()` для закрытия Spark Context.    
+
+В примере создания Spark Session мы импортируем модуль SparkSession и используем `builder` для настройки параметров 
+Spark Session, таких, как имя приложения. Затем мы вызываем метод getOrCreate(), который создает новую Spark Session 
+или возвращает существующую, если она уже создана. После этого мы можем выполнять операции с DataFrames, используя spark. 
+Наконец, мы вызываем метод `stop()` для закрытия Spark Session.  
