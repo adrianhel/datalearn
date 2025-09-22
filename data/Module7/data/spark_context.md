@@ -46,6 +46,7 @@ spark = SparkSession.builder \
     .getOrCreate()
 
 # Здесь можно выполнять операции с DataFrames
+
 # Закрытие SparkSession
 spark.stop()
 ```
