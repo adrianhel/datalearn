@@ -55,6 +55,6 @@
 результат драйверу.  
 
 <p align="center">
-<img src="/data/Module7/img/spark_driver.png" width="80%">
+<img src="/data/Module7/img/spark_driver.png" width="50%">
 </p>
 
