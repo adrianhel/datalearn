@@ -3,7 +3,7 @@
 ### [Назад в Содержание ⤶](/README.md)
 
 <p align="center">
-<img src="/data/Module7/img/spark_logo.png" width="80%">
+<img src="/data/Module7/img/spark_logo.png" width="50%">
 </p>
 
 ## 7.1 Знакомство с Apache Spark
@@ -51,7 +51,7 @@
 Именно в ней, как мы уже поняли, задается конфигурация запуска нашего приложения и многое другое.   
 
 <p align="center">
-<img src="/data/Module7/img/spark_driver.png" width="50%">
+<img src="/data/Module7/img/spark_driver.png" width="40%">
 </p>
 
 Экзекьюторы нужны для выполнения задач Spark. Одно приложение в Spark - это несколько задач (но может быть и одна). 
