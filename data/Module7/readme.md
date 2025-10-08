@@ -89,5 +89,5 @@
 
 ## 7.7 Фундаментальные концепции в Apache Spark
 В Apache Spark концепции ленивых вычислений ([lazy evaluation](data/spark_lazy.md)), преобразований 
-([transformations](data/transformations.md)) и действий ([actions](data/spark_actions.md)) играют ключевую роль 
+([transformations](data/spark_transformations.md)) и действий ([actions](data/spark_actions.md)) играют ключевую роль 
 в оптимизации и выполнении распределенных вычислений.  
