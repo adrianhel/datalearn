@@ -26,3 +26,14 @@ rdd = sc.parallelize(data)
 # Применение преобразования map
 squared_rdd = rdd.map(lambda x: x * x)
 ```
+
+## 7.7.3 Что происходит при вызове трансформации?
+Ничего, кроме обновления внутреннего DAG.
+
+```python
+lines_rdd = sc.textFile("data.txt")  # Еще ничего не прочитано
+words_rdd = lines_rdd.flatMap(lambda line: line.split(" ")) # Ничего не выполнено
+filtered_rdd = words_rdd.filter(lambda word: word.startswith("a")) # Все еще ничего
+```
+
+На этом этапе у Spark есть план: `Прочитать файл -> разбить на слова -> отфильтровать слова на 'a'`.
