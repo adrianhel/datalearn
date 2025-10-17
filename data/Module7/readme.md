@@ -91,3 +91,5 @@
 В Apache Spark концепции ленивых вычислений [lazy evaluation](data/spark_lazy.md), преобразований 
 [transformations](data/spark_transformations.md) и действий [actions](data/spark_actions.md) играют ключевую роль 
 в оптимизации и выполнении распределенных вычислений.  
+
+## 7.8 Популярные форматы хранения данных
