@@ -94,11 +94,11 @@
 
 ## 7.8 Популярные форматы хранения данных
 Spark, как мощный фреймворк для распределенной обработки данных, поддерживает множество форматов:  
-- Apache Parquet  
-- Apache ORC (Optimized Row Columnar)    
-- Avro  
-- Delta Lake форматы
-- JSON/CSV  
+- [Apache Parquet](data/parquet.md)  
+- [Apache ORC (Optimized Row Columnar)](data/orc.md)   
+- [Avro](data/avro.md)  
+- [Delta Lake](data/delta_lake.md) форматы  
+- [JSON/CSV](data/json_csv.md)  
 
 Выбор правильного формата критически важен для производительности, стоимости и удобства работы.  
 
