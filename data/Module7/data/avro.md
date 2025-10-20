@@ -17,4 +17,3 @@
 df.write.format("avro").save("/path/to/data.avro")
 df = spark.read.format("avro").load("/path/to/data.avro")
 ```
-
