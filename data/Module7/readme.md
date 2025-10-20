@@ -97,7 +97,7 @@ Spark, как мощный фреймворк для распределенно�
 - [Apache Parquet](data/parquet.md)  
 - [Apache ORC (Optimized Row Columnar)](data/orc.md)   
 - [Avro](data/avro.md)  
-- [Delta Lake](data/delta_lake.md) форматы  
+- [Delta Lake](data/delta_lake.md)  
 - [JSON/CSV](data/json_csv.md)  
 
 Выбор правильного формата критически важен для производительности, стоимости и удобства работы.  
