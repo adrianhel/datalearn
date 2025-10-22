@@ -107,7 +107,7 @@
 Spark поддерживает множество форматов хранения данных:  
 - [Apache Parquet](data/parquet.md)  
 - [Apache ORC (Optimized Row Columnar)](data/orc.md)   
-- [Avro](data/avro.md)  
+- [Apache Avro](data/avro.md)  
 - [Delta Lake](data/delta_lake.md)  
 - [JSON/CSV](data/json_csv.md)  
 
