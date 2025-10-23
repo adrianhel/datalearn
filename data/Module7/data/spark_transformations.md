@@ -36,4 +36,4 @@ words_rdd = lines_rdd.flatMap(lambda line: line.split(" ")) # Ничего не 
 filtered_rdd = words_rdd.filter(lambda word: word.startswith("a")) # Все еще ничего
 ```
 
-На этом этапе у Spark есть план: `Прочитать файл -> разбить на слова -> отфильтровать слова на 'a'`.
+На этом этапе у Spark есть план: `Прочитать файл -> разбить на слова -> отфильтровать слова на 'a'`.  
