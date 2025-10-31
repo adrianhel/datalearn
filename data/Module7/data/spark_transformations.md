@@ -8,48 +8,39 @@
 выполнения операций.  
 
 ## 7.7.2 Классификация трансформаций
-- **map(func)**: Применяет функцию к каждому элементу RDD и возвращает новый RDD.  
-- **filter(func)**: Возвращает новый RDD, содержащий только те элементы, которые удовлетворяют условию.  
-- **flatMap(func)**: Похож на map, но каждая входная строка может быть сопоставлена с несколькими выходными.   
-- **join()**: Соединяет пару RDD.  
-- **union()**: Объединяет пару RDD в один.  
-- **distinct()**: Убирает дублирующиеся элементы из RDD.  
-- **groupByKey()**, **reduceByKey()**: Используются для парных RDD (ключ-значение).
-
-
 - **Нефильтрующие (map-подобные)** — преобразуют каждое отдельное значение или группу значений без 
 изменения структуры разбиения:  
-    - map
-    - flatMap
-    - mapPartitions
-    - mapPartitionsWithIndex
+    - **map(func)**: Применяет функцию к каждому элементу RDD и возвращает новый RDD.  
+    - **flatMap(func)**: Похож на map, но каждая входная строка может быть сопоставлена с несколькими выходными.  
+    - **mapPartitions**  
+    - **mapPartitionsWithIndex**
 
 - **Фильтрующие** — отбирают часть данных на основе заданного условия:  
-    - filter
-    - distinct
-    - sample
+    - **filter(func)**: Возвращает новый RDD, содержащий только те элементы, которые удовлетворяют условию.  
+    - **distinct()**: Убирает дублирующиеся элементы из RDD.  
+    - **sample**
 
 - **Агрегирующие и группирующие** — агрегируют, объединяют или группируют данные по ключу:  
-    - groupByKey
-    - reduceByKey
-    - aggregateByKey
-    - combineByKey
-    - groupBy
+    - **groupByKey()**, **reduceByKey()**: Используются для парных RDD (ключ-значение).  
+    - **reduceByKey**
+    - **aggregateByKey**
+    - **combineByKey**
+    - **groupBy**
 
 - **Сортирующие** — изменяют порядок элементов:  
-    - sortBy
-    - sortByKey
+    - **sortBy**
+    - **sortByKey**
 
 - **Объединяющие и соединяющие** — работают с несколькими RDD:  
-    - union
-    - intersection
-    - subtract
-    - cartesian
-    - join
-    - leftOuterJoin
-    - rightOuterJoin
-    - fullOuterJoin
-    - cogroup
+    - **union()**: Объединяет пару RDD в один.  
+    - **intersection**
+    - **subtract**
+    - **cartesian**
+    - **join()**: Соединяет пару RDD.  
+    - **leftOuterJoin**
+    - **rightOuterJoin**
+    - **fullOuterJoin**
+    - **cogroup**
 
 ## 7.7.3 Что происходит при вызове трансформации?
 Ничего, кроме обновления внутреннего DAG.
