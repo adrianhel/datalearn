@@ -130,4 +130,4 @@ result.show()
 - Вычисление новых столбцов: `df.withColumn("bonus", df.salary * 0.1)`
 - Фильтрация по условию: `df.filter(df.salary > 50000)`
 
-## 7.6.11
+## 7.6.11 
