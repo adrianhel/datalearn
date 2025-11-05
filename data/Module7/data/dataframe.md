@@ -129,5 +129,3 @@ result.show()
 - Агрегирование: `df.groupBy("department").sum("salary")`
 - Вычисление новых столбцов: `df.withColumn("bonus", df.salary * 0.1)`
 - Фильтрация по условию: `df.filter(df.salary > 50000)`
-
-## 7.6.11 
