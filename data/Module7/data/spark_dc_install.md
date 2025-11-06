@@ -7,7 +7,7 @@
 
 **Docker Desktop** должен быть установлен.
 
-1. Перейдите в папку проекта и запустите файл "Dockerfile":
+1. Перейдите в папку проекта и запустите файл **Dockerfile**:
 
 ```bash
 cd C:\Users\andy\*\datalearn\data\Module7\data
