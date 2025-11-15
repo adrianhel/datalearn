@@ -18,15 +18,15 @@
 - **Декларативность:**  
     - DataFrame предоставляет декларативный API, позволяющий описывать вычисления на высоком уровне, 
     подобно SQL-запросам. Это облегчает анализ, оптимизацию и поддержку кода.  
-    - Пример:  
-
+    Пример:  
+  
     ```python
     # DataFrame API
     df.filter(df["age"] > 18).groupBy("country").count()
     ```
-
+  
     - В то время как RDD использует императивный, функциональный стиль:  
-
+  
     ```python
     # RDD API
     rdd.filter(lambda row: row.age > 18).map(lambda row: (row.country, 1)).reduceByKey(lambda x, y: x + y)
