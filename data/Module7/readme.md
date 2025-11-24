@@ -86,7 +86,7 @@
 
 Очевидно, что высокоуровневые структуры имеют ряд [приемуществ](data/spark_advantages_over_rdd.md) над RDD.
 
-## 7.7 Spark Core: базовые функции
+## 7.7 Spark Core
 В Apache Spark концепции [ленивых вычислений](data/spark_lazy.md) (lazy evaluation), 
 [преобразований](data/spark_transformations.md) (transformations) и [действий](data/spark_actions.md) (actions) играют 
 ключевую роль в оптимизации и выполнении распределенных вычислений, они составляют жизненный цикл Spark-программы.  
