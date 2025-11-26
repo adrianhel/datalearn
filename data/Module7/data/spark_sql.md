@@ -28,3 +28,58 @@ Spark SQL поддерживает два основных способа раб
 4. Планирование (Planning): генерация физического плана выполнения.  
 5. Выполнение (Execution): выполнение физического плана на кластере Spark.  
 
+## 7.9.3 Работа с DataFrame
+DataFrame — основной объект Spark SQL для представления структурированных данных. Его можно создать из различных 
+источников данных: файлов (JSON, Parquet, ORC, CSV), баз данных, RDD и других.  
+
+#### Пример создания SparkSession
+
+```python
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder \
+    .appName("SparkSQLExample") \
+    .getOrCreate()
+```
+                  
+#### Загрузка данных в DataFrame
+
+```python
+# Загрузка данных из CSV-файла
+df = spark.read.csv("path/to/data.csv", header=True, inferSchema=True)
+
+# Загрузка данных из Parquet-файла
+df_parquet = spark.read.parquet("path/to/data.parquet")
+```
+                  
+#### Работа с DataFrame: основные операции
+- **Выборка столбцов:**
+
+    ```python
+    df.select("name", "age")
+    ```
+                  
+- **Фильтрация строк:**
+
+    ```python
+    df.filter(df.age > 21)
+    ```
+                  
+- **Группировка и агрегирование:**
+
+    ```python
+    df.groupBy("city").agg({"salary": "avg"})
+    ```
+                  
+- **Соединения (joins):**
+
+    ```python
+    df1.join(df2, df1.id == df2.id, "inner")
+    ```
+                  
+- **Сортировка:**
+
+    ```python
+    df.orderBy(df.age.desc())
+    ```
+                  
