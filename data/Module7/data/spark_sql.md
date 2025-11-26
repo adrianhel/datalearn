@@ -52,7 +52,8 @@ df = spark.read.csv("path/to/data.csv", header=True, inferSchema=True)
 df_parquet = spark.read.parquet("path/to/data.parquet")
 ```
                   
-#### Работа с DataFrame: основные операции
+#### Работа с DataFrame
+Основные операции:
 - **Выборка столбцов:**
 
     ```python
