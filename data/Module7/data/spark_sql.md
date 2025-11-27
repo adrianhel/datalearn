@@ -82,4 +82,19 @@ df_parquet = spark.read.parquet("path/to/data.parquet")
     ```python
     df.orderBy(df.age.desc())
     ```
+---
+## 7.9.4 Работа с SQL-запросами
+Spark SQL позволяет выполнять SQL-запросы к DataFrame, регистрируя их как временные (**temporary**) 
+или постоянные (**global temporary**) представления (**views**).  
+
+```python
+# Регистрация DataFrame как временного представления
+df.createOrReplaceTempView("people")
+
+# Выполнение SQL-запроса
+result = spark.sql("SELECT name, COUNT(*) FROM people GROUP BY name")
+```
                   
+В глобальном контексте временные представления доступны только в рамках одной сессии, глобальные временные — 
+во всех сессиях Spark.  
+
