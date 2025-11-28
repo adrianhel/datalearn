@@ -98,3 +98,15 @@ result = spark.sql("SELECT name, COUNT(*) FROM people GROUP BY name")
 В глобальном контексте временные представления доступны только в рамках одной сессии, глобальные временные — 
 во всех сессиях Spark.  
 
+## 7.9.5 Dataset API
+Dataset — типизированная абстракция для работы с данными (доступна на Scala и Java), сочетающая преимущества RDD 
+(безопасность типов, высокоуровневая трансформация) и DataFrame (оптимизация, ленивое выполнение).  
+
+```scala
+// Пример на Scala
+case class Person(name: String, age: Int)
+val ds = spark.read.json("people.json").as[Person]
+ds.filter(_.age > 18).show()
+```
+                  
+
