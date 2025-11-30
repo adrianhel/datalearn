@@ -116,4 +116,25 @@ ds.filter(_.age > 18).show()
 - **Tungsten** — компонент для эффективного управления памятью и выполнения вычислений на низком уровне, что позволяет 
 повысить производительность Spark SQL.  
 
+## 7.9.7 Поддерживаемые форматы и источники данных
+- CSV, JSON, Parquet, ORC, Avro
+- JDBC (реляционные базы данных)
+- Hive (через HiveContext / SparkSession с Hive Support)
+- Delta Lake и другие форматы данных для управления транзакциями
 
+#### Примеры загрузки различных форматов
+
+```python
+# Загрузка данных из JSON
+df_json = spark.read.json("data.json")
+
+# Загрузка из реляционной БД через JDBC
+df_jdbc = spark.read \
+    .format("jdbc") \
+    .option("url", "jdbc:postgresql://host:port/db") \
+    .option("dbtable", "schema.tablename") \
+    .option("user", "username") \
+    .option("password", "password") \
+    .load()
+```
+                  
