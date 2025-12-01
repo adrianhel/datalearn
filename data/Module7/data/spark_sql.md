@@ -138,3 +138,18 @@ df_jdbc = spark.read \
     .load()
 ```
                   
+## 7.9.8 Интеграция с Hive
+Spark SQL поддерживает интеграцию с Apache Hive, включая чтение и запись данных из таблиц Hive, использование 
+Hive UDF и выполнение запросов HiveQL.  
+
+```python
+# Включение поддержки Hive
+spark = SparkSession.builder \
+    .appName("HiveExample") \
+    .enableHiveSupport() \
+    .getOrCreate()
+
+df_hive = spark.sql("SELECT * FROM hive_table")
+```
+                  
+
