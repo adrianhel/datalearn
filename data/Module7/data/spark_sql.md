@@ -152,4 +152,21 @@ spark = SparkSession.builder \
 df_hive = spark.sql("SELECT * FROM hive_table")
 ```
                   
+## 7.9.9 Управление схемой и эволюция схемы
+- **Инференция схемы** — автоматическое определение структуры данных при загрузке (например, `inferSchema=True`).  
+- **Явное задание схемы** — определение схемы с помощью `StructType` и `StructField`.  
+
+```python
+from pyspark.sql.types import StructType, StructField, StringType, IntegerType
+
+schema = StructType([
+    StructField("name", StringType(), True),
+    StructField("age", IntegerType(), True)
+])
+
+df = spark.read.csv("data.csv", schema=schema, header=True)
+```
+
+Spark SQL поддерживает эволюцию схемы (schema evolution) при работе с некоторыми форматами данных, например, Parquet.  
+
 
