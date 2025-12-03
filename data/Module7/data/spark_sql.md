@@ -169,4 +169,31 @@ df = spark.read.csv("data.csv", schema=schema, header=True)
 
 Spark SQL поддерживает эволюцию схемы (schema evolution) при работе с некоторыми форматами данных, например, Parquet.  
 
+## 7.9.10 Преобразования и действия (Transformations & Actions)
+- **Преобразования (Transformations):** операции, возвращающие новый DataFrame (например, `select`, `filter`, 
+`groupBy`, `join`).  
+- **Действия (Actions):** операции, инициирующие вычисление (например, `show`, `collect`, `write`).  
+
+#### Пример преобразований и действий
+
+```python
+df_filtered = df.filter(df["age"] > 18)
+df_grouped = df_filtered.groupBy("city").count()
+df_grouped.show()
+```
+
+#### Пользовательские функции (UDF)
+Spark SQL поддерживает определение и использование пользовательских функций (User Defined Functions, UDF) для обработки данных, выходящих за рамки стандартных функций.
+
+```python
+from pyspark.sql.functions import udf
+from pyspark.sql.types import IntegerType
+
+def add_ten(x):
+    return x + 10
+
+add_ten_udf = udf(add_ten, IntegerType())
+df.withColumn("age_plus_10", add_ten_udf(df.age)).show()
+```
+  
 
