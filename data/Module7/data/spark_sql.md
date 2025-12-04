@@ -196,4 +196,16 @@ add_ten_udf = udf(add_ten, IntegerType())
 df.withColumn("age_plus_10", add_ten_udf(df.age)).show()
 ```
   
+## 7.9.11 Запись данных
+- **Поддержка различных форматов:** CSV, JSON, Parquet, ORC, Avro, JDBC и др.  
+- **Управление режимами записи:** `overwrite`, `append`, `ignore`, `errorIfExists`.  
+
+```python
+# Запись в Parquet
+df.write.mode("overwrite").parquet("output/path")
+
+# Запись в таблицу Hive
+df.write.saveAsTable("hive_table")
+```
+                  
 
