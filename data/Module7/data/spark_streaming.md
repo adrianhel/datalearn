@@ -49,3 +49,31 @@ Apache Flume, TCP-сокеты, HDFS, файловые системы.
     - **window length** — длина окна (например, 10 секунд);  
     - **slide interval** — шаг сдвига окна (например, 5 секунд).  
 
+## 7.10.5 Работа с внешними источниками данных
+- **Apache Kafka** — популярный брокер сообщений для сбора и передачи потоковых данных. Spark Streaming поддерживает 
+Kafka через интеграцию с Kafka API.  
+- **Apache Flume** — система сбора и агрегирования логов, которая может быть использована как источник для 
+Spark Streaming.  
+- **Файловые системы** — поддержка мониторинга директорий и обработки новых файлов по мере их появления.  
+
+### Пример интеграции с Kafka на Scala
+
+```scala
+import org.apache.spark.streaming.kafka010._
+
+val kafkaParams = Map(
+    "bootstrap.servers" -> "localhost:9092",
+    "key.deserializer" -> "org.apache.kafka.common.serialization.StringDeserializer",
+    "value.deserializer" -> "org.apache.kafka.common.serialization.StringDeserializer",
+    "group.id" -> "spark-streaming-group"
+)
+val topics = Array("topic1")
+val stream = KafkaUtils.createDirectStream[String, String](
+    ssc,
+    LocationStrategies.PreferConsistent,
+    ConsumerStrategies.Subscribe[String, String](topics, kafkaParams)
+)
+
+val lines = stream.map(record => record.value)
+```
+
