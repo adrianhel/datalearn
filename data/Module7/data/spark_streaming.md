@@ -77,3 +77,22 @@ val stream = KafkaUtils.createDirectStream[String, String](
 val lines = stream.map(record => record.value)
 ```
 
+## 7.10.6 Гарантии доставки и отказоустойчивость
+- **Exactly-once** семантика — Spark Streaming способен гарантировать, что каждое событие будет обработано 
+ровно один раз при корректной настройке источников и выводов.  
+- **Checkpointing** — механизм сохранения состояния потоковой обработки на диск для восстановления после сбоев. 
+Может хранить состояние DStream, метаданные и данные о прогрессе.  
+- **Операции с состоянием (Stateful transformations)**, такие как `updateStateByKey` и `mapWithState`, требуют 
+использования checkpointing.  
+
+### Пример использования checkpointing
+
+```scala
+ssc.checkpoint("hdfs://path/to/checkpoint")
+
+val stateDstream = pairs.updateStateByKey(
+    (newValues: Seq[Int], runningCount: Option[Int]) =>
+        Some(runningCount.getOrElse(0) + newValues.sum)
+)
+```
+
