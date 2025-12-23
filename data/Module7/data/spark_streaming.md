@@ -118,3 +118,44 @@ val stateDstream = pairs.updateStateByKey(
 - **Stateful processing** — Spark Streaming поддерживает хранение и обновление состояния между пакетами данных, 
 что важно для сложных сценариев обработки.  
 
+## 7.10.10 Примеры кода на Scala
+**1. Создание StreamingContext**
+
+```scala
+import org.apache.spark._
+import org.apache.spark.streaming._
+
+val conf = new SparkConf().setAppName("NetworkWordCount").setMaster("local[2]")
+val ssc = new StreamingContext(conf, Seconds(1))
+```
+
+**2. Подключение к сокету и подсчёт слов**
+
+```scala
+val lines = ssc.socketTextStream("localhost", 9999)
+val words = lines.flatMap(_.split(" "))
+val pairs = words.map(word => (word, 1))
+val wordCounts = pairs.reduceByKey(_ + _)
+wordCounts.print()
+ssc.start()
+ssc.awaitTermination()
+```
+
+**3. Оконные операции**
+
+```scala
+val windowedWordCounts = pairs.reduceByKeyAndWindow(
+    (a: Int, b: Int) => a + b,           // функция объединения
+    Seconds(30),                         // длина окна
+    Seconds(10)                          // шаг сдвига
+)
+windowedWordCounts.print()
+```
+
+**4. Использование foreachRDD для записи результата**
+
+```scala
+wordCounts.foreachRDD { rdd =>
+    rdd.saveAsTextFile("hdfs://path/to/output")
+}
+```
