@@ -27,3 +27,74 @@ LogisticRegression, DecisionTreeClassifier).
 2. **Обучение без учителя (Unsupervised Learning):** задачи группировки данных или выявления структуры в неразмеченных 
 данных.  
 3. **Обучение с подкреплением (Reinforcement Learning):** в MLlib не реализовано.  
+
+## 7.11.3 Основные алгоритмы и методы MLlib
+### Классификация
+**Классификация** — задача отнесения объектов к одному из заранее известных классов.  
+  
+- **Логистическая регрессия (Logistic Regression):** применяется для бинарной и многоклассовой классификации.  
+- **Деревья решений (Decision Trees):** алгоритм построения дерева, где узлы — проверки признаков, листья — классы.  
+- **Случайный лес (Random Forest):** ансамбль деревьев решений для повышения точности и устойчивости.  
+- **Градиентный бустинг над деревьями (GBTClassifier):** ансамбль деревьев с последовательным обучением.  
+- **Линейные методы (Linear SVM, Naive Bayes):** линейные классификаторы для различных задач.  
+
+#### Пример кода: Логистическая регрессия
+
+```python
+from pyspark.ml.classification import LogisticRegression
+
+lr = LogisticRegression(featuresCol="features", labelCol="label")
+model = lr.fit(training_data)
+predictions = model.transform(test_data)
+```
+
+                  
+### Регрессия
+**Регрессия** — предсказание числового значения целевой переменной.  
+  
+- **Линейная регрессия (Linear Regression):** базовый метод для регрессионных задач.  
+- **Дерево решений для регрессии (DecisionTreeRegressor):** построение дерева для предсказания числовых значений.  
+- **Случайный лес для регрессии (RandomForestRegressor):** ансамбль деревьев для регрессии.  
+- **Градиентный бустинг для регрессии (GBTRegressor):** ансамбль деревьев с бустингом.  
+
+#### Пример кода: Линейная регрессия
+
+```python
+from pyspark.ml.regression import LinearRegression
+
+lr = LinearRegression(featuresCol="features", labelCol="label")
+model = lr.fit(training_data)
+predictions = model.transform(test_data)
+```
+
+                  
+### Кластеризация
+**Кластеризация** — поиск групп (кластеров) похожих объектов в неразмеченных данных.  
+  
+- **K-средних (KMeans):** алгоритм разделения данных на K кластеров по расстоянию до центроидов.  
+- **Gaussian Mixture Model (GMM):** вероятностный подход к кластеризации на основе смеси гауссовых распределений.  
+- **Bisecting K-means:** иерархический вариант алгоритма K-средних.  
+
+#### Пример кода: KMeans
+
+```python
+from pyspark.ml.clustering import KMeans
+
+kmeans = KMeans(featuresCol="features", k=3)
+model = kmeans.fit(dataset)
+predictions = model.transform(dataset)
+```
+                  
+### Снижение размерности
+- **Principal Component Analysis (PCA):** линейное преобразование для проекции данных в пространство меньшей размерности.  
+- **Feature Selection:** методы отбора наиболее информативных признаков (ChiSqSelector, VectorSlicer).  
+
+#### Пример кода: PCA
+
+```python
+from pyspark.ml.feature import PCA
+
+pca = PCA(k=2, inputCol="features", outputCol="pcaFeatures")
+model = pca.fit(dataset)
+result = model.transform(dataset)
+```
