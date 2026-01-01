@@ -98,3 +98,24 @@ pca = PCA(k=2, inputCol="features", outputCol="pcaFeatures")
 model = pca.fit(dataset)
 result = model.transform(dataset)
 ```
+
+## 7.11.4 Предобработка и преобразование признаков
+- **VectorAssembler:** сборка нескольких столбцов признаков в вектор признаков.  
+- **StandardScaler:** стандартизация признаков (нулевое среднее, единичное стандартное отклонение).  
+- **StringIndexer:** преобразование строковых категориальных признаков в числовые индексы.  
+- **OneHotEncoder:** one-hot-кодирование категориальных признаков.  
+- **Imputer:** заполнение пропущенных значений.  
+- **MinMaxScaler, MaxAbsScaler:** масштабирование признаков в заданные диапазоны.  
+
+### Пример кода: VectorAssembler и StandardScaler
+
+```python
+from pyspark.ml.feature import VectorAssembler, StandardScaler
+
+assembler = VectorAssembler(inputCols=["col1", "col2", "col3"], outputCol="features")
+assembled = assembler.transform(df)
+
+scaler = StandardScaler(inputCol="features", outputCol="scaledFeatures")
+scaled_model = scaler.fit(assembled)
+scaled_data = scaled_model.transform(assembled)
+```
