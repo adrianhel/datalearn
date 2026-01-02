@@ -120,4 +120,29 @@ scaled_model = scaler.fit(assembled)
 scaled_data = scaled_model.transform(assembled)
 ```
 
-## 7.11.5 
+## 7.11.5 Конвейеры машинного обучения (ML Pipelines)
+MLlib поддерживает построение конвейеров (pipelines), которые объединяют этапы предобработки, отбора признаков, 
+обучения и применения модели. Это обеспечивает воспроизводимость, масштабируемость и автоматизацию процессов машинного 
+обучения.  
+
+#### Структура конвейера
+1. Этапы предобработки данных
+2. Преобразование признаков
+3. Обучение модели
+4. Применение модели для предсказаний
+
+#### Пример кода: Конвейер
+
+```python
+from pyspark.ml import Pipeline
+from pyspark.ml.feature import StringIndexer, VectorAssembler
+from pyspark.ml.classification import RandomForestClassifier
+
+indexer = StringIndexer(inputCol="category", outputCol="categoryIndex")
+assembler = VectorAssembler(inputCols=["feature1", "feature2", "categoryIndex"], outputCol="features")
+rf = RandomForestClassifier(featuresCol="features", labelCol="label")
+
+pipeline = Pipeline(stages=[indexer, assembler, rf])
+model = pipeline.fit(training_data)
+predictions = model.transform(test_data)
+```
