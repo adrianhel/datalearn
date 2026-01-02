@@ -107,7 +107,7 @@ result = model.transform(dataset)
 - **Imputer:** заполнение пропущенных значений.  
 - **MinMaxScaler, MaxAbsScaler:** масштабирование признаков в заданные диапазоны.  
 
-### Пример кода: VectorAssembler и StandardScaler
+#### Пример кода: VectorAssembler и StandardScaler
 
 ```python
 from pyspark.ml.feature import VectorAssembler, StandardScaler
@@ -119,3 +119,5 @@ scaler = StandardScaler(inputCol="features", outputCol="scaledFeatures")
 scaled_model = scaler.fit(assembled)
 scaled_data = scaled_model.transform(assembled)
 ```
+
+## 7.11.5 
