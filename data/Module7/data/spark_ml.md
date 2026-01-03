@@ -146,3 +146,27 @@ pipeline = Pipeline(stages=[indexer, assembler, rf])
 model = pipeline.fit(training_data)
 predictions = model.transform(test_data)
 ```
+
+## 7.11.6 Оценка качества моделей
+**Метрические функции:** для классификации — accuracy, precision, recall, f1-score; для регрессии — RMSE, MAE, R2.  
+**CrossValidator:** перекрестная проверка для устойчивой оценки качества моделей.  
+**TrainValidationSplit:** разбиение на обучающую и валидационную выборки для подбора гиперпараметров.  
+
+#### Пример кода: Кросс-валидация
+
+```python
+from pyspark.ml.classification import LogisticRegression
+from pyspark.ml.tuning import CrossValidator, ParamGridBuilder
+from pyspark.ml.evaluation import BinaryClassificationEvaluator
+
+lr = LogisticRegression()
+paramGrid = ParamGridBuilder() \
+    .addGrid(lr.regParam, [0.1, 0.01]) \
+    .addGrid(lr.elasticNetParam, [0.0, 0.5, 1.0]) \
+    .build()
+
+evaluator = BinaryClassificationEvaluator()
+cv = CrossValidator(estimator=lr, estimatorParamMaps=paramGrid, evaluator=evaluator, numFolds=3)
+
+cvModel = cv.fit(training_data)
+```
