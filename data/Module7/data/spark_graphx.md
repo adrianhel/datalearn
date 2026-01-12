@@ -47,3 +47,29 @@ val edgeRDD: RDD[Edge[String]] = sc.parallelize(edgeArray)
 // Создание графа
 val graph: Graph[String, String] = Graph(vertexRDD, edgeRDD)
 ```
+
+## 7.12.4 Основные операции над графами
+### Трансформации
+- **mapVertices:** применяет функцию к каждому атрибуту вершины.  
+- **mapEdges:** применяет функцию к каждому атрибуту ребра.  
+- **subgraph:** строит подграф на основе предикатов для вершин и/или рёбер.  
+- **reverse:** возвращает граф с обращённым направлением рёбер.  
+- **joinVertices:** объединяет дополнительные данные с вершинами графа по их идентификатору.  
+
+```scala
+// Пример: добавим метку к имени пользователя
+val newGraph = graph.mapVertices{ case (id, name) => s"User: $name" }
+```
+                  
+### Действия (Actions)
+- **vertices:** возвращает RDD всех вершин.  
+- **edges:** возвращает RDD всех рёбер.  
+- **triplets:** возвращает RDD объектов `EdgeTriplet`, объединяющих атрибуты начальной и конечной вершин с атрибутом ребра.  
+
+```scala
+// Пример: выводим все тройки (вершина-ребро-вершина)
+graph.triplets.collect.foreach { triplet =>
+  println(s"${triplet.srcAttr} --${triplet.attr}--> ${triplet.dstAttr}")
+}
+```
+
