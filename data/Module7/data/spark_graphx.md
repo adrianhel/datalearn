@@ -12,16 +12,16 @@
 
 ## 7.12.2 Архитектура GraphX
 GraphX реализует граф как комбинацию двух RDD:
-- **Vertex RDD** — RDD пар (VertexId, VertexAttr), где VertexId — уникальный идентификатор вершины, VertexAttr — 
+- **Vertex RDD** — RDD пар `(VertexId, VertexAttr)`, где `VertexId` — уникальный идентификатор вершины, `VertexAttr` — 
 атрибут вершины.  
-- **Edge RDD** — RDD объектов Edge с полями srcId, dstId и attr, представляющими идентификаторы начальной и конечной 
+- **Edge RDD** — RDD объектов Edge с полями `srcId`, `dstId` и `attr`, представляющими идентификаторы начальной и конечной 
 вершин и атрибут ребра соответственно.  
 
-Граф в GraphX представлен объектом класса Graph[VD, ED], где VD — тип атрибутов вершин, ED — тип атрибутов рёбер.  
+Граф в GraphX представлен объектом класса `Graph[VD, ED]`, где `VD` — тип атрибутов вершин, `ED` — тип атрибутов рёбер.  
 
 ## 7.12.3 Создание графа
 
-```python
+```scala
 import org.apache.spark.graphx._
 import org.apache.spark.rdd.RDD
 
@@ -72,4 +72,6 @@ graph.triplets.collect.foreach { triplet =>
   println(s"${triplet.srcAttr} --${triplet.attr}--> ${triplet.dstAttr}")
 }
 ```
+
+
 
