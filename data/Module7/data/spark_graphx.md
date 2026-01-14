@@ -73,5 +73,22 @@ graph.triplets.collect.foreach { triplet =>
 }
 ```
 
+## 7.12.5 Графовые алгоритмы в GraphX
+- **PageRank:** вычисление рейтинга важности вершин на основе структуры графа.  
+- **Connected Components:** определение связных компонент неориентированного графа.  
+- **Strongly Connected Components:** определение сильно связных компонент в ориентированных графах.  
+- **Triangle Count:** подсчёт числа треугольников, в которых участвует каждая вершина.  
+- **Shortest Paths:** нахождение кратчайших путей между вершинами.  
+- **Label Propagation:** алгоритм кластеризации для обнаружения сообществ.  
 
+```scala
+// Пример: запуск PageRank
+val ranks = graph.pageRank(0.0001).vertices
+ranks.collect.foreach { case (id, rank) => println(s"Vertex $id has rank $rank") }
 
+// Пример: связные компоненты
+val cc = graph.connectedComponents().vertices
+
+// Пример: подсчёт треугольников
+val triangleCounts = graph.triangleCount().vertices
+```
