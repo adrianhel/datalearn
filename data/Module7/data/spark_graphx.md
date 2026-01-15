@@ -92,3 +92,26 @@ val cc = graph.connectedComponents().vertices
 // Пример: подсчёт треугольников
 val triangleCounts = graph.triangleCount().vertices
 ```
+
+## 7.12.6 Pregel API
+GraphX поддерживает модель вычислений **Pregel** для гибкой реализации итеративных алгоритмов на графах. 
+Основные компоненты Pregel:
+- **vertex program:** функция обновления атрибута вершины на основе полученного сообщения.  
+- **send message:** функция генерации сообщений для соседей по рёбрам.  
+- **message combiner:** функция агрегации сообщений, полученных вершиной.  
+   
+Вызов `pregel` выглядит следующим образом:   
+
+```scala
+val initialMsg = 0
+
+def vprog(id: VertexId, attr: Int, msg: Int): Int = math.max(attr, msg)
+
+def sendMsg(triplet: EdgeTriplet[Int, Int]): Iterator[(VertexId, Int)] = {
+  Iterator((triplet.dstId, triplet.srcAttr + 1))
+}
+
+def mergeMsg(a: Int, b: Int): Int = math.max(a, b)
+
+val result = graph.pregel(initialMsg)(vprog, sendMsg, mergeMsg)
+```
