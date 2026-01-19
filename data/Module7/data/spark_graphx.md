@@ -134,3 +134,37 @@ val result = graph.pregel(initialMsg)(vprog, sendMsg, mergeMsg)
 - Отсутствие поддержки динамических графов (графы считаются статическими в ходе вычислений).  
 - Ограниченное количество встроенных алгоритмов по сравнению с некоторыми специализированными графовыми СУБД.  
 - Основная реализация — на Scala и Java, Python поддержка ограничена через PySpark.  
+
+## 7.12.10 Пример обработки графа на GraphX
+
+```scala
+import org.apache.spark.graphx._
+
+// Создание простого графа
+val users: RDD[(VertexId, String)] = sc.parallelize(Array(
+  (3L, "Charlie"),
+  (7L, "David"),
+  (5L, "Ed"),
+  (2L, "Frank")
+))
+val relationships: RDD[Edge[String]] = sc.parallelize(Array(
+  Edge(3L, 7L, "collab"),
+  Edge(5L, 3L, "advisor"),
+  Edge(2L, 5L, "friend"),
+  Edge(5L, 7L, "colleague")
+))
+val defaultUser = "Unknown"
+
+val graph = Graph(users, relationships, defaultUser)
+
+// Выбор вершин с определённым свойством
+val filtered = graph.vertices.filter { case (_, name) => name.startsWith("C") }
+
+// Преобразование атрибутов рёбер
+val relGraph = graph.mapEdges(edge => edge.attr.toUpperCase)
+
+// Использование triplets для анализа связей
+relGraph.triplets.collect.foreach { t =>
+  println(s"${t.srcAttr} is ${t.attr} of ${t.dstAttr}")
+}
+```
