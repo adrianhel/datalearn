@@ -17,4 +17,19 @@
    - Использование модели Directed Acyclic Graph (DAG) позволяет Spark оптимизировать план выполнения задач,
    минимизируя избыточные вычисления.  
 
-2. 
+2. Гибкость API и поддержка различных языков программирования  
+   - Spark предоставляет высокоуровневые API для Scala, Java, Python и R, что обеспечивает широкую доступность для 
+   специалистов с разным технологическим стеком.  
+
+   - Унифицированный стек API Spark позволяет создавать решения для разнообразных аналитических задач: от ETL до 
+   машинного обучения и потоковой обработки.  
+
+   - Пример простого анализа данных с использованием PySpark (API на Python):  
+
+      ```python
+       from pyspark.sql import SparkSession
+    
+       spark = SparkSession.builder.appName("ПримерАналитики").getOrCreate()
+       df = spark.read.csv("data.csv", header=True, inferSchema=True)
+       df.groupBy("category").count().show()
+      ```        
