@@ -33,3 +33,36 @@
        df = spark.read.csv("data.csv", header=True, inferSchema=True)
        df.groupBy("category").count().show()
       ```        
+     
+3. Унифицированная аналитическая платформа
+   - Spark содержит встроенные библиотеки для различных типов аналитики:  
+     - Spark SQL — для работы с структурированными данными, поддержка SQL-запросов и DataFrame API.  
+     - Spark Streaming — для потоковой обработки данных в реальном времени.  
+     - MLlib — библиотека машинного обучения.  
+     - GraphX — для анализа графовых структур.  
+
+   - Возможность объединять различные типы аналитики в одном приложении без необходимости интеграции нескольких инструментов.  
+
+   - Пример объединения SQL- и ML-задач:   
+
+      ```python
+      from pyspark.sql import SparkSession
+      from pyspark.ml.feature import VectorAssembler
+      from pyspark.ml.regression import LinearRegression
+
+      spark = SparkSession.builder.appName("MLExample").getOrCreate()
+      df = spark.read.csv("data.csv", header=True, inferSchema=True)
+      df.createOrReplaceTempView("data_table")
+
+      # SQL-запрос для отбора данных
+      filtered = spark.sql("SELECT feature1, feature2, label FROM data_table WHERE label IS NOT NULL")
+
+      # Подготовка данных для ML
+      assembler = VectorAssembler(inputCols=["feature1", "feature2"], outputCol="features")
+      ml_data = assembler.transform(filtered)
+
+      # Обучение модели
+      lr = LinearRegression(featuresCol="features", labelCol="label")
+      model = lr.fit(ml_data)
+      ```        
+
