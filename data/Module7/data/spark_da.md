@@ -91,4 +91,25 @@
        df.createOrReplaceTempView("events")
        result = spark.sql("SELECT event_type, COUNT(*) FROM events GROUP BY event_type")
        result.show()
-       ```        
+       ```       
+      
+6. Обработка потоковых и исторических данных  
+   - Spark Streaming и Structured Streaming позволяют обрабатывать данные в реальном времени и совмещать их с 
+   историческими данными для комплексной аналитики.  
+  
+   - Поддержка различных источников данных: Kafka, Flume, HDFS, S3 и др.
+  
+   - Пример обработки потока данных:  
+
+      ```python
+       from pyspark.sql import SparkSession
+
+       spark = SparkSession.builder.appName("StreamingExample").getOrCreate()
+       streamingDF = spark.readStream.format("kafka") \
+           .option("kafka.bootstrap.servers", "localhost:9092") \
+           .option("subscribe", "topic1") \
+           .load()
+       streamingDF.selectExpr("CAST(value AS STRING)").writeStream \
+           .format("console").start()
+      ```
+     
