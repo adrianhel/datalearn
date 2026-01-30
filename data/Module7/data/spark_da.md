@@ -113,3 +113,23 @@
            .format("console").start()
       ```
      
+7. Гибкая интеграция с различными источниками и форматами данных  
+   - Spark поддерживает широкий спектр источников данных: HDFS, Amazon S3, Cassandra, HBase, JDBC, Hive, Avro, Parquet, 
+   ORC, JSON, CSV и др.  
+
+   - Унифицированные DataFrame и Dataset API позволяют работать с данными вне зависимости от их формата или хранилища.  
+
+   - Пример чтения данных из Parquet и SQL-базы:  
+
+      ```python
+      from pyspark.sql import SparkSession
+
+      spark = SparkSession.builder.appName("IntegrationExample").getOrCreate()
+      parquetDF = spark.read.parquet("data.parquet")
+      jdbcDF = spark.read.format("jdbc") \
+         .option("url", "jdbc:postgresql://localhost/db") \
+         .option("dbtable", "public.table") \
+         .option("user", "user") \
+         .option("password", "password") \
+         .load()
+      ```
