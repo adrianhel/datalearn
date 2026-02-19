@@ -83,3 +83,11 @@ grouped.collect()
 // groupByKey вызывает полный shuffle всех данных с одинаковым ключом на один executor
 ```
 
+### Ошибка `OutOfMemoryError` при большом количестве данных
+
+```scala
+val largeRdd = sc.parallelize(1 to 100000000)
+largeRdd.map(_ * 2).collect()
+// collect собирает все данные на драйвер, что приводит к OutOfMemoryError
+```
+
