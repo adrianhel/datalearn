@@ -91,3 +91,12 @@ largeRdd.map(_ * 2).collect()
 // collect собирает все данные на драйвер, что приводит к OutOfMemoryError
 ```
 
+### Неэффективность микро-батчей в Spark Streaming
+
+```scala
+val ssc = new StreamingContext(sc, Seconds(1))
+val lines = ssc.socketTextStream("localhost", 9999)
+lines.print()
+// Минимальный размер batch-интервала — 1 секунда, real-time latency невозможна
+```
+
