@@ -100,3 +100,11 @@ lines.print()
 // Минимальный размер batch-интервала — 1 секунда, real-time latency невозможна
 ```
 
+### Ограничения по API языков (пример на R)
+
+```r
+library(SparkR)
+df <- as.DataFrame(faithful)
+# Некоторые функции из DataFrame API недоступны в SparkR по сравнению со Scala/Python
+```
+
