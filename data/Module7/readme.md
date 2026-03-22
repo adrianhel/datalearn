@@ -97,7 +97,7 @@
    - Финансовая аналитика: анализ транзакций, обнаружение мошенничества.  
 
 ## 7.8 Spark Core
-В Spark концепции [ленивых вычислений](data/spark_lazy.md) (lazy evaluation), 
+Концепции [ленивых вычислений](data/spark_lazy.md) (lazy evaluation), 
 [преобразований](data/spark_transformations.md) (transformations) и [действий](data/spark_actions.md) (actions) играют 
 ключевую роль в оптимизации и выполнении распределенных вычислений, они составляют жизненный цикл Spark-программы.   
 
