@@ -17,7 +17,7 @@
 **Трансформеры (Transformers):** объекты, преобразующие DataFrame (например, StandardScaler, PCA, модель классификации).  
 
 **Оценщики (Estimators):** объекты, которые могут быть обучены на данных и превращаются в трансформеры (например, 
-LogisticRegression, DecisionTreeClassifier).  
+`LogisticRegression`, `DecisionTreeClassifier`).  
 
 **Параметры (Params):** механизм настройки поведения моделей и трансформеров через ключ-значение.  
 
