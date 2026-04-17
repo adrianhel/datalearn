@@ -174,9 +174,9 @@ df = spark.read.csv("data.csv", schema=schema, header=True)
 Spark SQL поддерживает эволюцию схемы (schema evolution) при работе с некоторыми форматами данных, например, Parquet.  
 
 ## 7.9.10 Преобразования и действия (Transformations & Actions)
-- **Преобразования (Transformations):** операции, возвращающие новый DataFrame (например, `select`, `filter`, 
+   - **Преобразования (Transformations):** операции, возвращающие новый DataFrame (например, `select`, `filter`, 
 `groupBy`, `join`).  
-- **Действия (Actions):** операции, инициирующие вычисление (например, `show`, `collect`, `write`).  
+   - **Действия (Actions):** операции, инициирующие вычисление (например, `show`, `collect`, `write`).  
 
 #### Пример преобразований и действий
 
