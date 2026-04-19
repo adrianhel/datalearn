@@ -157,8 +157,8 @@ df_hive = spark.sql("SELECT * FROM hive_table")
 ```
                   
 ## 7.9.9 Управление схемой и эволюция схемы
-- **Инференция схемы** — автоматическое определение структуры данных при загрузке (например, `inferSchema=True`).  
-- **Явное задание схемы** — определение схемы с помощью `StructType` и `StructField`.  
+   - **Инференция схемы** — автоматическое определение структуры данных при загрузке (например, `inferSchema=True`).  
+   - **Явное задание схемы** — определение схемы с помощью `StructType` и `StructField`.  
 
 ```python
 from pyspark.sql.types import StructType, StructField, StringType, IntegerType
