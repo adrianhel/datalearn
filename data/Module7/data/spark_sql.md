@@ -57,13 +57,13 @@ df_parquet = spark.read.parquet("path/to/data.parquet")
 ```
                   
 ### Основные операции
-- **Выборка столбцов:**
+   - **Выборка столбцов:**
 
     ```python
     df.select("name", "age")
     ```
                   
-- **Фильтрация строк:**
+   - **Фильтрация строк:**
 
     ```python
     df.filter(df.age > 21)
