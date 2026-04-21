@@ -69,19 +69,19 @@ df_parquet = spark.read.parquet("path/to/data.parquet")
     df.filter(df.age > 21)
     ```
                   
-- **Группировка и агрегирование:**
+   - **Группировка и агрегирование:**
 
     ```python
     df.groupBy("city").agg({"salary": "avg"})
     ```
                   
-- **Соединения (joins):**
+   - **Соединения (joins):**
 
     ```python
     df1.join(df2, df1.id == df2.id, "inner")
     ```
                   
-- **Сортировка:**
+   - **Сортировка:**
 
     ```python
     df.orderBy(df.age.desc())
