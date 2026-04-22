@@ -57,35 +57,35 @@ df_parquet = spark.read.parquet("path/to/data.parquet")
 ```
                   
 ### Основные операции
-   - **Выборка столбцов:**
+- **Выборка столбцов:**
 
     ```python
     df.select("name", "age")
     ```
                   
-   - **Фильтрация строк:**
+- **Фильтрация строк:**
 
     ```python
     df.filter(df.age > 21)
     ```
                   
-   - **Группировка и агрегирование:**
+- **Группировка и агрегирование:**
 
     ```python
     df.groupBy("city").agg({"salary": "avg"})
     ```
                   
-   - **Соединения (joins):**
+- **Соединения (joins):**
 
     ```python
     df1.join(df2, df1.id == df2.id, "inner")
     ```
                   
-   - **Сортировка:**
+- **Сортировка:**
 
-    ```python
-    df.orderBy(df.age.desc())
-    ```
+   ```python
+   df.orderBy(df.age.desc())
+   ```
 
 ## 7.9.4 Работа с SQL-запросами
 Spark SQL позволяет выполнять SQL-запросы к DataFrame, регистрируя их как временные (**temporary**) 
