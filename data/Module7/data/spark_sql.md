@@ -121,10 +121,10 @@ ds.filter(_.age > 18).show()
 повысить производительность Spark SQL.  
 
 ## 7.9.7 Поддерживаемые форматы и источники данных
-   - CSV, JSON, Parquet, ORC, Avro
-   - JDBC (реляционные базы данных)
-   - Hive (через HiveContext / SparkSession с Hive Support)
-   - Delta Lake и другие форматы данных для управления транзакциями
+- CSV, JSON, Parquet, ORC, Avro
+- JDBC (реляционные базы данных)
+- Hive (через HiveContext / SparkSession с Hive Support)
+- Delta Lake и другие форматы данных для управления транзакциями
 
 #### Примеры загрузки различных форматов
 
