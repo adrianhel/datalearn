@@ -153,11 +153,11 @@ GraphX объединяет парадигму обработки данных R
 
 ## 7.13 Популярные форматы хранения данных
 Spark поддерживает множество форматов хранения данных:  
-   - [Apache Parquet](data/parquet.md)   
-   - [Apache ORC (Optimized Row Columnar)](data/orc.md)   
-   - [Apache Avro](data/avro.md)  
-   - [Delta Lake](data/delta_lake.md)  
-   - [JSON/CSV](data/json_csv.md)  
+- [Apache Parquet](data/parquet.md)   
+- [Apache ORC (Optimized Row Columnar)](data/orc.md)   
+- [Apache Avro](data/avro.md)  
+- [Delta Lake](data/delta_lake.md)  
+- [JSON/CSV](data/json_csv.md)  
 
 > Выбор правильного формата критически важен для производительности, стоимости и удобства работы.  
 
