@@ -157,7 +157,7 @@ val total = sales.reduce(_ + _)
 ```
                   
 - **Сохранение результатов анализа:**
-    - Экспорт уникальных пользователей в файл с помощью `distinct` и `saveAsTextFile`.  
+- Экспорт уникальных пользователей в файл с помощью `distinct` и `saveAsTextFile`.  
 
 ```scala
 val users = sc.textFile("access.log").map(_.split(" ")(0)).distinct()
